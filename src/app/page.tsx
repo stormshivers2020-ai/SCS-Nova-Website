@@ -1,0 +1,35 @@
+import {
+  BusinessSection,
+  CompanyContactSection,
+  Hero,
+  Navbar,
+  PhilosophySection,
+  TheFutureSection,
+  TheSystemSection,
+  WhatThisIsSection,
+} from "@/components/site";
+
+export default function Home() {
+  return (
+    <div className="relative min-h-[100dvh] overflow-x-hidden bg-black">
+      <div className="cauris-ambient" aria-hidden>
+        <div className="cauris-grid" />
+        <div className="cauris-starfield animate-twinkle" />
+        <div className="cauris-vignette" />
+        <div className="cauris-grain" />
+      </div>
+
+      <Navbar />
+
+      <main>
+        <Hero />
+        <WhatThisIsSection />
+        <TheSystemSection />
+        <BusinessSection />
+        <PhilosophySection />
+        <TheFutureSection />
+        <CompanyContactSection />
+      </main>
+    </div>
+  );
+}
