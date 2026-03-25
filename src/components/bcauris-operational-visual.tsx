@@ -1,128 +1,110 @@
 /**
- * Abstract operational memory — retention lanes + hub (not charts, not SaaS chrome).
+ * Conceptual companion surface: context strip, thread, workflow cards, memory tags — not a dashboard.
  */
 export function BcaurisOperationalVisual() {
   return (
     <div
-      className="relative mx-auto w-full max-w-[400px] overflow-hidden rounded-2xl border border-white/[0.07] bg-gradient-to-br from-zinc-950/95 via-black to-zinc-950/85 p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.035),0_36px_72px_rgba(0,0,0,0.5)] ring-1 ring-cauris-gold/[0.07] sm:p-6"
+      className="relative mx-auto w-full max-w-[460px] overflow-hidden rounded-[1.35rem] border border-white/[0.14] bg-gradient-to-br from-zinc-900/95 via-zinc-950/90 to-black p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_52px_100px_rgba(0,0,0,0.5),0_0_100px_rgba(244,176,66,0.09)] ring-1 ring-cauris-gold/[0.18] sm:max-w-[480px] sm:p-7"
       aria-hidden
     >
-      <div className="pointer-events-none absolute -right-10 top-1/2 h-52 w-52 -translate-y-1/2 rounded-full bg-cauris-ember/[0.055] blur-3xl" />
-      <div className="pointer-events-none absolute -left-12 bottom-0 h-36 w-36 rounded-full bg-[#1a1030]/40 blur-3xl" />
+      <div className="pointer-events-none absolute -right-14 top-0 h-56 w-56 rounded-full bg-cauris-ember/[0.11] blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-10 -left-10 h-44 w-44 rounded-full bg-cauris-flame/[0.09] blur-3xl" />
 
-      <div className="relative flex items-center justify-between border-b border-white/[0.06] pb-3">
-        <div className="flex flex-col gap-0.5">
-          <span className="font-mono text-[9px] uppercase tracking-[0.22em] text-zinc-500">
-            Operational memory
+      {/* Context strip */}
+      <div className="relative flex flex-wrap items-center justify-between gap-2 border-b border-white/[0.1] pb-3">
+        <div className="flex min-w-0 flex-col gap-0.5">
+          <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-zinc-400">
+            Workspace
           </span>
-          <span className="font-mono text-[8px] uppercase tracking-[0.18em] text-zinc-700">
-            structured field
+          <span className="truncate font-mono text-[8px] uppercase tracking-[0.14em] text-zinc-500">
+            context · memory · flow
           </span>
         </div>
-        <span className="flex items-center gap-1.5">
-          <span className="h-1 w-1 rounded-full bg-cauris-flame/85 motion-reduce:animate-none bcauris-pulse-dot" />
-          <span className="font-mono text-[9px] text-zinc-500">retained</span>
+        <span className="shrink-0 rounded-full border border-cauris-gold/30 bg-cauris-flame/[0.12] px-2 py-0.5 font-mono text-[8px] uppercase tracking-[0.12em] text-cauris-dawn">
+          Workflow detected
         </span>
       </div>
 
-      <div className="relative mt-4 flex flex-wrap gap-1.5">
-        {["invoice", "PMIX", "variance", "client"].map((tag) => (
+      {/* Thread-like exchange */}
+      <div className="relative mt-4 space-y-2.5">
+        <div className="rounded-lg border border-white/[0.1] bg-white/[0.05] px-3 py-2.5 backdrop-blur-sm">
+          <div className="flex items-center justify-between gap-2">
+            <span className="font-mono text-[8px] uppercase tracking-[0.16em] text-zinc-500">
+              Input
+            </span>
+            <span className="font-mono text-[7px] text-zinc-500">file + note</span>
+          </div>
+          <p className="mt-1.5 text-[11px] leading-snug text-zinc-400">
+            Screenshot and spreadsheet attached…
+          </p>
+        </div>
+        <div className="ml-2 rounded-lg border border-cauris-gold/28 bg-black/55 px-3 py-2.5 shadow-[0_0_32px_rgba(244,176,66,0.12)] backdrop-blur-sm">
+          <div className="flex items-center justify-between gap-2">
+            <span className="font-mono text-[8px] uppercase tracking-[0.16em] text-cauris-flame">
+              Companion
+            </span>
+            <span className="h-1 w-1 shrink-0 rounded-full bg-cauris-flame motion-reduce:animate-none bcauris-pulse-dot" />
+          </div>
+          <p className="mt-1.5 text-[11px] leading-snug text-zinc-300">
+            Related context found
+          </p>
+        </div>
+        <div className="rounded-lg border border-white/[0.08] bg-white/[0.04] px-3 py-2 backdrop-blur-sm">
+          <p className="font-mono text-[9px] leading-relaxed text-zinc-500">
+            Prior fix available · same pattern as last week
+          </p>
+        </div>
+      </div>
+
+      {/* Workflow cards */}
+      <div className="relative mt-5 space-y-2">
+        <div className="flex items-center justify-between rounded-lg border border-white/[0.1] bg-zinc-950/70 px-3 py-2">
+          <span className="font-mono text-[8px] uppercase tracking-[0.12em] text-zinc-400">
+            Invoice Review
+          </span>
+          <span className="font-mono text-[8px] text-zinc-500">3 similar tasks</span>
+        </div>
+        <div className="flex items-center justify-between rounded-lg border border-white/[0.08] bg-zinc-950/40 px-3 py-2">
+          <span className="font-mono text-[8px] uppercase tracking-[0.12em] text-zinc-500">
+            Monthly reporting pattern
+          </span>
+          <span className="font-mono text-[7px] uppercase tracking-[0.1em] text-cauris-flame/90">
+            remembered
+          </span>
+        </div>
+      </div>
+
+      {/* Memory tags */}
+      <div className="relative mt-4 flex flex-wrap items-center gap-1.5">
+        {["workflow memory", "screenshot", "files"].map((tag) => (
           <span
             key={tag}
-            className="rounded border border-white/[0.05] bg-white/[0.02] px-2 py-0.5 font-mono text-[7.5px] uppercase tracking-[0.14em] text-zinc-600"
+            className="rounded border border-white/[0.1] bg-white/[0.04] px-2 py-0.5 font-mono text-[7px] uppercase tracking-[0.12em] text-zinc-500"
           >
             {tag}
           </span>
         ))}
       </div>
 
-      <div className="relative mt-5 space-y-3.5">
-        {[
-          { label: "Workflow", hint: "how work moves" },
-          { label: "Exception", hint: "what breaks & returns" },
-          { label: "Report", hint: "variance → decision" },
-        ].map((lane, i) => (
-          <div key={lane.label} className="relative">
-            <div className="mb-1 flex justify-between gap-2 font-mono text-[8px] uppercase tracking-[0.16em] text-zinc-600">
-              <span>{lane.label}</span>
-              <span className="truncate text-zinc-700">{lane.hint}</span>
-            </div>
-            <div className="h-px w-full overflow-hidden rounded-full bg-white/[0.06]">
-              <div
-                className="bcauris-lane-pulse h-full rounded-full bg-gradient-to-r from-transparent via-cauris-flame/40 to-transparent"
-                style={{
-                  width: i === 0 ? "78%" : i === 1 ? "62%" : "88%",
-                  animationDelay: `${i * 0.7}s`,
-                }}
-              />
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <div className="relative mt-6">
+      <div className="relative mt-4 flex items-center gap-2">
+        <div className="h-px flex-1 bg-gradient-to-r from-transparent via-cauris-flame/45 to-transparent" />
         <svg
-          viewBox="0 0 280 160"
-          className="h-auto w-full"
+          viewBox="0 0 120 24"
+          className="h-5 w-[120px] shrink-0 opacity-90"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <defs>
-            <linearGradient id="bc-op-edge" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="rgba(244,176,66,0)" />
-              <stop offset="50%" stopColor="rgba(244,176,66,0.32)" />
-              <stop offset="100%" stopColor="rgba(244,176,66,0)" />
-            </linearGradient>
-          </defs>
-
-          <g opacity={0.88}>
-            <line x1="140" y1="80" x2="52" y2="36" stroke="url(#bc-op-edge)" strokeWidth={0.55} />
-            <line x1="140" y1="80" x2="228" y2="36" stroke="url(#bc-op-edge)" strokeWidth={0.55} />
-            <line x1="140" y1="80" x2="44" y2="118" stroke="url(#bc-op-edge)" strokeWidth={0.55} />
-            <line x1="140" y1="80" x2="236" y2="118" stroke="url(#bc-op-edge)" strokeWidth={0.55} />
-            <line x1="140" y1="80" x2="140" y2="22" stroke="rgba(244,176,66,0.12)" strokeWidth={0.45} />
-          </g>
-
-          <circle
-            cx="140"
-            cy="80"
-            r="10"
-            stroke="rgba(201,162,39,0.3)"
-            strokeWidth={0.75}
-            fill="rgba(0,0,0,0.55)"
+          <path
+            d="M4 12h24M44 12h32M92 12h24"
+            stroke="rgba(244,176,66,0.38)"
+            strokeWidth={0.55}
+            strokeLinecap="round"
           />
-          <circle
-            cx="140"
-            cy="80"
-            r="4"
-            fill="rgba(244,176,66,0.5)"
-            className="motion-reduce:opacity-100 bcauris-hub-core"
-          />
-
-          {[
-            [52, 36],
-            [228, 36],
-            [44, 118],
-            [236, 118],
-            [140, 22],
-          ].map(([cx, cy], idx) => (
-            <circle
-              key={`${cx}-${cy}`}
-              cx={cx}
-              cy={cy}
-              r={idx === 4 ? 2.1 : 2.6}
-              fill={idx === 4 ? "rgba(253,230,138,0.45)" : "rgba(161,161,170,0.32)"}
-            />
-          ))}
+          <circle cx="16" cy="12" r="2" fill="rgba(244,176,66,0.55)" />
+          <circle cx="60" cy="12" r="2.5" fill="rgba(253,230,138,0.45)" />
+          <circle cx="104" cy="12" r="2" fill="rgba(212,212,216,0.45)" />
         </svg>
-
-        <div className="absolute bottom-0 left-0 right-0 flex justify-center gap-3 font-mono text-[8px] uppercase tracking-[0.2em] text-zinc-600">
-          <span>preserve</span>
-          <span className="text-zinc-700">·</span>
-          <span>recall</span>
-          <span className="text-zinc-700">·</span>
-          <span>decide</span>
-        </div>
+        <div className="h-px flex-1 bg-gradient-to-r from-transparent via-cauris-flame/45 to-transparent" />
       </div>
     </div>
   );

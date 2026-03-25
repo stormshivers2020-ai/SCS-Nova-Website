@@ -75,7 +75,7 @@ export function Hero() {
         <div ref={logoRef} className="will-change-transform">
           <div className="cauris-logo-breathe relative mx-auto">
             <div
-              className="pointer-events-none absolute inset-[-18%] rounded-full bg-cauris-flame/10 blur-3xl"
+              className="pointer-events-none absolute inset-[-18%] rounded-full bg-cauris-flame/[0.16] blur-3xl"
               aria-hidden
             />
             <Image
@@ -83,7 +83,7 @@ export function Hero() {
               alt="Cauris"
               width={280}
               height={280}
-              className="relative z-[1] mx-auto h-auto w-[min(220px,48vw)] max-w-full object-contain sm:w-[min(260px,44vw)]"
+              className="relative z-[1] mx-auto h-auto w-[min(220px,48vw)] max-w-full object-contain brightness-[1.06] contrast-[1.06] drop-shadow-[0_0_40px_rgba(244,176,66,0.18)] sm:w-[min(260px,44vw)]"
               priority
             />
           </div>

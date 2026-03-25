@@ -1,5 +1,7 @@
 import {
-  BusinessSection,
+  ApparelSection,
+  BCaurisHero,
+  BuildStatusSection,
   CompanyContactSection,
   Hero,
   Navbar,
@@ -24,10 +26,12 @@ export default function Home() {
       <main>
         <Hero />
         <WhatThisIsSection />
+        <BCaurisHero />
+        <BuildStatusSection />
         <TheSystemSection />
-        <BusinessSection />
         <PhilosophySection />
         <TheFutureSection />
+        <ApparelSection />
         <CompanyContactSection />
       </main>
     </div>

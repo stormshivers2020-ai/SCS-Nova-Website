@@ -15,13 +15,13 @@ export function Navbar() {
           href="#hero"
           className="col-start-1 row-start-1 flex min-w-0 items-center gap-3 text-sm font-medium tracking-tight text-zinc-100"
         >
-          <span className="relative shrink-0 rounded-lg ring-1 ring-white/[0.08]">
+          <span className="relative shrink-0 rounded-lg ring-1 ring-white/[0.14]">
             <Image
               src="/logo.png"
               alt="Cauris"
               width={36}
               height={36}
-              className="h-9 w-9 rounded-md object-contain"
+              className="h-9 w-9 rounded-md object-contain brightness-[1.08] contrast-[1.05]"
               priority
             />
           </span>

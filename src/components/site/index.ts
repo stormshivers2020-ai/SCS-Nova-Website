@@ -1,4 +1,6 @@
-export { BusinessSection } from "./BusinessSection";
+export { ApparelSection } from "./ApparelSection";
+export { BCaurisHero } from "./BCaurisHero";
+export { BuildStatusSection } from "./BuildStatusSection";
 export { CompanyContactSection } from "./CompanyContactSection";
 export { Hero } from "./Hero";
 export { Navbar } from "./Navbar";
