@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { BcaurisOperationalVisual } from "@/components/bcauris-operational-visual";
 
@@ -61,8 +62,24 @@ export function BCaurisHero() {
             </div>
 
             <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
-              <div className="animate-fade-up w-full max-w-[min(100%,480px)] opacity-0 [animation-delay:0.2s] [animation-duration:1s] [animation-fill-mode:forwards] lg:max-w-none">
-                <BcaurisOperationalVisual />
+              <div className="animate-fade-up w-full max-w-[min(100%,520px)] opacity-0 [animation-delay:0.2s] [animation-duration:1s] [animation-fill-mode:forwards]">
+                <div className="relative overflow-hidden rounded-2xl border border-white/[0.12] bg-zinc-950/70 ring-1 ring-cauris-gold/[0.16] shadow-[0_36px_72px_rgba(0,0,0,0.46),0_0_72px_rgba(244,176,66,0.1)]">
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-cauris-flame/[0.06]" />
+                  <div className="relative aspect-[4/5] w-full">
+                    <Image
+                      src="/B-Cauris Hero.png"
+                      alt="B-Cauris visual identity preview"
+                      fill
+                      sizes="(max-width: 1024px) 90vw, 42vw"
+                      className="object-contain object-center p-3 brightness-[1.08] contrast-[1.05] sm:p-4"
+                      priority
+                    />
+                  </div>
+                </div>
+
+                <div className="mt-4">
+                  <BcaurisOperationalVisual />
+                </div>
               </div>
             </div>
           </div>
