@@ -6,6 +6,7 @@ export { Hero } from "./Hero";
 export { Navbar } from "./Navbar";
 export { PhilosophySection } from "./PhilosophySection";
 export { SelectedWorkSection } from "./SelectedWorkSection";
+export { ServicesSection } from "./ServicesSection";
 export { SectionHeader } from "./SectionHeader";
 export { SystemCards } from "./SystemCards";
 export { TheFutureSection } from "./TheFutureSection";

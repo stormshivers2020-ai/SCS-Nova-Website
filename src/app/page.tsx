@@ -7,6 +7,7 @@ import {
   Navbar,
   PhilosophySection,
   SelectedWorkSection,
+  ServicesSection,
   TheFutureSection,
   TheSystemSection,
   WhatThisIsSection,
@@ -30,6 +31,7 @@ export default function Home() {
         <BCaurisHero />
         <BuildStatusSection />
         <SelectedWorkSection />
+        <ServicesSection />
         <TheSystemSection />
         <PhilosophySection />
         <TheFutureSection />
