@@ -105,23 +105,29 @@ export function Hero() {
           Intelligence for your life.
         </p>
 
-        <p className="animate-fade-up mx-auto mt-8 max-w-md text-pretty text-center text-sm leading-relaxed text-zinc-500 opacity-0 [animation-delay:0.36s] [animation-duration:1s] [animation-fill-mode:forwards] sm:text-base sm:leading-relaxed">
-          A personal intelligence system designed to help you capture, understand, and evolve your
-          life through memory, insight, and action.
+        <p className="animate-fade-up mx-auto mt-8 max-w-md text-pretty text-center text-sm leading-relaxed text-zinc-400 opacity-0 [animation-delay:0.36s] [animation-duration:1s] [animation-fill-mode:forwards] sm:text-base sm:leading-relaxed">
+          A personal intelligence system for capturing life as it happens — then structuring it into
+          memory, insight, and calmer next steps.
         </p>
 
-        <div className="animate-fade-up mt-12 flex w-full max-w-md flex-col gap-3 opacity-0 [animation-delay:0.44s] [animation-duration:1s] [animation-fill-mode:forwards] sm:max-w-none sm:flex-row sm:justify-center sm:gap-4">
+        <div className="animate-fade-up mt-12 flex w-full max-w-lg flex-col gap-3 opacity-0 [animation-delay:0.44s] [animation-duration:1s] [animation-fill-mode:forwards] sm:max-w-none sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4">
+          <Link
+            href="/demo"
+            className="inline-flex h-12 min-h-11 items-center justify-center rounded-full bg-gradient-to-b from-cauris-flame/95 to-cauris-ember/95 px-8 text-sm font-semibold text-black shadow-glow-gold transition duration-300 hover:from-cauris-dawn hover:to-cauris-flame hover:shadow-glow-gold-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-cauris-flame focus-visible:ring-offset-2 focus-visible:ring-offset-black sm:min-w-[200px]"
+          >
+            Open the guided demo
+          </Link>
           <Link
             href="#memory"
-            className="inline-flex h-12 items-center justify-center rounded-full bg-gradient-to-b from-cauris-flame/95 to-cauris-ember/95 px-8 text-sm font-semibold text-black shadow-glow-gold transition duration-300 hover:from-cauris-dawn hover:to-cauris-flame hover:shadow-glow-gold-lg"
+            className="inline-flex h-12 min-h-11 items-center justify-center rounded-full border border-cauris-gold/35 bg-cauris-flame/[0.1] px-8 text-sm font-semibold text-cauris-dawn ring-1 ring-cauris-gold/[0.12] transition duration-300 hover:border-cauris-flame/50 hover:bg-cauris-flame/[0.14] hover:text-zinc-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-cauris-flame focus-visible:ring-offset-2 focus-visible:ring-offset-black sm:min-w-[160px]"
           >
-            Enter Cauris
+            How the system works
           </Link>
           <Link
             href="#scs-nova"
-            className="inline-flex h-12 items-center justify-center rounded-full border border-white/[0.1] bg-white/[0.03] px-8 text-sm font-medium text-zinc-200 ring-1 ring-white/[0.04] transition duration-300 hover:border-gold-fade hover:bg-white/[0.05] hover:text-zinc-50"
+            className="inline-flex h-12 min-h-11 items-center justify-center rounded-full border border-white/[0.1] bg-white/[0.03] px-8 text-sm font-medium text-zinc-200 ring-1 ring-white/[0.04] transition duration-300 hover:border-gold-fade hover:bg-white/[0.05] hover:text-zinc-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-cauris-flame focus-visible:ring-offset-2 focus-visible:ring-offset-black"
           >
-            Explore SCS Nova
+            Studio &amp; contact
           </Link>
         </div>
       </div>

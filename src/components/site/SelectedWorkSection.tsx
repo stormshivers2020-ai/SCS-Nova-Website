@@ -33,8 +33,7 @@ const WORK_ITEMS: WorkItem[] = [
     alt: "SCS Nova mark — live site identity",
     category: "Website Design",
     title: "SCS Nova Website",
-    description:
-      "Cinematic web presence built to introduce the SCS Nova ecosystem.",
+    description: "Flagship site introducing the SCS Nova / Cauris ecosystem with cinematic depth.",
   },
   {
     kind: "single",
@@ -42,8 +41,7 @@ const WORK_ITEMS: WorkItem[] = [
     alt: "Cauris brand and hero visual direction",
     category: "Brand Identity",
     title: "Cauris Brand Direction",
-    description:
-      "Brand and visual language for a memory-driven intelligence system.",
+    description: "Identity and hero language for Cauris — memory-first, calm, premium.",
   },
   {
     kind: "single",
@@ -51,14 +49,13 @@ const WORK_ITEMS: WorkItem[] = [
     alt: "B-Cauris visual identity preview",
     category: "Visual Direction",
     title: "B-Cauris Visual Identity",
-    description:
-      "Operational intelligence identity work for the business side of the platform.",
+    description: "Visual system for the operational / work side of the platform — in development.",
   },
   {
     kind: "dual-apparel",
     category: "Apparel Concepts",
     title: "Apparel Preview",
-    description: "Early apparel visuals extending the brand into physical form.",
+    description: "Early concepts for SCS Nova apparel — same universe as the digital brand.",
     files: [
       { file: "Apparel copy.png", alt: "SCS Nova apparel preview one" },
       { file: "Apparel 2 copy.png", alt: "SCS Nova apparel preview two" },
@@ -69,7 +66,7 @@ const WORK_ITEMS: WorkItem[] = [
     category: "System Builds",
     title: "Homepage System Build",
     description:
-      "Layered product storytelling, build status, and ecosystem framing — engineered for clarity and motion.",
+      "This homepage: layered storytelling, build transparency, and motion — built as a system, not a template.",
   },
 ];
 
@@ -98,12 +95,12 @@ export function SelectedWorkSection() {
             id="selected-work-heading"
             className="mt-4 max-w-4xl text-pretty text-3xl font-semibold tracking-tight text-zinc-100 sm:mt-5 sm:text-4xl md:text-[2.5rem] md:leading-tight"
           >
-            What we&apos;re building and shaping now
+            Product, web, and brand — in parallel
           </h2>
-          <p className="mt-8 max-w-3xl text-pretty text-base font-medium leading-relaxed text-zinc-400 sm:text-lg sm:leading-relaxed">
-            SCS Nova is actively developing digital systems, brand identity, and visual direction
-            across multiple fronts — from cinematic websites and product ecosystems to logos,
-            apparel, and future-facing intelligence platforms.
+          <p className="mt-8 max-w-3xl text-pretty text-base font-medium leading-relaxed text-zinc-300 sm:text-lg sm:leading-relaxed">
+            A curated slice of what SCS Nova is shaping now: live web work, Cauris and B-Cauris
+            product direction, and early brand extensions. Not a full portfolio — a clear signal of
+            craft and momentum.
           </p>
         </ScrollReveal>
 
@@ -148,8 +145,8 @@ export function SelectedWorkSection() {
                 <div className="relative aspect-[16/10] w-full border-b border-white/[0.08] bg-gradient-to-br from-zinc-950/80 via-black to-zinc-950/60">
                   <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_40%,rgba(244,176,66,0.12),transparent_62%)]" />
                   <div className="relative flex h-full items-center justify-center px-6">
-                    <p className="text-center font-mono text-[10px] uppercase tracking-[0.28em] text-zinc-500 sm:text-[11px]">
-                      In motion
+                    <p className="text-center font-mono text-[10px] uppercase tracking-[0.28em] text-zinc-400 sm:text-[11px]">
+                      Iterating in public
                     </p>
                   </div>
                 </div>

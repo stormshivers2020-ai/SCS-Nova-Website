@@ -30,12 +30,12 @@ export default function Home() {
         <WhatThisIsSection />
         <BCaurisHero />
         <BuildStatusSection />
+        <ApparelSection />
         <SelectedWorkSection />
         <ServicesSection />
         <TheSystemSection />
         <PhilosophySection />
         <TheFutureSection />
-        <ApparelSection />
         <CompanyContactSection />
       </main>
     </div>

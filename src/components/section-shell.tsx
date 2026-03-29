@@ -19,7 +19,7 @@ export function SectionShell({
     <section
       id={id}
       aria-labelledby={ariaLabelledBy}
-      className={`section-y relative scroll-mt-[4.5rem] ${className}`}
+      className={`section-y relative scroll-mt-[4.75rem] md:scroll-mt-[5rem] ${className}`}
     >
       <div className={`container-brand ${innerClassName}`}>{children}</div>
     </section>

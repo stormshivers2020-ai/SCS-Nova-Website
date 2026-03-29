@@ -1,10 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 
+const navLinkClass =
+  "rounded-md px-2 py-2 text-[12px] transition-colors duration-300 hover:text-cauris-dawn focus:outline-none focus-visible:ring-2 focus-visible:ring-cauris-flame/55 focus-visible:ring-offset-2 focus-visible:ring-offset-black md:text-[13px]";
+
 const nav = [
   { href: "#memory", label: "Memory" },
   { href: "#insight", label: "Insight" },
   { href: "#scs-nova", label: "SCS Nova" },
+  { href: "#services", label: "Services" },
+  { href: "#apparel", label: "Apparel" },
 ] as const;
 
 export function Navbar() {
@@ -32,18 +37,20 @@ export function Navbar() {
         </Link>
 
         <nav
-          className="col-span-2 row-start-2 flex justify-center gap-6 border-t border-white/[0.05] pt-3 text-[12px] text-zinc-500 md:col-span-1 md:col-start-2 md:row-start-1 md:border-t-0 md:pt-0 md:text-[13px]"
+          className="col-span-2 row-start-2 flex flex-wrap justify-center gap-x-4 gap-y-1 border-t border-white/[0.05] pt-3 sm:gap-x-6 sm:gap-y-2 md:col-span-1 md:col-start-2 md:row-start-1 md:border-t-0 md:pt-0"
           aria-label="Section anchors"
         >
           {nav.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="transition-colors duration-300 hover:text-cauris-dawn"
-            >
+            <a key={item.href} href={item.href} className={`text-zinc-500 ${navLinkClass}`}>
               {item.label}
             </a>
           ))}
+          <Link
+            href="/demo"
+            className={`text-cauris-dawn/90 ${navLinkClass} hover:text-cauris-dawn`}
+          >
+            Demo
+          </Link>
         </nav>
 
         <a

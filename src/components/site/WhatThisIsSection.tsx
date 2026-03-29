@@ -19,15 +19,15 @@ export function WhatThisIsSection() {
               }
               titleClassName="mt-4 text-balance text-3xl font-semibold tracking-tight text-zinc-50 sm:text-4xl"
             />
-            <div className="mt-8 space-y-5 text-pretty text-base leading-relaxed text-zinc-400 sm:text-[17px] sm:leading-relaxed">
+            <div className="mt-8 space-y-5 text-pretty text-base leading-relaxed text-zinc-300 sm:text-[17px] sm:leading-relaxed">
               <p>
-                Cauris is a personal intelligence system that transforms your life into structured
-                memory, connected insight, and actionable clarity.
+                Cauris is a personal intelligence system that turns everyday input into structured
+                memory, connected insight, and clearer decisions — not another notes app.
               </p>
-              <p className="text-zinc-500">
+              <p className="text-zinc-400">
                 It doesn&apos;t just store information.
                 <br />
-                <span className="text-zinc-300">It understands it.</span>
+                <span className="text-zinc-200">It organizes meaning.</span>
               </p>
             </div>
           </ScrollReveal>

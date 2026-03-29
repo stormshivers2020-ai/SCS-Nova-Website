@@ -3,10 +3,10 @@ import { SectionShell } from "@/components/section-shell";
 import { SectionHeader } from "./SectionHeader";
 
 const features = [
-  "A unified life operating system",
-  "Memory-driven intelligence",
-  "AI that evolves with you",
-  "A global network of human timelines",
+  "A calmer life operating layer",
+  "Memory-first intelligence",
+  "Systems that deepen as you use them",
+  "Human timelines, structured with care",
 ] as const;
 
 export function TheFutureSection() {
@@ -49,8 +49,9 @@ export function TheFutureSection() {
         </ScrollReveal>
 
         <ScrollReveal delayMs={180} className="mt-14 max-w-2xl sm:mt-16">
-          <p className="text-pretty text-base leading-relaxed text-zinc-500 sm:text-lg">
-            This is the beginning of a new way to live with intelligence.
+          <p className="text-pretty text-base leading-relaxed text-zinc-400 sm:text-lg">
+            The roadmap is long; the commitment is to ship carefully — premium, human-centered, and
+            built to last.
           </p>
         </ScrollReveal>
       </div>

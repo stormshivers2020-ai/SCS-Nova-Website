@@ -17,7 +17,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "SCS Nova / Cauris",
   description:
-    "Cinematic intelligence system for life, memory, and operational clarity.",
+    "SCS Nova builds digital and brand work for companies. Cauris and B-Cauris are life- and work-intelligence products in development — explore the guided Cauris demo and studio contact on this site.",
 };
 
 export default function RootLayout({

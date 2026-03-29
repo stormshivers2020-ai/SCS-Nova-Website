@@ -6,20 +6,21 @@ const items = [
     name: "Cauris",
     status: "In development",
     statusVariant: "development" as const,
-    description: "A personal intelligence system for memory, insight, and action.",
+    description:
+      "Life-side intelligence: capture, structure, patterns, and insight. Guided demo available on this site.",
   },
   {
     name: "B-Cauris",
     status: "In development",
     statusVariant: "development" as const,
     description:
-      "An operational intelligence system designed to learn workflows, preserve context, and support execution over time.",
+      "Work-side companion for operational memory and workflow clarity. Building alongside Cauris.",
   },
   {
     name: "Apparel",
     status: "Coming soon",
     statusVariant: "soon" as const,
-    description: "A future extension of the SCS Nova brand.",
+    description: "Premium apparel in design — the physical layer of the SCS Nova identity.",
   },
 ] as const;
 
@@ -38,18 +39,18 @@ export function BuildStatusSection() {
       <div className="relative">
         <ScrollReveal>
           <p className="font-mono text-xs font-medium uppercase tracking-[0.26em] text-zinc-500 sm:text-sm sm:tracking-[0.22em]">
-            Current Build Status
+            Ecosystem status
           </p>
           <h2
             id="build-status-heading"
             className="mt-4 max-w-3xl text-pretty text-3xl font-semibold tracking-tight text-zinc-100 sm:mt-5 sm:text-4xl md:text-[2.5rem] md:leading-tight"
           >
-            What&apos;s in motion
+            Actively in build
           </h2>
-          <p className="mt-8 max-w-3xl text-pretty text-base font-medium leading-relaxed text-zinc-400 sm:text-lg sm:leading-relaxed">
-            SCS Nova is actively building the next generation of personal and operational
-            intelligence. Cauris and B-Cauris are both currently in development, with Apparel
-            coming soon.
+          <p className="mt-8 max-w-3xl text-pretty text-base font-medium leading-relaxed text-zinc-300 sm:text-lg sm:leading-relaxed">
+            This is a living ecosystem — not a frozen launch page. Cauris and B-Cauris are in
+            development in parallel; apparel is queued as a brand extension. What you see here is the
+            current shape of the work.
           </p>
         </ScrollReveal>
 
@@ -78,7 +79,7 @@ export function BuildStatusSection() {
                   </span>
                 </div>
                 <div className="h-px w-full bg-gradient-to-r from-cauris-flame/35 via-cauris-gold/20 to-transparent" />
-                <p className="text-sm leading-relaxed text-zinc-500 sm:text-[15px] sm:leading-relaxed">
+                <p className="text-sm leading-relaxed text-zinc-400 sm:text-[15px] sm:leading-relaxed">
                   {item.description}
                 </p>
               </div>

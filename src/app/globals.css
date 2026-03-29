@@ -323,3 +323,171 @@ body {
     animation: none !important;
   }
 }
+
+/* —— Cauris product demo — step transitions —— */
+@media (prefers-reduced-motion: no-preference) {
+  .demo-step-enter {
+    animation: demo-step-in 0.52s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+@keyframes demo-step-in {
+  from {
+    opacity: 0;
+    transform: translateY(7px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .demo-step-enter {
+    animation: none;
+  }
+}
+
+/* —— Demo Workspace — restrained bubble / signal entrance —— */
+@media (prefers-reduced-motion: no-preference) {
+  .demo-workspace-bubble {
+    animation: demo-workspace-bubble-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .demo-workspace-signal {
+    animation: demo-workspace-signal-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+@keyframes demo-workspace-bubble-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes demo-workspace-signal-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .demo-workspace-bubble,
+  .demo-workspace-signal {
+    animation: none !important;
+  }
+}
+
+/* —— Demo Timeline — restrained entry reveal —— */
+@media (prefers-reduced-motion: no-preference) {
+  .demo-timeline-entry {
+    animation: demo-timeline-entry-in 0.52s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+@keyframes demo-timeline-entry-in {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .demo-timeline-entry {
+    animation: none !important;
+  }
+}
+
+/* —— Demo Helix — summary cards —— */
+@media (prefers-reduced-motion: no-preference) {
+  .demo-helix-card {
+    animation: demo-timeline-entry-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .demo-helix-card {
+    animation: none !important;
+  }
+}
+
+/* —— Demo Insight — hero + insight cards —— */
+@media (prefers-reduced-motion: no-preference) {
+  .demo-insight-hero {
+    animation: demo-timeline-entry-in 0.58s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .demo-insight-card {
+    animation: demo-timeline-entry-in 0.52s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .demo-insight-hero,
+  .demo-insight-card {
+    animation: none !important;
+  }
+}
+
+/* —— Demo Compass — orientation hero + guidance cards —— */
+@media (prefers-reduced-motion: no-preference) {
+  .demo-compass-hero {
+    animation: demo-timeline-entry-in 0.58s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .demo-compass-card {
+    animation: demo-timeline-entry-in 0.52s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .demo-compass-hero,
+  .demo-compass-card {
+    animation: none !important;
+  }
+}
+
+/* —— Demo Vault — retention hero + artifact tiles —— */
+@media (prefers-reduced-motion: no-preference) {
+  .demo-vault-hero {
+    animation: demo-timeline-entry-in 0.58s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .demo-vault-tile {
+    animation: demo-timeline-entry-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .demo-vault-hero,
+  .demo-vault-tile {
+    animation: none !important;
+  }
+}
+
+/* —— Demo Early Access — CTA cards —— */
+@media (prefers-reduced-motion: no-preference) {
+  .demo-early-cta {
+    animation: demo-timeline-entry-in 0.52s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .demo-early-cta {
+    animation: none !important;
+  }
+}

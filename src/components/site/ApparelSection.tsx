@@ -27,11 +27,13 @@ export function ApparelSection() {
               SCS Nova <span className="text-gradient-gold">Apparel</span>
             </h2>
             <span className="rounded-full border border-cauris-gold/25 bg-cauris-flame/[0.08] px-3 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-cauris-dawn">
-              Coming soon
+              In design · coming soon
             </span>
           </div>
-          <p className="mt-8 max-w-lg text-pretty text-base font-medium leading-relaxed text-zinc-400 sm:text-lg">
-            A premium extension of the SCS Nova brand — visual direction in preview.
+          <p className="mt-8 max-w-lg text-pretty text-base font-medium leading-relaxed text-zinc-300 sm:text-lg">
+            Apparel is a future branch of the same SCS Nova world as Cauris and B-Cauris — physical
+            craft, not generic merch. Design is in progress; drops will follow when the line is
+            ready.
           </p>
         </ScrollReveal>
 
