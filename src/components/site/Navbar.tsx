@@ -5,11 +5,11 @@ const navLinkClass =
   "rounded-md px-2 py-2 text-[12px] transition-colors duration-300 hover:text-cauris-dawn focus:outline-none focus-visible:ring-2 focus-visible:ring-cauris-flame/55 focus-visible:ring-offset-2 focus-visible:ring-offset-black md:text-[13px]";
 
 const nav = [
-  { href: "#memory", label: "Memory" },
-  { href: "#insight", label: "Insight" },
-  { href: "#scs-nova", label: "SCS Nova" },
-  { href: "#services", label: "Services" },
-  { href: "#apparel", label: "Apparel" },
+  { href: "/#memory", label: "Memory" },
+  { href: "/#insight", label: "Insight" },
+  { href: "/#scs-nova", label: "SCS Nova" },
+  { href: "/#services", label: "Services" },
+  { href: "/#apparel", label: "Apparel" },
 ] as const;
 
 export function Navbar() {
@@ -17,7 +17,7 @@ export function Navbar() {
     <header className="sticky top-0 z-50 border-b border-white/[0.06] bg-glass-header">
       <div className="container-brand grid min-h-[4.25rem] grid-cols-[minmax(0,1fr)_auto] items-center gap-y-3 py-3 md:grid-cols-[auto_1fr_auto] md:gap-y-0 md:py-0">
         <Link
-          href="#hero"
+          href="/#hero"
           className="col-start-1 row-start-1 flex min-w-0 items-center gap-3 text-sm font-medium tracking-tight text-zinc-100"
         >
           <span className="relative shrink-0 rounded-lg ring-1 ring-white/[0.14]">
@@ -53,12 +53,12 @@ export function Navbar() {
           </Link>
         </nav>
 
-        <a
-          href="#hero"
+        <Link
+          href="/#hero"
           className="col-start-2 row-start-1 justify-self-end font-mono text-[10px] uppercase tracking-[0.22em] text-zinc-600 md:col-start-3 sm:text-[11px]"
         >
           System
-        </a>
+        </Link>
       </div>
     </header>
   );

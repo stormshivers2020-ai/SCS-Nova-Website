@@ -5,6 +5,7 @@ export { CompanyContactSection } from "./CompanyContactSection";
 export { Hero } from "./Hero";
 export { Navbar } from "./Navbar";
 export { PhilosophySection } from "./PhilosophySection";
+export { RangeOSSection } from "./RangeOSSection";
 export { SelectedWorkSection } from "./SelectedWorkSection";
 export { ServicesSection } from "./ServicesSection";
 export { SectionHeader } from "./SectionHeader";

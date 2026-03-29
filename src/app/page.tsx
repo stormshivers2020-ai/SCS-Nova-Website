@@ -6,6 +6,7 @@ import {
   Hero,
   Navbar,
   PhilosophySection,
+  RangeOSSection,
   SelectedWorkSection,
   ServicesSection,
   TheFutureSection,
@@ -33,6 +34,7 @@ export default function Home() {
         <ApparelSection />
         <SelectedWorkSection />
         <ServicesSection />
+        <RangeOSSection />
         <TheSystemSection />
         <PhilosophySection />
         <TheFutureSection />
