@@ -245,7 +245,7 @@ export function RangeOSDemoExperience() {
   }, [goNext, goBack]);
 
   return (
-    <div className="relative min-h-[100dvh] overflow-x-hidden bg-black text-zinc-100">
+    <div className="relative min-h-[100dvh] overflow-x-hidden text-zinc-100">
       <DemoAmbient />
 
       <header className="sticky top-0 z-20 border-b border-white/[0.06] bg-glass-header pt-[env(safe-area-inset-top,0px)]">

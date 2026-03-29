@@ -16,7 +16,7 @@ import {
 
 export default function Home() {
   return (
-    <div className="relative min-h-[100dvh] overflow-x-hidden bg-black">
+    <div className="relative min-h-[100dvh] overflow-x-hidden">
       <div className="cauris-ambient" aria-hidden>
         <div className="cauris-grid" />
         <div className="cauris-starfield animate-twinkle" />

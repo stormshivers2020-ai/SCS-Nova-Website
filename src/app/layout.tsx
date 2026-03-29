@@ -37,14 +37,14 @@ export default function RootLayout({
             aria-hidden="true"
           >
             <Image
-              src="/FULL%20BACKGROUND.png"
+              src="/FULL BACKGROUND.png"
               alt=""
               fill
               className="object-cover"
               sizes="100vw"
+              unoptimized
             />
-            <div className="absolute inset-0 bg-black/70" />
-            <div className="absolute inset-0 backdrop-blur-[2px]" />
+            <div className="absolute inset-0 bg-black/50" />
           </div>
           <div className="relative z-10">{children}</div>
         </div>
