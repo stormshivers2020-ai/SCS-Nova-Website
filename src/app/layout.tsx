@@ -37,7 +37,7 @@ export default function RootLayout({
             aria-hidden="true"
           >
             <Image
-              src="/FULL BACKGROUND.png"
+              src="/FULL-BACKGROUND.png"
               alt=""
               fill
               className="object-cover"
