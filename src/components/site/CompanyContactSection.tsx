@@ -17,7 +17,7 @@ export function CompanyContactSection() {
     <SectionShell
       id="scs-nova"
       aria-labelledby="company-name-heading"
-      className="scroll-mt-[5.5rem] border-t border-white/[0.08] bg-black !py-24 md:!py-32 lg:!py-40"
+      className="scroll-mt-[5.5rem] border-t border-white/[0.08] bg-black/35 !py-24 md:!py-32 lg:!py-40"
     >
       <ScrollReveal>
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-stretch">

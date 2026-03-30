@@ -14,7 +14,7 @@ export function TheFutureSection() {
     <SectionShell
       id="future"
       aria-labelledby="future-heading"
-      className="relative overflow-hidden border-t border-white/[0.08] bg-gradient-to-b from-black via-zinc-950/26 to-black"
+      className="relative overflow-hidden border-t border-white/[0.08] bg-gradient-to-b from-black/38 via-zinc-950/12 to-black/38"
     >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_90%_50%_at_50%_0%,rgba(232,148,58,0.09),transparent_55%)]" />
 

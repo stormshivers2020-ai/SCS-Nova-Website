@@ -76,7 +76,7 @@ export function SelectedWorkSection() {
     <SectionShell
       id="selected-work"
       aria-labelledby="selected-work-heading"
-      className="relative overflow-hidden border-t border-white/[0.08] bg-gradient-to-b from-black via-zinc-950/32 to-black !py-28 md:!py-36 lg:!py-40"
+      className="relative overflow-hidden border-t border-white/[0.08] bg-gradient-to-b from-black/38 via-zinc-950/12 to-black/38 !py-28 md:!py-36 lg:!py-40"
     >
       <div
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_90%_50%_at_50%_0%,rgba(232,148,58,0.09),transparent_58%)]"
@@ -138,7 +138,7 @@ export function SelectedWorkSection() {
               )}
 
               {item.kind === "text" && (
-                <div className="relative aspect-[16/10] w-full border-b border-white/[0.08] bg-gradient-to-br from-zinc-950/80 via-black to-zinc-950/60">
+                <div className="relative aspect-[16/10] w-full border-b border-white/[0.08] bg-gradient-to-br from-zinc-950/48 via-black/32 to-zinc-950/42">
                   <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_40%,rgba(244,176,66,0.12),transparent_62%)]" />
                   <div className="relative flex h-full items-center justify-center px-6">
                     <p className="text-center font-mono text-[10px] uppercase tracking-[0.28em] text-zinc-400 sm:text-[11px]">

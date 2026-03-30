@@ -30,7 +30,7 @@ export function BuildStatusSection() {
     <SectionShell
       id="build-status"
       aria-labelledby="build-status-heading"
-      className="relative overflow-hidden border-t border-white/[0.08] bg-gradient-to-b from-black via-zinc-950/24 to-black !py-28 md:!py-36 lg:!py-40"
+      className="relative overflow-hidden border-t border-white/[0.08] bg-gradient-to-b from-black/38 via-zinc-950/12 to-black/38 !py-28 md:!py-36 lg:!py-40"
     >
       <div
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_90%_55%_at_50%_0%,rgba(232,148,58,0.095),transparent_60%)]"

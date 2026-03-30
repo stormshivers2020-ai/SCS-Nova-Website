@@ -513,7 +513,7 @@ export function ServicesSection() {
     <SectionShell
       id="services"
       aria-labelledby="services-heading"
-      className="relative overflow-hidden border-t border-white/[0.08] bg-gradient-to-b from-black via-zinc-950/22 to-black !py-28 md:!py-36 lg:!py-40"
+      className="relative overflow-hidden border-t border-white/[0.08] bg-gradient-to-b from-black/38 via-zinc-950/10 to-black/38 !py-28 md:!py-36 lg:!py-40"
     >
       <div
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_45%_at_20%_10%,rgba(232,148,58,0.085),transparent_55%)]"

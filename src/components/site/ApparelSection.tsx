@@ -12,7 +12,7 @@ export function ApparelSection() {
     <SectionShell
       id="apparel"
       aria-labelledby="apparel-heading"
-      className="relative overflow-hidden border-t border-white/[0.08] bg-gradient-to-b from-black via-zinc-950/32 to-black !py-28 md:!py-36 lg:!py-40"
+      className="relative overflow-hidden border-t border-white/[0.08] bg-gradient-to-b from-black/38 via-zinc-950/12 to-black/38 !py-28 md:!py-36 lg:!py-40"
     >
       <div
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_75%_50%_at_80%_20%,rgba(244,176,66,0.08),transparent_58%)]"

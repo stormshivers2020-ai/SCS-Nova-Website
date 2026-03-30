@@ -54,7 +54,7 @@ function WelcomeStep({ onStart }: { onStart: () => void }) {
           aria-hidden
         />
         <div className="demo-welcome-hero relative overflow-hidden rounded-brand-lg border border-white/[0.13] bg-gradient-to-b from-white/[0.1] to-white/[0.025] p-px shadow-[0_0_88px_rgba(88,60,180,0.14),inset_0_1px_0_rgba(255,255,255,0.1)] ring-1 ring-cauris-gold/[0.14] backdrop-blur-md">
-          <div className="rounded-[calc(1.5rem-1px)] bg-black/58 p-7 backdrop-blur-xl sm:p-11">
+          <div className="rounded-[calc(1.5rem-1px)] bg-black/38 p-7 backdrop-blur-xl sm:p-11">
             <div className="flex flex-col items-center">
               <div className="relative">
                 <div

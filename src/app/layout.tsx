@@ -66,18 +66,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
-      <body className="min-h-screen bg-black text-zinc-100 antialiased">
+      <body className="min-h-screen bg-transparent text-zinc-100 antialiased">
         <OrganizationJsonLd />
-        <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+        <div
+          className="pointer-events-none fixed inset-0 -z-10 min-h-[100dvh] w-full overflow-hidden"
+          aria-hidden
+        >
           <img
-            src="/background.png"
+            src="/FULL-BACKGROUND.png"
             alt=""
             aria-hidden
             decoding="async"
             fetchPriority="high"
-            className="h-full w-full object-cover opacity-[0.18]"
+            className="h-full min-h-[100dvh] w-full object-cover opacity-[0.52]"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/55 to-black/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/32 via-black/14 to-black/40" />
         </div>
         <Navbar />
         <main className="relative">{children}</main>

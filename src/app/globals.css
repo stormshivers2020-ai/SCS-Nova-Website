@@ -42,6 +42,7 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: var(--cauris-black);
 }
 
 @supports (scrollbar-gutter: stable) {
@@ -52,7 +53,7 @@ html {
 
 body {
   @apply antialiased;
-  background-color: var(--cauris-black);
+  background-color: transparent;
   color: var(--cauris-text);
   text-rendering: optimizeLegibility;
 }
@@ -72,38 +73,38 @@ body {
   background-image:
     radial-gradient(
       ellipse 120% 80% at 50% -30%,
-      var(--cauris-nebula) 0%,
+      rgba(88, 60, 180, 0.07) 0%,
       transparent 55%
     ),
     radial-gradient(
       ellipse 90% 60% at 100% 20%,
-      rgba(232, 148, 58, 0.085) 0%,
+      rgba(232, 148, 58, 0.045) 0%,
       transparent 52%
     ),
     radial-gradient(
       ellipse 55% 35% at 50% 100%,
-      rgba(244, 176, 66, 0.04) 0%,
+      rgba(244, 176, 66, 0.025) 0%,
       transparent 62%
     ),
     radial-gradient(
       ellipse 70% 50% at 0% 80%,
-      rgba(15, 23, 42, 0.22) 0%,
+      rgba(15, 23, 42, 0.1) 0%,
       transparent 48%
     ),
     linear-gradient(
       to bottom,
-      rgba(3, 3, 4, 0.28) 0%,
-      rgba(0, 0, 0, 0.07) 28%,
+      rgba(3, 3, 4, 0.1) 0%,
+      rgba(0, 0, 0, 0.035) 28%,
       transparent 54%,
-      rgba(0, 0, 0, 0.14) 78%,
-      rgba(0, 0, 0, 0.22) 100%
+      rgba(0, 0, 0, 0.06) 78%,
+      rgba(0, 0, 0, 0.1) 100%
     );
 }
 
 .cauris-grid {
   position: absolute;
   inset: 0;
-  opacity: 0.22;
+  opacity: 0.14;
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.03) 1px,
       transparent 1px
@@ -116,7 +117,7 @@ body {
 .cauris-starfield {
   position: absolute;
   inset: 0;
-  opacity: 0.55;
+  opacity: 0.36;
   background-image: radial-gradient(
       1px 1px at 12% 18%,
       rgba(255, 255, 255, 0.55) 50%,
@@ -155,7 +156,7 @@ body {
   background: radial-gradient(
     ellipse 75% 65% at 50% 45%,
     transparent 0%,
-    rgba(0, 0, 0, 0.22) 100%
+    rgba(0, 0, 0, 0.11) 100%
   );
 }
 
@@ -396,8 +397,8 @@ body {
   .bg-glass-header {
     background: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.52) 0%,
-      rgba(0, 0, 0, 0.22) 100%
+      rgba(0, 0, 0, 0.28) 0%,
+      rgba(0, 0, 0, 0.08) 100%
     );
     backdrop-filter: blur(14px) saturate(1.06);
     -webkit-backdrop-filter: blur(14px) saturate(1.06);

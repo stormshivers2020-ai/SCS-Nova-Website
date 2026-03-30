@@ -6,7 +6,7 @@ export function PhilosophySection() {
   return (
     <SectionShell
       aria-labelledby="philosophy-heading"
-      className="border-t border-white/[0.08] bg-black !py-32 md:!py-40 lg:!py-48"
+      className="border-t border-white/[0.08] bg-black/35 !py-32 md:!py-40 lg:!py-48"
     >
       <div className="mx-auto max-w-2xl text-center">
         <ScrollReveal slow>

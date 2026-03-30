@@ -6,11 +6,11 @@ export function BCaurisHero() {
   return (
     <section
       id="b-cauris"
-      className="relative flex min-h-[100dvh] scroll-mt-[4.75rem] flex-col overflow-hidden border-t border-white/[0.08] bg-black"
+      className="relative flex min-h-[100dvh] scroll-mt-[4.75rem] flex-col overflow-hidden border-t border-white/[0.08] bg-black/35"
       aria-labelledby="bcauris-hero-heading"
     >
       <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_100%_65%_at_65%_25%,rgba(232,148,58,0.13),transparent_58%),radial-gradient(ellipse_70%_45%_at_15%_75%,rgba(26,16,48,0.38),transparent_55%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_100%_65%_at_65%_25%,rgba(232,148,58,0.09),transparent_58%),radial-gradient(ellipse_70%_45%_at_15%_75%,rgba(26,16,48,0.2),transparent_55%)]"
         aria-hidden
       />
       <div

@@ -93,7 +93,7 @@ function HeroFraming() {
       <p id="rangeos-brand-hero-label" className={`${demoUi.kickerTrack} text-zinc-500`}>
         Hero framing
       </p>
-      <div className="relative mt-4 overflow-hidden rounded-brand border border-white/[0.11] bg-black p-1 ring-1 ring-cauris-gold/[0.12] shadow-[0_24px_56px_rgba(0,0,0,0.28)]">
+      <div className="relative mt-4 overflow-hidden rounded-brand border border-white/[0.11] bg-black/40 p-1 ring-1 ring-cauris-gold/[0.12] shadow-[0_24px_56px_rgba(0,0,0,0.28)]">
         <div
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_90%_70%_at_50%_0%,rgba(244,176,66,0.12),transparent_60%)]"
           aria-hidden

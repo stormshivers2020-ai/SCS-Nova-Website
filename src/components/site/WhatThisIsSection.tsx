@@ -8,7 +8,7 @@ export function WhatThisIsSection() {
     <SectionShell
       id="memory"
       aria-labelledby="what-this-is-heading"
-      className="relative overflow-hidden border-t border-white/[0.08] bg-gradient-to-b from-black via-zinc-950/14 to-black"
+      className="relative overflow-hidden border-t border-white/[0.08] bg-gradient-to-b from-black/32 via-zinc-950/8 to-black/32"
     >
       <div
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_55%_at_20%_30%,rgba(88,60,180,0.08),transparent_58%),radial-gradient(ellipse_70%_45%_at_85%_70%,rgba(232,148,58,0.06),transparent_55%)]"

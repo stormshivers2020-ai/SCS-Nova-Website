@@ -69,8 +69,8 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-0 z-0" aria-hidden>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_95%_75%_at_50%_-5%,rgba(88,60,180,0.1),transparent_58%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_72%_48%_at_50%_18%,rgba(244,176,66,0.09),transparent_60%)]" />
-        <div className="absolute inset-x-[-15%] bottom-0 h-[min(48vh,380px)] bg-gradient-to-t from-black/55 via-black/15 to-transparent" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_85%_65%_at_50%_45%,transparent_32%,rgba(0,0,0,0.28)_100%)]" />
+        <div className="absolute inset-x-[-15%] bottom-0 h-[min(48vh,380px)] bg-gradient-to-t from-black/28 via-black/8 to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_85%_65%_at_50%_45%,transparent_32%,rgba(0,0,0,0.14)_100%)]" />
       </div>
 
       <div

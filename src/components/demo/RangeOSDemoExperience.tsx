@@ -61,7 +61,7 @@ function WelcomeStep({ onStart }: { onStart: () => void }) {
         />
 
         <div className="demo-welcome-hero relative overflow-hidden rounded-brand-lg border border-white/[0.13] bg-gradient-to-b from-zinc-900/68 to-black/82 p-px shadow-[0_0_88px_rgba(244,176,66,0.12),inset_0_1px_0_rgba(255,255,255,0.1)] ring-1 ring-cauris-gold/[0.15] backdrop-blur-md">
-          <div className="rounded-[calc(1.5rem-1px)] bg-black/58 backdrop-blur-xl">
+          <div className="rounded-[calc(1.5rem-1px)] bg-black/38 backdrop-blur-xl">
             <div className="flex items-center gap-2 border-b border-white/[0.08] px-3 py-2.5 sm:px-4">
               <span className="flex gap-1.5" aria-hidden>
                 <span className="h-2 w-2 rounded-full bg-zinc-600 shadow-[inset_0_1px_0_rgba(255,255,255,0.12)]" />
