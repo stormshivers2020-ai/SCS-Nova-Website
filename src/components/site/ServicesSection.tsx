@@ -4,7 +4,18 @@ import { ScrollReveal } from "@/components/scroll-reveal";
 import { SectionShell } from "@/components/section-shell";
 import { publicImagePath } from "@/lib/publicImagePath";
 
-const services = [
+type ServiceCard = {
+  title: string;
+  body: string;
+  bullets?: readonly string[];
+  /** Subtle style labels — rendered as a quiet mono line. */
+  chips?: readonly string[];
+  closingLine?: string;
+  /** Spans all columns on md+ so richer content breathes without breaking the 3-up row above. */
+  span?: "full";
+};
+
+const services: readonly ServiceCard[] = [
   {
     title: "Website design & build",
     body: "New sites from concept to launch — structure, visuals, and narrative aligned so your company reads clearly online.",
@@ -17,7 +28,20 @@ const services = [
     title: "Website updates & refinement",
     body: "Improve what you already have: layout, performance, visuals, and messaging — without starting from zero.",
   },
-] as const;
+  {
+    title: "Custom Design & Brand Identity",
+    body: "We don't believe in one-size-fits-all design. Every business has its own identity, energy, and purpose. We build websites and systems that reflect your vision — whether that's clean and professional, bold and aggressive, or something completely unique.",
+    bullets: [
+      "Multiple design styles (light, dark, luxury, minimal, bold)",
+      "Custom branding tailored to your business identity",
+      "Visual direction built around your audience and goals",
+      "Cohesive systems that match your brand across every page",
+    ],
+    chips: ["Clean", "Dark", "Luxury", "Bold", "Minimal"],
+    closingLine: "Your vision. Your truth. Built into a system that works.",
+    span: "full",
+  },
+];
 
 type PricingTier = {
   name: string;
@@ -575,8 +599,7 @@ export function ServicesSection() {
           <ScrollReveal delayMs={160}>
             <p className="cauris-kicker text-zinc-500">Capabilities</p>
             <p className="mt-5 max-w-2xl text-pretty text-sm font-medium leading-relaxed text-zinc-400 sm:text-base">
-              Three ways we typically partner — each scoped as a private engagement, not a checkout
-              flow.
+              Four ways we typically partner — each scoped as a private engagement, not a checkout flow.
             </p>
           </ScrollReveal>
         </div>
@@ -586,7 +609,9 @@ export function ServicesSection() {
             <ScrollReveal
               key={s.title}
               delayMs={200 + i * 80}
-              className="flex flex-col rounded-brand border border-white/[0.11] bg-gradient-to-b from-white/[0.08] to-white/[0.022] p-7 shadow-cauris-elevate-sm ring-1 ring-cauris-gold/[0.1] backdrop-blur-md transition-[border-color,box-shadow,transform] duration-[var(--cauris-duration-surface)] ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:border-cauris-gold/20 hover:shadow-[0_0_48px_rgba(244,176,66,0.07)] motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:p-8"
+              className={`flex flex-col rounded-brand border border-white/[0.11] bg-gradient-to-b from-white/[0.08] to-white/[0.022] p-7 shadow-cauris-elevate-sm ring-1 ring-cauris-gold/[0.1] backdrop-blur-md transition-[border-color,box-shadow,transform] duration-[var(--cauris-duration-surface)] ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:border-cauris-gold/20 hover:shadow-[0_0_48px_rgba(244,176,66,0.07)] motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:p-8 ${
+                s.span === "full" ? "md:col-span-3" : ""
+              }`}
             >
               <div className="h-px w-12 bg-gradient-to-r from-cauris-flame/60 to-transparent" />
               <h3 className="mt-6 text-lg font-semibold tracking-[-0.02em] text-zinc-50 sm:text-xl">
@@ -595,6 +620,29 @@ export function ServicesSection() {
               <p className="mt-4 text-sm leading-relaxed text-zinc-500 sm:text-[15px] sm:leading-relaxed">
                 {s.body}
               </p>
+              {s.bullets ? (
+                <ul className="mt-6 flex flex-col gap-2.5 border-t border-white/[0.08] pt-6">
+                  {s.bullets.map((b) => (
+                    <li
+                      key={b}
+                      className="flex gap-3 text-sm leading-relaxed text-zinc-400 sm:text-[15px] sm:leading-relaxed"
+                    >
+                      <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-cauris-flame/70" aria-hidden />
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
+              {s.chips?.length ? (
+                <p className="mt-6 font-mono text-[10px] font-normal uppercase tracking-[0.12em] text-zinc-500 sm:text-[11px] sm:tracking-[0.14em]">
+                  {s.chips.join(" · ")}
+                </p>
+              ) : null}
+              {s.closingLine ? (
+                <p className="mt-5 text-sm font-medium leading-relaxed text-zinc-200 sm:text-[15px] sm:leading-relaxed">
+                  {s.closingLine}
+                </p>
+              ) : null}
             </ScrollReveal>
           ))}
         </div>
