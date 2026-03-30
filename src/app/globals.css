@@ -50,7 +50,7 @@ body {
   position: fixed;
   inset: 0;
   z-index: -1;
-  background-color: var(--cauris-black);
+  background-color: transparent;
   background-image:
     radial-gradient(
       ellipse 120% 80% at 50% -30%,
@@ -59,15 +59,22 @@ body {
     ),
     radial-gradient(
       ellipse 90% 60% at 100% 20%,
-      rgba(232, 148, 58, 0.06) 0%,
-      transparent 50%
+      rgba(232, 148, 58, 0.07) 0%,
+      transparent 52%
     ),
     radial-gradient(
       ellipse 70% 50% at 0% 80%,
-      var(--cauris-horizon) 0%,
-      transparent 45%
+      rgba(15, 23, 42, 0.32) 0%,
+      transparent 48%
     ),
-    linear-gradient(to bottom, var(--cauris-void) 0%, var(--cauris-black) 38%, var(--cauris-black) 100%);
+    linear-gradient(
+      to bottom,
+      rgba(3, 3, 4, 0.42) 0%,
+      rgba(0, 0, 0, 0.12) 28%,
+      transparent 52%,
+      rgba(0, 0, 0, 0.22) 78%,
+      rgba(0, 0, 0, 0.32) 100%
+    );
 }
 
 .cauris-grid {
@@ -125,7 +132,7 @@ body {
   background: radial-gradient(
     ellipse 75% 65% at 50% 45%,
     transparent 0%,
-    rgba(0, 0, 0, 0.55) 100%
+    rgba(0, 0, 0, 0.32) 100%
   );
 }
 
