@@ -1,45 +1,50 @@
 import { LightDemoContainer } from "./LightDemoContainer";
 import { LightDemoSection } from "./LightDemoSection";
+import { ldSectionLead, ldSectionKicker, ldSectionTitle } from "./lightDemoUi";
 
 const cards = [
   {
-    title: "Websites",
+    title: "Member network",
     description:
-      "Clear, modern sites that present your business with confidence and guide visitors toward action.",
+      "Curated mix of consultants, founders, and remote teams—designed so chance encounters turn into useful collaborations.",
   },
   {
-    title: "Business Systems",
+    title: "Events & roundtables",
     description:
-      "Structured tools for inventory, booking, and day-to-day operations—so nothing important slips through the cracks.",
+      "Workshops and hosted evenings that build reputation and give newcomers a natural way to plug in.",
   },
   {
-    title: "Growth Tools",
+    title: "Shared wins",
     description:
-      "Digital touchpoints and workflows built to improve visibility, efficiency, and how customers engage with you.",
+      "Visible wins—from launches to hires—celebrated in-channel so momentum stays high without noise.",
   },
 ] as const;
 
 export function LightDemoServicesCards() {
   return (
-    <LightDemoSection id="what-we-do" aria-labelledby="ld-services-heading">
+    <LightDemoSection
+      id="community"
+      aria-labelledby="ld-community-heading"
+      className="border-t border-neutral-100/80 bg-white"
+    >
       <LightDemoContainer>
         <div className="mx-auto max-w-2xl text-center">
-          <h2
-            id="ld-services-heading"
-            className="text-3xl font-semibold tracking-[-0.02em] text-neutral-900 sm:text-4xl"
-          >
-            What We Do
+          <p className={ldSectionKicker}>Networking</p>
+          <h2 id="ld-community-heading" className={`${ldSectionTitle} mt-3`}>
+            Community &amp; networking
           </h2>
-          <p className="mt-5 text-pretty text-base leading-relaxed text-neutral-600 sm:text-lg">
-            Three ways we help your business show up clearly and run smoothly.
+          <p className={ldSectionLead}>
+            Built for productivity, meetings, networking, and momentum—so the brand feels alive the
+            moment someone lands on the page. Same storytelling priority as a strong hub site, with
+            calmer cards and more breathing room.
           </p>
         </div>
 
-        <ul className="mt-12 grid list-none gap-6 sm:mt-14 md:grid-cols-3 md:gap-8">
+        <ul className="mt-10 grid list-none gap-6 sm:mt-14 md:grid-cols-3 md:gap-8">
           {cards.map((card) => (
             <li key={card.title} className="flex min-h-0">
-              <article className="flex h-full w-full flex-col rounded-2xl border border-neutral-100 bg-white p-8 shadow-sm sm:p-9">
-                <h3 className="text-xl font-semibold tracking-[-0.02em] text-neutral-900">
+              <article className="flex h-full w-full flex-col rounded-2xl border border-neutral-100 bg-neutral-50/40 p-7 shadow-sm transition-shadow duration-300 hover:shadow-md sm:p-9">
+                <h3 className="text-lg font-semibold tracking-[-0.02em] text-neutral-900 sm:text-xl">
                   {card.title}
                 </h3>
                 <p className="mt-4 flex-1 text-pretty text-base leading-relaxed text-neutral-600">

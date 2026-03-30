@@ -1,57 +1,58 @@
 import Link from "next/link";
 import { LightDemoContainer } from "./LightDemoContainer";
 import { LightDemoSection } from "./LightDemoSection";
+import {
+  ldBtnPrimaryCompact,
+  ldBtnSecondaryCompact,
+  ldSectionDeck,
+  ldSectionLead,
+  ldSectionKicker,
+  ldSectionTitle,
+} from "./lightDemoUi";
 
 const baseCard =
-  "flex h-full min-h-0 flex-col rounded-2xl border bg-white p-8 sm:p-9 lg:p-10";
+  "flex h-full min-h-0 flex-col rounded-2xl border bg-white p-7 sm:p-9 lg:p-10";
 
-const quietCard = `${baseCard} border-neutral-100 shadow-sm`;
+const quietCard = `${baseCard} border-neutral-200/80 shadow-[0_1px_0_rgba(15,23,42,0.04)]`;
 
-const featuredCard = `${baseCard} relative border-blue-200/90 shadow-md shadow-blue-900/5 ring-1 ring-blue-100/60 lg:z-[1] lg:-my-1 lg:scale-[1.02]`;
+const featuredCard = `${baseCard} relative border-blue-200/90 bg-gradient-to-b from-sky-50/60 via-white to-white shadow-[0_8px_30px_-8px_rgba(37,99,235,0.12)] ring-1 ring-blue-100/80 lg:z-[1] lg:-my-0.5 lg:scale-[1.02]`;
 
-const btnPrimary =
-  "mt-10 inline-flex min-h-12 w-full items-center justify-center rounded-lg bg-blue-600 px-6 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 lg:mt-auto";
-
-const btnSecondary =
-  "mt-10 inline-flex min-h-12 w-full items-center justify-center rounded-lg border border-neutral-200 bg-white px-6 text-sm font-semibold text-neutral-800 shadow-sm transition-colors hover:bg-neutral-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400 focus-visible:ring-offset-2 lg:mt-auto";
-
-const tiers = [
+const plans = [
   {
-    title: "Starter Website",
-    description: "A focused online presence for businesses getting started or refreshing essentials.",
+    title: "Flex membership",
+    description: "Ideal for travelers and hybrid teams who need quality space a few times a month.",
     features: [
-      "1–3 core pages tailored to your offer",
-      "Mobile-friendly layout and clear calls-to-action",
-      "Contact path and deployment you can own",
+      "Shared workspace access on scheduled days",
+      "Member rates on meeting rooms",
+      "Community events included",
     ],
-    price: "Starting at $300",
-    cta: "Discuss Starter",
+    price: "From $149 / mo · concept pricing",
+    cta: "Request details",
     featured: false,
   },
   {
-    title: "Growth System",
-    description: "Stronger structure for teams that need credibility, clarity, and room to expand.",
+    title: "Dedicated desk",
+    description: "Your home base—lockable storage, consistent neighbors, and room to settle in.",
     features: [
-      "Deeper site architecture (4–7 pages or equivalent)",
-      "Brand-aligned visuals, typography, and tone",
-      "Performance-minded front end and SEO basics",
-      "Conversion-oriented section flow",
+      "Reserved desk in a bright open studio",
+      "24/7 access where available",
+      "Mail & package handling options",
+      "Priority booking for collaboration rooms",
     ],
-    price: "Starting at $2,000",
-    cta: "Explore Growth",
+    price: "From $349 / mo · concept pricing",
+    cta: "Join waitlist",
     featured: true,
   },
   {
-    title: "Full Business System",
-    description: "Custom build for operators who want tools—not just pages—behind their brand.",
+    title: "Private office suite",
+    description: "For teams that need a door, signage, and a predictable place for clients to visit.",
     features: [
-      "Fully scoped UX and bespoke layout",
-      "Backend or workflow logic where the job requires it",
-      "Dashboards, integrations, or demos when in scope",
-      "Ongoing alignment through delivery and launch",
+      "Enclosed suite with meeting table",
+      "Branded entry options",
+      "Scales with headcount",
     ],
-    price: "Starting at $5,000",
-    cta: "Plan a Full Build",
+    price: "Custom · concept pricing",
+    cta: "Talk with us",
     featured: false,
   },
 ] as const;
@@ -59,58 +60,56 @@ const tiers = [
 export function LightDemoOurSystems() {
   return (
     <LightDemoSection
-      id="our-systems"
-      aria-labelledby="ld-our-systems-heading"
-      className="bg-white"
+      id="membership"
+      aria-labelledby="ld-membership-heading"
+      className="border-t border-neutral-100/80 bg-white"
     >
       <LightDemoContainer>
         <div className="mx-auto max-w-2xl text-center">
-          <h2
-            id="ld-our-systems-heading"
-            className="text-3xl font-semibold tracking-[-0.02em] text-neutral-900 sm:text-4xl"
-          >
-            Our Systems
+          <p className={ldSectionKicker}>Plans</p>
+          <h2 id="ld-membership-heading" className={`${ldSectionTitle} mt-3`}>
+            Membership
           </h2>
-          <p className="mt-5 text-pretty text-base leading-relaxed text-neutral-600 sm:text-lg">
-            Three clear paths—pick what matches your stage. Every engagement is scoped in writing
-            before we build.
+          <p className={ldSectionLead}>
+            Three clear tiers—a decision-friendly layout that echoes familiar coworking pricing pages,
+            then refines hierarchy and spacing so scanning feels effortless.
+          </p>
+          <p className={ldSectionDeck}>
+            Figures are illustrative for this SCS Nova concept only—not an offer from any real venue.
           </p>
         </div>
 
-        <ul className="mx-auto mt-14 grid max-w-6xl list-none gap-8 lg:mt-20 lg:grid-cols-3 lg:items-stretch lg:gap-6 xl:gap-8">
-          {tiers.map((tier) => (
-            <li key={tier.title} className="flex min-h-0 lg:min-h-0">
+        <ul className="mx-auto mt-12 grid max-w-6xl list-none gap-6 sm:mt-16 sm:gap-8 lg:mt-20 lg:grid-cols-3 lg:items-stretch lg:gap-6 xl:gap-8">
+          {plans.map((plan) => (
+            <li key={plan.title} className="flex min-h-0">
               <article
-                className={tier.featured ? featuredCard : quietCard}
-                aria-label={`${tier.title}${tier.featured ? ", recommended option" : ""}`}
+                className={plan.featured ? featuredCard : quietCard}
+                aria-label={`${plan.title}${plan.featured ? ", popular option" : ""}`}
               >
-                {tier.featured ? (
-                  <p className="mb-4 font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-blue-700 sm:text-[11px]">
-                    Most businesses start here
+                {plan.featured ? (
+                  <p className="mb-3 font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-blue-700 sm:mb-4 sm:text-[11px]">
+                    Most teams start here
                   </p>
                 ) : null}
                 <h3 className="text-xl font-semibold tracking-[-0.02em] text-neutral-900 sm:text-2xl">
-                  {tier.title}
+                  {plan.title}
                 </h3>
                 <p className="mt-4 text-pretty text-base leading-relaxed text-neutral-600">
-                  {tier.description}
+                  {plan.description}
                 </p>
-                <ul className="mt-8 space-y-3 border-t border-neutral-100 pt-8 text-left text-sm leading-relaxed text-neutral-700 sm:text-[15px]">
-                  {tier.features.map((f) => (
+                <ul className="mt-7 space-y-2.5 border-t border-neutral-100 pt-7 text-left text-sm leading-relaxed text-neutral-700 sm:space-y-3 sm:text-[15px]">
+                  {plan.features.map((f) => (
                     <li key={f} className="flex gap-3">
-                      <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-blue-400/80" aria-hidden />
+                      <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-blue-500/80" aria-hidden />
                       <span>{f}</span>
                     </li>
                   ))}
                 </ul>
-                {tier.price ? (
-                  <p className="mt-8 font-medium text-neutral-900">{tier.price}</p>
+                {plan.price ? (
+                  <p className="mt-7 text-base font-semibold tracking-tight text-neutral-900">{plan.price}</p>
                 ) : null}
-                <p className="mt-1 text-xs leading-relaxed text-neutral-500">
-                  Final investment depends on scope—we quote after intake.
-                </p>
-                <Link href="#contact" className={tier.featured ? btnPrimary : btnSecondary}>
-                  {tier.cta}
+                <Link href="#contact" className={`mt-8 ${plan.featured ? ldBtnPrimaryCompact : ldBtnSecondaryCompact}`}>
+                  {plan.cta}
                 </Link>
               </article>
             </li>

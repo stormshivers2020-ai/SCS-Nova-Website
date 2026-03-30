@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useState, type FormEvent } from "react";
-import { buildBusinessMailto } from "@/data/siteContact";
+import { buildLightDemoMailto } from "@/data/lightDemoConcept";
 
 export function LightDemoContactForm() {
   const [name, setName] = useState("");
@@ -20,8 +20,8 @@ export function LightDemoContactForm() {
         .filter(Boolean)
         .join("\n");
 
-      const href = buildBusinessMailto({
-        subject: "SCS Nova — Light demo contact",
+      const href = buildLightDemoMailto({
+        subject: "SCS Nova — Coworking redesign concept inquiry",
         body,
       });
       window.location.href = href;
@@ -30,10 +30,10 @@ export function LightDemoContactForm() {
   );
 
   const inputClass =
-    "w-full rounded-lg border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 shadow-sm outline-none transition-colors placeholder:text-neutral-400 focus:border-blue-300 focus:ring-2 focus:ring-blue-200/60";
+    "w-full rounded-xl border border-neutral-200/90 bg-white px-4 py-3 text-sm text-neutral-900 shadow-sm outline-none ring-1 ring-neutral-100/80 transition-colors placeholder:text-neutral-400 focus:border-blue-300 focus:ring-2 focus:ring-blue-200/60";
 
   return (
-    <form onSubmit={onSubmit} className="mx-auto mt-10 max-w-md space-y-5 text-left">
+    <form onSubmit={onSubmit} className="mx-auto max-w-md space-y-5 text-left sm:mx-0 lg:max-w-none">
       <div>
         <label htmlFor="ld-contact-name" className="block text-sm font-medium text-neutral-700">
           Name
@@ -78,7 +78,7 @@ export function LightDemoContactForm() {
       </div>
       <button
         type="submit"
-        className="w-full min-h-12 rounded-lg bg-blue-600 px-6 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-sky-50"
+        className="w-full min-h-12 rounded-xl bg-blue-600 px-6 text-sm font-semibold text-white shadow-[0_4px_20px_rgba(37,99,235,0.22)] transition-all hover:bg-blue-700 hover:shadow-[0_6px_28px_rgba(37,99,235,0.3)] focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
       >
         Send message
       </button>

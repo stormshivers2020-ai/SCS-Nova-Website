@@ -1,33 +1,33 @@
 import { LightDemoContainer } from "./LightDemoContainer";
 import { LightDemoSection } from "./LightDemoSection";
+import { ldSectionLead, ldSectionKicker, ldSectionTitle } from "./lightDemoUi";
 
 const bullets = [
-  "attract more customers",
-  "streamline operations",
-  "improve professionalism",
-  "scalable systems",
+  "Flexible options for solo focus days and collaborative weeks",
+  "Meeting-ready rooms without the overhead of a long lease",
+  "A professional first impression for clients and partners",
+  "Community programming that turns introductions into real relationships",
 ] as const;
 
 export function LightDemoWhyNova() {
   return (
     <LightDemoSection
-      id="why"
+      id="why-space"
       aria-labelledby="ld-why-heading"
-      className="bg-neutral-50"
+      className="border-t border-neutral-100/80 bg-neutral-50/90"
     >
       <LightDemoContainer>
         <div className="mx-auto max-w-2xl text-center">
-          <h2
-            id="ld-why-heading"
-            className="text-3xl font-semibold tracking-[-0.02em] text-neutral-900 sm:text-4xl"
-          >
-            Why SCS Nova
+          <p className={ldSectionKicker}>Why this space</p>
+          <h2 id="ld-why-heading" className={`${ldSectionTitle} mt-3`}>
+            Why choose this space
           </h2>
-          <p className="mt-6 text-pretty text-base leading-relaxed text-neutral-600 sm:text-lg sm:leading-relaxed">
-            We focus on outcomes you can feel: clearer presence, smoother day-to-day operations, and
-            systems that keep working as you grow.
+          <p className={ldSectionLead}>
+            Members stay when the environment matches how work really happens—focused blocks, real
+            conversations, and infrastructure that stays out of the way. This section mirrors the
+            “why us” beat you see on leading coworking sites, tightened for clarity.
           </p>
-          <ul className="mx-auto mt-10 max-w-lg list-disc space-y-4 pl-6 text-left text-base leading-relaxed text-neutral-700 marker:text-neutral-400 sm:pl-7 sm:text-[17px]">
+          <ul className="mx-auto mt-10 max-w-lg list-disc space-y-4 pl-6 text-left text-base leading-relaxed text-neutral-700 marker:text-blue-500/70 sm:mt-12 sm:pl-7 sm:text-[17px]">
             {bullets.map((item) => (
               <li key={item} className="pl-1">
                 {item}

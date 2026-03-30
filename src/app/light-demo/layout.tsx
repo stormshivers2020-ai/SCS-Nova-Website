@@ -3,8 +3,9 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "Light demo",
-  description: "SCS Nova — light theme business design option (demo).",
+  title: "Think Tank–inspired coworking redesign — SCS Nova concept",
+  description:
+    "How SCS Nova would elevate a coworking site: cleaner layout and flow inspired by Think Tank Co-Works’ structure—not a copy, not live venue contact info.",
 };
 
 export default function LightDemoLayout({ children }: { children: ReactNode }) {
@@ -13,7 +14,8 @@ export default function LightDemoLayout({ children }: { children: ReactNode }) {
       <header className="border-b border-neutral-200/90 bg-white">
         <div className="mx-auto flex max-w-[75rem] flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8">
           <p className="text-xs font-medium text-neutral-500 sm:text-sm">
-            Light theme preview · <span className="text-neutral-700">SCS Nova</span>
+            Upgraded coworking site concept · <span className="text-neutral-700">SCS Nova</span>
+            <span className="hidden sm:inline"> · Think Tank–inspired structure</span>
           </p>
           <Link
             href="/"
