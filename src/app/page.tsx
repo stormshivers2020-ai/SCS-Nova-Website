@@ -5,6 +5,7 @@ import {
   CompanyContactSection,
   Hero,
   PhilosophySection,
+  LightDemoPromoSection,
   RangeOSSection,
   SelectedWorkSection,
   ServicesSection,
@@ -33,6 +34,7 @@ export default function Home() {
         <ApparelSection />
         <SelectedWorkSection />
         <ServicesSection />
+        <LightDemoPromoSection />
         <RangeOSSection />
         <TheSystemSection />
         <PhilosophySection />
