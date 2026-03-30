@@ -53,9 +53,9 @@ export function ScrollReveal({
       className={`${className} ${
         shown
           ? `opacity-100 translate-y-0 ${visibleClassName}`
-          : "opacity-0 translate-y-8"
+          : "opacity-0 translate-y-6"
       } transition-[opacity,transform] ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:translate-y-0 motion-reduce:opacity-100 ${
-        slow ? "duration-[1200ms]" : "duration-[950ms]"
+        slow ? "duration-[var(--cauris-duration-reveal-slow)]" : "duration-[var(--cauris-duration-reveal)]"
       }`}
       style={{
         transitionDelay: shown ? `${delayMs}ms` : "0ms",

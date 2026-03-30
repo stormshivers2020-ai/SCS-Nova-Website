@@ -3,6 +3,7 @@
 import type { ReactNode } from "react";
 import { demoUi } from "@/components/demo/demoUi";
 import {
+  demoPhaseEyebrows,
   demoVaultArtifacts,
   demoVaultContinuity,
   demoVaultIntro,
@@ -108,7 +109,7 @@ export function DemoVaultStep() {
   return (
     <div className={demoUi.region} role="region" aria-labelledby={titleId}>
       <div className={demoUi.introMax}>
-        <p className={demoUi.kicker}>Guided preview</p>
+        <p className={demoUi.phaseEyebrow}>{demoPhaseEyebrows.vault}</p>
         <h2 id={titleId} className={demoUi.stepTitle}>
           {demoVaultIntro.title}
         </h2>
@@ -129,7 +130,7 @@ export function DemoVaultStep() {
       <div className={`${demoUi.sectionY} ${demoUi.gridSplit}`}>
         <div className="flex flex-col gap-8 sm:gap-10">
           <article
-            className={`demo-vault-hero relative overflow-hidden ${demoUi.roundedPanel} border ${demoUi.borderHairline} bg-zinc-950/80 p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.04),inset_0_0_0_1px_rgba(255,255,255,0.02)] sm:p-9`}
+            className={`demo-vault-hero relative overflow-hidden ${demoUi.roundedPanel} border border-white/[0.11] bg-zinc-950/88 p-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.06),inset_0_0_0_1px_rgba(255,255,255,0.03),0_24px_64px_rgba(0,0,0,0.35)] ring-1 ring-cauris-gold/[0.08] sm:p-10`}
             style={{
               backgroundImage:
                 "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(71, 85, 105, 0.12), transparent 55%), radial-gradient(ellipse 50% 45% at 100% 100%, rgba(88, 60, 180, 0.08), transparent 60%)",
@@ -144,11 +145,11 @@ export function DemoVaultStep() {
               aria-hidden
             />
             <div className="relative">
-              <p className={`${demoUi.kickerTrack} text-zinc-500`}>Secure reference</p>
-              <h3 className="mt-4 text-xl font-semibold tracking-tight text-zinc-50 sm:text-2xl">
+              <p className={`${demoUi.kickerTrack} text-zinc-400`}>Secure reference</p>
+              <h3 className="mt-5 text-xl font-semibold tracking-[-0.02em] text-zinc-50 sm:text-2xl">
                 {demoVaultMain.title}
               </h3>
-              <p className="mt-4 max-w-2xl text-pretty text-sm leading-relaxed text-zinc-400 sm:text-[15px]">
+              <p className="mt-4 max-w-2xl text-pretty text-sm font-medium leading-relaxed text-zinc-400 sm:text-[15px]">
                 {demoVaultMain.body}
               </p>
             </div>
@@ -162,7 +163,7 @@ export function DemoVaultStep() {
             {demoVaultArtifacts.map((artifact, i) => (
               <li
                 key={artifact.id}
-                className={`demo-vault-tile group relative overflow-hidden rounded-xl border ${demoUi.borderHairline} bg-gradient-to-b from-white/[0.02] to-black/40 p-5 ${demoUi.panelInset} transition duration-500 hover:border-white/[0.12] hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.05),0_0_32px_rgba(88,60,180,0.06)]`}
+                className={`demo-vault-tile group relative overflow-hidden rounded-brand border border-white/[0.11] bg-gradient-to-b from-white/[0.065] to-black/26 p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_18px_44px_rgba(0,0,0,0.22)] ring-1 ring-white/[0.04] backdrop-blur-md transition duration-500 hover:border-white/[0.15] hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.07),0_0_40px_rgba(88,60,180,0.08)]`}
                 style={{ animationDelay: `${100 + i * 55}ms` }}
               >
                 <div
@@ -185,7 +186,7 @@ export function DemoVaultStep() {
 
         <aside className={demoUi.stickyAside}>
           <div
-            className={`relative overflow-hidden ${demoUi.roundedPanel} border ${demoUi.borderHairline} bg-zinc-950/70 p-6 ${demoUi.panelInset}`}
+            className={`relative overflow-hidden ${demoUi.roundedPanel} border border-white/[0.1] bg-zinc-950/78 p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] ring-1 ring-white/[0.05] backdrop-blur-md`}
           >
             <div
               className="pointer-events-none absolute right-0 top-0 h-24 w-24 translate-x-1/3 -translate-y-1/3 rounded-full bg-indigo-600/[0.06] blur-3xl"

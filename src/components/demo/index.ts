@@ -1,3 +1,10 @@
+export {
+  DemoAmbient,
+  DemoProgressBar,
+  DemoStepNavDesktop,
+  DemoStepRegion,
+  useDemoArrowNavigation,
+} from "./shared";
 export { CaurisDemoExperience } from "./CaurisDemoExperience";
 export { DemoCompassStep } from "./DemoCompassStep";
 export { DemoEarlyAccessStep } from "./DemoEarlyAccessStep";

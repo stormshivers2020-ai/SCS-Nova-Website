@@ -1,5 +1,6 @@
 import { demoUi } from "@/components/demo/demoUi";
 import { rangeOSDemoUi } from "@/components/demo/rangeOSDemoUi";
+import { rangeOSPhaseEyebrows } from "@/data/rangeOSDemoContent";
 import {
   rangeOSDemoInventoryItems,
   rangeOSInventoryIntro,
@@ -117,6 +118,7 @@ export function RangeOSInventoryStep() {
   return (
     <div className={demoUi.region} role="region" aria-labelledby={headingId}>
       <header className={demoUi.introMax}>
+        <p className={demoUi.phaseEyebrow}>{rangeOSPhaseEyebrows.inventory}</p>
         <h2 id={headingId} className={demoUi.stepTitle}>
           {intro.title}
         </h2>

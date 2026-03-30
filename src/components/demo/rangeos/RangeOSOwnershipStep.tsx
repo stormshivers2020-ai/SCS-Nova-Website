@@ -1,5 +1,6 @@
 import { demoUi } from "@/components/demo/demoUi";
 import { rangeOSDemoUi } from "@/components/demo/rangeOSDemoUi";
+import { rangeOSPhaseEyebrows } from "@/data/rangeOSDemoContent";
 import {
   rangeOSDemoOwnershipModels,
   rangeOSOwnershipIntro,
@@ -18,19 +19,21 @@ function OwnershipModelCard({ model }: { model: RangeOSOwnershipModel }) {
           aria-hidden
         />
       ) : null}
-      <h3 className="text-lg font-semibold tracking-tight text-zinc-50 sm:text-xl">{model.title}</h3>
-      <p className="mt-2 text-sm leading-relaxed text-zinc-500">{model.tagline}</p>
-      <p className="mt-5 text-2xl font-semibold tracking-tight text-zinc-50 sm:text-[1.65rem]">
+      <h3 className="text-lg font-semibold tracking-[-0.02em] text-zinc-50 sm:text-xl">{model.title}</h3>
+      <p className="mt-2 text-sm font-medium leading-relaxed text-zinc-500">{model.tagline}</p>
+      <p className="mt-1 font-mono text-[10px] font-medium uppercase tracking-[0.2em] text-zinc-600 sm:text-[11px]">
+        Typical investment
+      </p>
+      <p className="mt-2 text-2xl font-semibold tracking-[-0.02em] text-zinc-50 sm:text-[1.65rem]">
         {model.price}
       </p>
-      <ul className="mt-6 flex flex-col gap-2.5 border-t border-white/[0.08] pt-6">
+      <ul className="mt-6 flex flex-col gap-3 border-t border-white/[0.09] pt-6">
         {model.bullets.map((b) => (
-          <li key={b} className="flex gap-2.5 text-sm leading-snug text-zinc-200">
-            <span
-              className="mt-2 h-1 w-1 shrink-0 rounded-full bg-cauris-flame/55"
-              aria-hidden
-            />
-            <span>{b}</span>
+          <li
+            key={b}
+            className="border-l border-cauris-gold/[0.16] pl-4 text-sm leading-relaxed text-zinc-200"
+          >
+            {b}
           </li>
         ))}
       </ul>
@@ -45,6 +48,7 @@ export function RangeOSOwnershipStep() {
   return (
     <div className={demoUi.region} role="region" aria-labelledby={headingId}>
       <header className={demoUi.introMax}>
+        <p className={demoUi.phaseEyebrow}>{rangeOSPhaseEyebrows.ownership}</p>
         <h2 id={headingId} className={demoUi.stepTitle}>
           {intro.title}
         </h2>
@@ -52,13 +56,13 @@ export function RangeOSOwnershipStep() {
       </header>
 
       <div className={demoUi.sectionY}>
-        <p className={demoUi.kicker}>How to engage</p>
+        <p className={`${demoUi.kickerTrack} text-zinc-500`}>How to engage</p>
         <div className="mt-6 grid gap-5 md:grid-cols-2 md:gap-6">
           {rangeOSDemoOwnershipModels.map((model) => (
             <OwnershipModelCard key={model.id} model={model} />
           ))}
         </div>
-        <p className="mx-auto mt-10 max-w-2xl text-center text-sm font-medium leading-relaxed text-zinc-500 sm:mt-12 sm:text-base">
+        <p className="mx-auto mt-10 max-w-2xl text-center text-sm font-medium leading-relaxed text-zinc-500 sm:mt-12 sm:text-[15px]">
           {rangeOSOwnershipSupportLine}
         </p>
       </div>

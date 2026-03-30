@@ -1,6 +1,8 @@
 /**
- * Demo config — fictional, public-safe copy only. No real user data.
+ * Cauris guided tour — sample copy and UI only; no accounts or backend.
  */
+
+import { MAILTO_SUBJECTS } from "@/data/siteContact";
 
 /** Header progress labels (order = step index 0…7). */
 export const demoStepLabels = [
@@ -16,10 +18,21 @@ export const demoStepLabels = [
 
 export const demoWelcome = {
   title: "Cauris Demo",
-  subheadline: "One guided path through how Cauris thinks.",
-  body: "This is an interactive preview — fictional thread, browser-only. You will move from raw capture to timeline, pattern layer, insight, direction, secure reference, and a calm path to stay in touch with the build.",
+  subheadline: "Walk the product arc — from first capture to calm guidance.",
+  body: "Browser-only walkthrough: sample thread and UI, no account and nothing sent to a server. Same story the product is built around — capture, then structure, then guidance you can weigh for yourself.",
   ctaStart: "Begin the tour",
 };
+
+/** Step-specific editorial eyebrow — product language, sample data. */
+export const demoPhaseEyebrows = {
+  workspace: "Capture · workspace (sample)",
+  timeline: "Chronology · ordered memory",
+  helix: "Structure · pattern layer",
+  insight: "Synthesis · primary read",
+  compass: "Orientation · gentle guidance",
+  vault: "Retention · secure reference",
+  earlyAccess: "Roadmap · stay with the build",
+} as const;
 
 // —— Phase 3: Workspace ——
 
@@ -74,7 +87,7 @@ export const demoWorkspaceChips = ["Memories", "Timeline", "Patterns", "Insight"
 export const demoWorkspaceComposer = {
   placeholder: "Add a line to the thread (optional)...",
   sendLabel: "Send",
-  helper: "Preview only — scripted replies; nothing leaves your browser.",
+  helper: "Sample replies only — nothing leaves your browser.",
 };
 
 /**
@@ -154,7 +167,7 @@ export const demoTimelineChips = [
 /** Continuity hint linking back to the Workspace step (demo only). */
 export const demoTimelineContinuity = {
   label: "Same thread, now in order",
-  note: "The demo day is fictional — it exists to show how capture becomes chronology.",
+  note: "Sample day — shows how capture becomes chronology.",
 };
 
 // —— Phase 5: Helix ——
@@ -167,7 +180,7 @@ export const demoHelixIntro = {
 
 export const demoHelixContinuity = {
   label: "Chronology has now become connection",
-  note: "Relationships between themes — illustrative graph from the same preview thread.",
+  note: "Illustrative graph from the same sample thread.",
 };
 
 /** Node positions in SVG viewBox `0 0 120 100` (fictional graph). */
@@ -368,13 +381,14 @@ export const demoVaultSupport = {
 export const demoEarlyAccessIntro = {
   title: "See where Cauris is going.",
   supporting:
-    "Cauris is in development as a life-intelligence system — memory, structure, insight, and calm guidance.",
-  secondary: "Use the options below when you want a conversation with the team — no accounts here.",
+    "In development: life-side intelligence — memory, structure, insight, calm guidance.",
+  secondary:
+    "Early access, waitlist, or a straight note — each opens your mail app with the right subject; you send when ready.",
 };
 
 export const demoEarlyAccessContinuity = {
   label: "Memory, structure, insight — opening to early access",
-  note: "You followed one coherent preview thread. When you are ready for a real conversation, the team is reachable by email — no signup on this page.",
+  note: "One coherent sample thread. Ready to talk? Email the studio from here — no signup wall.",
 };
 
 export const demoEarlyAccessCtas = [
@@ -394,17 +408,17 @@ export const demoEarlyAccessCtas = [
   },
   {
     id: "demo",
-    label: "Book a conversation",
-    description: "Ask for a walkthrough or Q&A when the team can schedule it.",
-    subject: "Cauris Demo Request",
+    label: "Continue after the demo",
+    description: "Reference this tour and ask what you still want to understand.",
+    subject: MAILTO_SUBJECTS.caurisAfterDemo,
     emphasis: "secondary" as const,
   },
 ] as const;
 
 export const demoEarlyAccessForm = {
-  title: "Or write a short note",
+  title: "Or compose a note",
   helper:
-    "We will open your email client with this text ready to send. Nothing is transmitted from this page until you hit send.",
+    "Opens your email app with this text in the body — you can edit before sending. No data leaves this page until you send from your own client.",
   nameLabel: "Name",
   namePlaceholder: "Your name",
   emailLabel: "Email",
@@ -417,6 +431,6 @@ export const demoEarlyAccessForm = {
 
 export const demoEarlyAccessSupport = {
   title: "Early preview",
-  body: "Cauris is shipping in stages. This tour is intentionally public-safe: scripted content, no backend, no sign-in — so you can evaluate the direction with confidence.",
-  tags: ["In development", "Guided preview", "Browser-only", "Early access"] as const,
+  body: "Rolling out in stages. This tour is sample UI and copy in the browser — no backend, no sign-in — so you can judge the direction on its merits.",
+  tags: ["In development", "Sample UI", "Browser-only", "Early access"] as const,
 };

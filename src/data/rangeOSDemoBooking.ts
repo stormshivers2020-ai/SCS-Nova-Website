@@ -9,7 +9,7 @@ export const rangeOSBookingIntro = {
 
 export const rangeOSBookingFlowPanel = {
   title: "Customer flow",
-  body: "When the next step is obvious, more visitors complete it. Your team still confirms the details that matter.",
+  body: "Fewer phone tags: the site qualifies intent before staff touches the booking. Your desk still owns confirmation, payment, and lane assignment.",
 } as const;
 
 /** Schedule panel disclaimer — sets expectations without sounding like a toy. */

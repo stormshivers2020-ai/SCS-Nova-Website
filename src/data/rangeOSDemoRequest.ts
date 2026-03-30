@@ -2,19 +2,19 @@
  * RangeOS™ demo closing step — mailto CTAs via shared site contact helper.
  */
 
+import { MAILTO_SUBJECTS } from "@/data/siteContact";
+
 export const rangeOSRequestDemoIntro = {
   title: "See what RangeOS™ could look like for your range.",
-  lead: "Inventory, bookings, classes, and presentation — one scoped system for how your range serves customers online.",
+  lead: "The screens you toured — inventory, booking, programs, branding — built and scoped for your lanes, rules, and brand when you engage SCS Nova.",
 } as const;
 
 export const rangeOSRequestDemoSupportLine =
-  "Direct email to SCS Nova — share your range context and we’ll reply with next steps." as const;
-
-export const rangeOSRequestDemoKicker = "Contact" as const;
+  "Use a clear subject line; add city, lane count, and what isn’t working today — replies come from the studio with scope, timeline, and a cost band." as const;
 
 export const rangeOSRequestDemoSubjects = {
-  projectInquiry: "RangeOS Project Inquiry",
-  demoRequest: "RangeOS Demo Request",
+  projectInquiry: MAILTO_SUBJECTS.rangeOS,
+  demoRequest: MAILTO_SUBJECTS.rangeOSDemoFollowUp,
 } as const;
 
 export const rangeOSRequestDemoCtas = [
@@ -25,7 +25,7 @@ export const rangeOSRequestDemoCtas = [
   },
   {
     id: "request-demo",
-    label: "Request a walkthrough",
+    label: "Continue from this demo",
     subjectKey: "demoRequest" as const,
   },
   {

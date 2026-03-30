@@ -26,6 +26,18 @@
 
   --cauris-text: #f4f4f5;
   --cauris-muted: #a1a1aa;
+
+  --cauris-radius-card: 1.25rem;
+  --cauris-radius-pill: 9999px;
+  /* Unified motion — one easing, tiered durations (restrained, cinematic) */
+  --cauris-ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
+  --cauris-duration-hover: 380ms;
+  --cauris-duration-surface: 540ms;
+  --cauris-duration-reveal: 880ms;
+  --cauris-duration-reveal-slow: 1040ms;
+  --cauris-duration-hero: 940ms;
+  --cauris-duration-step: 700ms;
+  --cauris-duration-route: 400ms;
 }
 
 html {
@@ -42,6 +54,12 @@ body {
   @apply antialiased;
   background-color: var(--cauris-black);
   color: var(--cauris-text);
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: rgba(244, 176, 66, 0.22);
+  color: #fafafa;
 }
 
 /* —— Full-viewport cinematic stack (fixed, non-interactive) —— */
@@ -59,21 +77,26 @@ body {
     ),
     radial-gradient(
       ellipse 90% 60% at 100% 20%,
-      rgba(232, 148, 58, 0.07) 0%,
+      rgba(232, 148, 58, 0.085) 0%,
       transparent 52%
     ),
     radial-gradient(
+      ellipse 55% 35% at 50% 100%,
+      rgba(244, 176, 66, 0.04) 0%,
+      transparent 62%
+    ),
+    radial-gradient(
       ellipse 70% 50% at 0% 80%,
-      rgba(15, 23, 42, 0.32) 0%,
+      rgba(15, 23, 42, 0.22) 0%,
       transparent 48%
     ),
     linear-gradient(
       to bottom,
-      rgba(3, 3, 4, 0.42) 0%,
-      rgba(0, 0, 0, 0.12) 28%,
-      transparent 52%,
-      rgba(0, 0, 0, 0.22) 78%,
-      rgba(0, 0, 0, 0.32) 100%
+      rgba(3, 3, 4, 0.28) 0%,
+      rgba(0, 0, 0, 0.07) 28%,
+      transparent 54%,
+      rgba(0, 0, 0, 0.14) 78%,
+      rgba(0, 0, 0, 0.22) 100%
     );
 }
 
@@ -132,7 +155,7 @@ body {
   background: radial-gradient(
     ellipse 75% 65% at 50% 45%,
     transparent 0%,
-    rgba(0, 0, 0, 0.32) 100%
+    rgba(0, 0, 0, 0.22) 100%
   );
 }
 
@@ -147,30 +170,210 @@ body {
 /* —— Layout: premium section rhythm —— */
 @layer components {
   .section-y {
-    @apply py-24 md:py-32 lg:py-40;
+    @apply py-24 sm:py-28 md:py-36 lg:py-44;
   }
 
   .section-y-tight {
-    @apply py-16 md:py-24;
+    @apply py-16 sm:py-20 md:py-28;
   }
 
   .container-brand {
-    @apply mx-auto w-full max-w-5xl px-6 sm:px-8;
+    @apply mx-auto w-full max-w-5xl px-4 sm:px-7 lg:px-10;
+  }
+
+  /** Unified editorial label — homepage + demos */
+  .cauris-kicker {
+    @apply font-mono text-[10px] font-medium uppercase tracking-[0.32em] text-zinc-500 sm:text-[11px] sm:tracking-[0.26em];
+  }
+
+  /** Primary CTA — gold fill, dimensional, restrained motion */
+  .cauris-btn-primary {
+    @apply inline-flex h-12 min-h-12 w-full items-center justify-center rounded-full px-7 text-sm font-semibold text-black sm:w-auto sm:px-8;
+    background: linear-gradient(
+      180deg,
+      rgba(244, 176, 66, 0.98) 0%,
+      rgba(232, 148, 58, 0.96) 100%
+    );
+    box-shadow:
+      inset 0 1px 0 rgba(255, 253, 240, 0.22),
+      0 0 0 1px rgba(201, 162, 39, 0.14),
+      0 10px 36px rgba(0, 0, 0, 0.32),
+      0 0 52px rgba(244, 176, 66, 0.12);
+    transition:
+      transform var(--cauris-duration-hover) var(--cauris-ease-out-expo),
+      box-shadow var(--cauris-duration-hover) var(--cauris-ease-out-expo),
+      filter var(--cauris-duration-hover) ease,
+      background var(--cauris-duration-hover) var(--cauris-ease-out-expo);
+  }
+
+  .cauris-btn-primary:hover {
+    background: linear-gradient(
+      180deg,
+      rgba(253, 230, 138, 0.99) 0%,
+      rgba(244, 176, 66, 0.98) 100%
+    );
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.28),
+      0 0 0 1px rgba(244, 176, 66, 0.22),
+      0 14px 44px rgba(0, 0, 0, 0.38),
+      0 0 72px rgba(244, 176, 66, 0.16);
+    transform: translateY(-0.5px);
+  }
+
+  .cauris-btn-primary:focus-visible {
+    @apply outline-none ring-2 ring-cauris-flame ring-offset-2 ring-offset-black;
+  }
+
+  /** Secondary — gold glass rail */
+  .cauris-btn-secondary {
+    @apply inline-flex h-12 min-h-12 w-full items-center justify-center rounded-full border px-7 text-sm font-semibold text-cauris-dawn ring-1 sm:w-auto sm:px-8;
+    border-color: rgba(201, 162, 39, 0.36);
+    background-color: rgba(244, 176, 66, 0.09);
+    --tw-ring-color: rgba(201, 162, 39, 0.14);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.06),
+      0 8px 28px rgba(0, 0, 0, 0.22);
+    transition:
+      transform var(--cauris-duration-hover) var(--cauris-ease-out-expo),
+      border-color var(--cauris-duration-hover) var(--cauris-ease-out-expo),
+      background-color var(--cauris-duration-hover) var(--cauris-ease-out-expo),
+      color var(--cauris-duration-hover) var(--cauris-ease-out-expo),
+      box-shadow var(--cauris-duration-hover) var(--cauris-ease-out-expo);
+  }
+
+  .cauris-btn-secondary:hover {
+    @apply text-zinc-50;
+    border-color: rgba(244, 176, 66, 0.48);
+    background-color: rgba(244, 176, 66, 0.14);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.08),
+      0 12px 40px rgba(0, 0, 0, 0.28),
+      0 0 48px rgba(244, 176, 66, 0.1);
+    transform: translateY(-0.5px);
+  }
+
+  .cauris-btn-secondary:focus-visible {
+    @apply outline-none ring-2 ring-cauris-flame ring-offset-2 ring-offset-black;
+  }
+
+  /** Tertiary — neutral glass */
+  .cauris-btn-tertiary {
+    @apply inline-flex h-12 min-h-12 w-full items-center justify-center rounded-full border border-white/[0.11] bg-white/[0.035] px-7 text-sm font-medium text-zinc-200 ring-1 ring-white/[0.06] sm:w-auto sm:px-8;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    transition:
+      transform var(--cauris-duration-hover) var(--cauris-ease-out-expo),
+      border-color var(--cauris-duration-hover) var(--cauris-ease-out-expo),
+      background-color var(--cauris-duration-hover) var(--cauris-ease-out-expo),
+      color var(--cauris-duration-hover) var(--cauris-ease-out-expo),
+      box-shadow var(--cauris-duration-hover) var(--cauris-ease-out-expo);
+  }
+
+  .cauris-btn-tertiary:hover {
+    @apply border-gold-fade bg-white/[0.06] text-zinc-50;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.07),
+      0 10px 32px rgba(0, 0, 0, 0.2);
+    transform: translateY(-0.5px);
+  }
+
+  .cauris-btn-tertiary:focus-visible {
+    @apply outline-none ring-2 ring-cauris-flame ring-offset-2 ring-offset-black;
+  }
+
+  /** In-card CTAs — same language, rectangular radius */
+  .cauris-btn-primary-card {
+    @apply inline-flex min-h-12 flex-1 items-center justify-center rounded-xl px-6 py-3.5 text-sm font-semibold tracking-tight text-black sm:flex-none sm:min-h-11 sm:px-8 sm:py-0 sm:text-base;
+    background: linear-gradient(
+      180deg,
+      rgba(244, 176, 66, 0.98) 0%,
+      rgba(232, 148, 58, 0.96) 100%
+    );
+    box-shadow:
+      inset 0 1px 0 rgba(255, 253, 240, 0.2),
+      0 0 0 1px rgba(201, 162, 39, 0.12),
+      0 8px 28px rgba(0, 0, 0, 0.28),
+      0 0 44px rgba(244, 176, 66, 0.09);
+    transition:
+      transform var(--cauris-duration-hover) var(--cauris-ease-out-expo),
+      box-shadow var(--cauris-duration-hover) var(--cauris-ease-out-expo),
+      background var(--cauris-duration-hover) var(--cauris-ease-out-expo),
+      border-color var(--cauris-duration-hover) var(--cauris-ease-out-expo),
+      color var(--cauris-duration-hover) var(--cauris-ease-out-expo);
+  }
+
+  .cauris-btn-primary-card:hover {
+    background: linear-gradient(
+      180deg,
+      rgba(253, 230, 138, 0.99) 0%,
+      rgba(244, 176, 66, 0.98) 100%
+    );
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.26),
+      0 0 0 1px rgba(244, 176, 66, 0.2),
+      0 12px 36px rgba(0, 0, 0, 0.34),
+      0 0 56px rgba(244, 176, 66, 0.12);
+    transform: translateY(-0.5px);
+  }
+
+  .cauris-btn-primary-card:focus-visible {
+    @apply outline-none ring-2 ring-cauris-flame ring-offset-2 ring-offset-black;
+  }
+
+  .cauris-btn-tertiary-card {
+    @apply inline-flex min-h-12 flex-1 items-center justify-center rounded-xl border border-white/[0.12] bg-white/[0.035] px-6 py-3.5 text-sm font-semibold tracking-tight text-zinc-200 ring-1 ring-white/[0.06] sm:flex-none sm:min-h-11 sm:px-8 sm:py-0 sm:text-base;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    transition:
+      transform var(--cauris-duration-hover) var(--cauris-ease-out-expo),
+      border-color var(--cauris-duration-hover) var(--cauris-ease-out-expo),
+      background-color var(--cauris-duration-hover) var(--cauris-ease-out-expo),
+      color var(--cauris-duration-hover) var(--cauris-ease-out-expo),
+      box-shadow var(--cauris-duration-hover) var(--cauris-ease-out-expo);
+  }
+
+  .cauris-btn-tertiary-card:hover {
+    @apply bg-white/[0.06] text-zinc-50;
+    border-color: rgba(201, 162, 39, 0.25);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.07),
+      0 10px 32px rgba(0, 0, 0, 0.22);
+    transform: translateY(-0.5px);
+  }
+
+  .cauris-btn-tertiary-card:focus-visible {
+    @apply outline-none ring-2 ring-cauris-flame ring-offset-2 ring-offset-black;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cauris-btn-primary:hover,
+  .cauris-btn-secondary:hover,
+  .cauris-btn-tertiary:hover,
+  .cauris-btn-primary-card:hover,
+  .cauris-btn-tertiary-card:hover {
+    transform: none;
   }
 }
 
 /* —— Reusable glow & surface utilities —— */
 @layer utilities {
   .glow-gold-soft {
-    box-shadow: 0 0 48px var(--cauris-glow-soft), 0 0 120px rgba(244, 176, 66, 0.06);
+    box-shadow: 0 0 52px var(--cauris-glow-soft), 0 0 128px rgba(244, 176, 66, 0.07);
   }
 
   .glow-gold-focus {
-    box-shadow: 0 0 0 1px rgba(244, 176, 66, 0.25), 0 0 36px var(--cauris-glow-mid);
+    box-shadow: 0 0 0 1px rgba(244, 176, 66, 0.28), 0 0 40px var(--cauris-glow-mid);
   }
 
   .ring-gold-subtle {
     box-shadow: inset 0 0 0 1px rgba(201, 162, 39, 0.18);
+  }
+
+  /** Demo chrome + inline controls — matches .cauris-btn-* timing */
+  .cauris-transition-interactive {
+    transition-property: transform, box-shadow, border-color, background-color, color, background, opacity,
+      filter;
+    transition-duration: var(--cauris-duration-hover);
+    transition-timing-function: var(--cauris-ease-out-expo);
   }
 
   .text-gradient-gold {
@@ -193,32 +396,61 @@ body {
   .bg-glass-header {
     background: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.72) 0%,
-      rgba(0, 0, 0, 0.45) 100%
+      rgba(0, 0, 0, 0.52) 0%,
+      rgba(0, 0, 0, 0.22) 100%
     );
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px) saturate(1.06);
+    -webkit-backdrop-filter: blur(14px) saturate(1.06);
+    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.04);
   }
 }
 
-/* Logo glow: slow breathe — transform handled on parent for parallax */
+/* Homepage hero — flagship entrance (stagger via animation-delay) */
+@keyframes hero-reveal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 12px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-reveal {
+    opacity: 0;
+    animation: hero-reveal var(--cauris-duration-hero) var(--cauris-ease-out-expo) forwards;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-reveal {
+    opacity: 1;
+    animation: none;
+  }
+}
+
+/* Logo glow: slow breathe — transform handled on parent for parallax (hero mark) */
 @media (prefers-reduced-motion: no-preference) {
   .cauris-logo-breathe {
-    animation: cauris-logo-breathe 5.5s ease-in-out infinite;
+    animation: cauris-logo-breathe 6.25s ease-in-out infinite;
   }
 }
 
 @keyframes cauris-logo-breathe {
   0%,
   100% {
-    filter: drop-shadow(0 0 28px rgba(244, 176, 66, 0.14))
-      drop-shadow(0 0 64px rgba(232, 148, 58, 0.06));
+    filter: drop-shadow(0 0 32px rgba(244, 176, 66, 0.16))
+      drop-shadow(0 0 72px rgba(232, 148, 58, 0.08))
+      drop-shadow(0 24px 48px rgba(0, 0, 0, 0.35));
     transform: scale(1);
   }
   50% {
-    filter: drop-shadow(0 0 40px rgba(244, 176, 66, 0.26))
-      drop-shadow(0 0 100px rgba(201, 162, 39, 0.1));
-    transform: scale(1.018);
+    filter: drop-shadow(0 0 48px rgba(244, 176, 66, 0.28))
+      drop-shadow(0 0 110px rgba(201, 162, 39, 0.11))
+      drop-shadow(0 28px 56px rgba(0, 0, 0, 0.4));
+    transform: scale(1.012);
   }
 }
 
@@ -244,33 +476,40 @@ body {
 
 /* Glass system cards */
 .cauris-glass-card {
+  border-radius: var(--cauris-radius-card);
   background: linear-gradient(
-    155deg,
-    rgba(255, 255, 255, 0.045) 0%,
-    rgba(255, 255, 255, 0.012) 48%,
-    rgba(0, 0, 0, 0.2) 100%
+    152deg,
+    rgba(255, 255, 255, 0.09) 0%,
+    rgba(255, 255, 255, 0.03) 42%,
+    rgba(0, 0, 0, 0.08) 100%
   );
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 24px 48px rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.09),
+    0 22px 52px rgba(0, 0, 0, 0.24),
+    0 0 0 1px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(15px) saturate(1.1);
+  -webkit-backdrop-filter: blur(15px) saturate(1.1);
   transition:
-    transform 700ms cubic-bezier(0.22, 1, 0.36, 1),
-    border-color 700ms ease,
-    box-shadow 700ms ease;
+    transform var(--cauris-duration-surface) var(--cauris-ease-out-expo),
+    border-color var(--cauris-duration-surface) var(--cauris-ease-out-expo),
+    box-shadow var(--cauris-duration-surface) var(--cauris-ease-out-expo);
 }
 
 .cauris-glass-card:hover {
-  border-color: rgba(201, 162, 39, 0.22);
+  border-color: rgba(201, 162, 39, 0.28);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.06),
-    0 28px 56px rgba(0, 0, 0, 0.4),
-    0 0 48px rgba(244, 176, 66, 0.05);
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 30px 64px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(244, 176, 66, 0.08),
+    0 0 56px rgba(244, 176, 66, 0.07);
 }
 
 @media (prefers-reduced-motion: reduce) {
   .cauris-glass-card {
-    transition: border-color 400ms ease, box-shadow 400ms ease;
+    transition:
+      border-color var(--cauris-duration-hover) ease,
+      box-shadow var(--cauris-duration-hover) ease;
   }
 }
 
@@ -331,21 +570,73 @@ body {
   }
 }
 
-/* —— Cauris product demo — step transitions —— */
+/* —— Cauris product demo — chrome + step transitions —— */
+.demo-cauris-header {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.78) 0%,
+    rgba(0, 0, 0, 0.42) 55%,
+    rgba(0, 0, 0, 0.32) 100%
+  );
+  backdrop-filter: blur(18px) saturate(1.12);
+  -webkit-backdrop-filter: blur(18px) saturate(1.12);
+  box-shadow:
+    inset 0 -1px 0 rgba(255, 255, 255, 0.055),
+    0 20px 48px rgba(0, 0, 0, 0.22);
+}
+
+.demo-cauris-footer {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.92) 0%,
+    rgba(0, 0, 0, 0.78) 45%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
+  backdrop-filter: blur(16px) saturate(1.08);
+  -webkit-backdrop-filter: blur(16px) saturate(1.08);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 -24px 56px rgba(0, 0, 0, 0.28);
+}
+
+.demo-welcome-hero {
+  animation: demo-welcome-in var(--cauris-duration-step) var(--cauris-ease-out-expo) both;
+}
+
+@keyframes demo-welcome-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.988);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .demo-welcome-hero {
+    animation: none;
+    opacity: 1;
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .demo-step-enter {
-    animation: demo-step-in 0.52s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation: demo-step-in var(--cauris-duration-step) var(--cauris-ease-out-expo) both;
   }
 }
 
 @keyframes demo-step-in {
   from {
     opacity: 0;
-    transform: translateY(7px);
+    transform: translateY(10px) scale(0.994);
+    filter: blur(4px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
+    filter: blur(0);
   }
 }
 
@@ -358,29 +649,29 @@ body {
 /* —— Demo Workspace — restrained bubble / signal entrance —— */
 @media (prefers-reduced-motion: no-preference) {
   .demo-workspace-bubble {
-    animation: demo-workspace-bubble-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation: demo-workspace-bubble-in var(--cauris-duration-surface) var(--cauris-ease-out-expo) both;
   }
 
   .demo-workspace-signal {
-    animation: demo-workspace-signal-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation: demo-workspace-signal-in var(--cauris-duration-surface) var(--cauris-ease-out-expo) both;
   }
 }
 
 @keyframes demo-workspace-bubble-in {
   from {
     opacity: 0;
-    transform: translateY(6px);
+    transform: translateY(8px) scale(0.992);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 }
 
 @keyframes demo-workspace-signal-in {
   from {
     opacity: 0;
-    transform: translateY(4px);
+    transform: translateY(6px);
   }
   to {
     opacity: 1;
@@ -398,14 +689,14 @@ body {
 /* —— Demo Timeline — restrained entry reveal —— */
 @media (prefers-reduced-motion: no-preference) {
   .demo-timeline-entry {
-    animation: demo-timeline-entry-in 0.52s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation: demo-timeline-entry-in var(--cauris-duration-surface) var(--cauris-ease-out-expo) both;
   }
 }
 
 @keyframes demo-timeline-entry-in {
   from {
     opacity: 0;
-    transform: translateY(5px);
+    transform: translateY(8px);
   }
   to {
     opacity: 1;
@@ -422,7 +713,7 @@ body {
 /* —— Demo Helix — summary cards —— */
 @media (prefers-reduced-motion: no-preference) {
   .demo-helix-card {
-    animation: demo-timeline-entry-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation: demo-timeline-entry-in var(--cauris-duration-surface) var(--cauris-ease-out-expo) both;
   }
 }
 
@@ -435,11 +726,11 @@ body {
 /* —— Demo Insight — hero + insight cards —— */
 @media (prefers-reduced-motion: no-preference) {
   .demo-insight-hero {
-    animation: demo-timeline-entry-in 0.58s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation: demo-timeline-entry-in var(--cauris-duration-surface) var(--cauris-ease-out-expo) both;
   }
 
   .demo-insight-card {
-    animation: demo-timeline-entry-in 0.52s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation: demo-timeline-entry-in var(--cauris-duration-surface) var(--cauris-ease-out-expo) both;
   }
 }
 
@@ -453,11 +744,11 @@ body {
 /* —— Demo Compass — orientation hero + guidance cards —— */
 @media (prefers-reduced-motion: no-preference) {
   .demo-compass-hero {
-    animation: demo-timeline-entry-in 0.58s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation: demo-timeline-entry-in var(--cauris-duration-surface) var(--cauris-ease-out-expo) both;
   }
 
   .demo-compass-card {
-    animation: demo-timeline-entry-in 0.52s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation: demo-timeline-entry-in var(--cauris-duration-surface) var(--cauris-ease-out-expo) both;
   }
 }
 
@@ -471,11 +762,11 @@ body {
 /* —— Demo Vault — retention hero + artifact tiles —— */
 @media (prefers-reduced-motion: no-preference) {
   .demo-vault-hero {
-    animation: demo-timeline-entry-in 0.58s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation: demo-timeline-entry-in var(--cauris-duration-surface) var(--cauris-ease-out-expo) both;
   }
 
   .demo-vault-tile {
-    animation: demo-timeline-entry-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation: demo-timeline-entry-in var(--cauris-duration-surface) var(--cauris-ease-out-expo) both;
   }
 }
 
@@ -489,12 +780,41 @@ body {
 /* —— Demo Early Access — CTA cards —— */
 @media (prefers-reduced-motion: no-preference) {
   .demo-early-cta {
-    animation: demo-timeline-entry-in 0.52s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation: demo-timeline-entry-in var(--cauris-duration-surface) var(--cauris-ease-out-expo) both;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .demo-early-cta {
     animation: none !important;
+  }
+}
+
+/* —— App Router template — restrained entry on client navigations —— */
+@keyframes cauris-route-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 8px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .cauris-route-enter {
+    animation: cauris-route-enter var(--cauris-duration-route) var(--cauris-ease-out-expo) both;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cauris-route-enter {
+    animation: none;
+  }
+
+  .cauris-transition-interactive {
+    transition-duration: 70ms;
+    transition-timing-function: ease;
   }
 }

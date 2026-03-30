@@ -2,6 +2,7 @@
 
 import { demoUi } from "@/components/demo/demoUi";
 import {
+  demoPhaseEyebrows,
   demoTimelineChips,
   demoTimelineChronology,
   demoTimelineContinuity,
@@ -15,7 +16,7 @@ export function DemoTimelineStep() {
   return (
     <div className={demoUi.region} role="region" aria-labelledby={titleId}>
       <div className={demoUi.introMax}>
-        <p className={demoUi.kicker}>Guided preview</p>
+        <p className={demoUi.phaseEyebrow}>{demoPhaseEyebrows.timeline}</p>
         <h2 id={titleId} className={demoUi.stepTitle}>
           {demoTimelineIntro.title}
         </h2>
@@ -34,15 +35,18 @@ export function DemoTimelineStep() {
 
       <div className={`${demoUi.sectionY} ${demoUi.gridSplit}`}>
         {/* —— Vertical timeline —— */}
-        <div
-          className={`relative overflow-hidden ${demoUi.roundedPanel} border ${demoUi.borderHairline} bg-gradient-to-b from-white/[0.035] to-transparent p-6 sm:p-8 ${demoUi.panelInset}`}
-          style={{
-            backgroundImage:
-              "radial-gradient(ellipse 70% 45% at 20% 15%, rgba(88, 60, 180, 0.12), transparent 60%)",
-          }}
-        >
-          <p className={demoUi.kicker}>Day progression</p>
-          <div className="relative mt-8 pl-2 sm:pl-3">
+        <div className={`relative overflow-hidden ${demoUi.productMain} p-6 sm:p-8`}>
+          <div
+            className="pointer-events-none absolute inset-0"
+            style={{
+              background:
+                "radial-gradient(ellipse 70% 45% at 20% 15%, rgba(88, 60, 180, 0.14), transparent 60%)",
+            }}
+            aria-hidden
+          />
+          <div className="relative z-[1]">
+          <p className={`${demoUi.kickerTrack} text-zinc-500`}>Day progression</p>
+          <div className="relative mt-9 pl-2 sm:pl-3">
             <div
               className="absolute left-[11px] top-2 bottom-2 w-px bg-gradient-to-b from-cauris-flame/50 via-cauris-gold/25 to-indigo-500/20 sm:left-[13px]"
               aria-hidden
@@ -76,13 +80,12 @@ export function DemoTimelineStep() {
               ))}
             </ol>
           </div>
+          </div>
         </div>
 
         {/* —— Chronology / memory signal —— */}
         <aside className={demoUi.stickyAside}>
-          <div
-            className={`relative overflow-hidden ${demoUi.roundedPanel} border ${demoUi.borderHairline} bg-gradient-to-b from-indigo-950/30 to-black/40 p-6 ${demoUi.panelInset}`}
-          >
+          <div className={`relative overflow-hidden ${demoUi.productAside} bg-gradient-to-b from-indigo-950/25 to-black/28 p-6`}>
             <div
               className="pointer-events-none absolute -right-6 -top-8 h-28 w-28 rounded-full bg-cauris-flame/[0.08] blur-2xl"
               aria-hidden

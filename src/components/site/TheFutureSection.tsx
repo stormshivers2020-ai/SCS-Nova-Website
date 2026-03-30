@@ -14,9 +14,9 @@ export function TheFutureSection() {
     <SectionShell
       id="future"
       aria-labelledby="future-heading"
-      className="border-t border-white/[0.06] bg-gradient-to-b from-black via-zinc-950/50 to-black"
+      className="relative overflow-hidden border-t border-white/[0.08] bg-gradient-to-b from-black via-zinc-950/26 to-black"
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_90%_50%_at_50%_0%,rgba(232,148,58,0.07),transparent_55%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_90%_50%_at_50%_0%,rgba(232,148,58,0.09),transparent_55%)]" />
 
       <div className="relative">
         <ScrollReveal>
@@ -31,12 +31,12 @@ export function TheFutureSection() {
           />
         </ScrollReveal>
 
-        <ScrollReveal delayMs={80} className="mt-14 sm:mt-16">
-          <ul className="space-y-0 divide-y divide-white/[0.06] border-y border-white/[0.08]">
+        <ScrollReveal delayMs={80} className="mt-16 sm:mt-20">
+          <ul className="space-y-0 divide-y divide-white/[0.07] border-y border-white/[0.09]">
             {features.map((item) => (
               <li
                 key={item}
-                className="flex items-start gap-4 py-5 text-[15px] leading-snug text-zinc-300 sm:py-6 sm:text-lg"
+                className="flex items-start gap-5 py-6 text-[15px] font-medium leading-snug text-zinc-200 sm:py-7 sm:text-lg"
               >
                 <span
                   className="mt-2 h-1 w-1 shrink-0 rounded-full bg-cauris-flame/70"
@@ -48,8 +48,8 @@ export function TheFutureSection() {
           </ul>
         </ScrollReveal>
 
-        <ScrollReveal delayMs={180} className="mt-14 max-w-2xl sm:mt-16">
-          <p className="text-pretty text-base leading-relaxed text-zinc-400 sm:text-lg">
+        <ScrollReveal delayMs={180} className="mt-16 max-w-2xl sm:mt-20">
+          <p className="text-pretty text-base leading-relaxed text-zinc-500 sm:text-lg">
             The roadmap is long; the commitment is to ship carefully — premium, human-centered, and
             built to last.
           </p>

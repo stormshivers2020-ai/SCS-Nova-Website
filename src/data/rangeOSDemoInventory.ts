@@ -9,7 +9,7 @@ export const rangeOSInventoryIntro = {
 
 export const rangeOSInventoryStructuredPanel = {
   title: "Structured updates",
-  body: "Staff maintain one photo library; the public site stays accurate and visitors self-serve availability at a glance.",
+  body: "One source of truth for rentals and retail: update once, and the public catalog reflects lane-ready status without a separate spreadsheet.",
   tags: ["Photo-based", "Structured", "Availability-ready"] as const,
 } as const;
 

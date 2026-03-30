@@ -5,8 +5,16 @@ import { SectionHeader } from "./SectionHeader";
 
 export function WhatThisIsSection() {
   return (
-    <SectionShell id="memory" aria-labelledby="what-this-is-heading">
-      <div className="grid items-center gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] lg:gap-20">
+    <SectionShell
+      id="memory"
+      aria-labelledby="what-this-is-heading"
+      className="relative overflow-hidden border-t border-white/[0.08] bg-gradient-to-b from-black via-zinc-950/14 to-black"
+    >
+      <div
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_55%_at_20%_30%,rgba(88,60,180,0.08),transparent_58%),radial-gradient(ellipse_70%_45%_at_85%_70%,rgba(232,148,58,0.06),transparent_55%)]"
+        aria-hidden
+      />
+      <div className="relative grid items-center gap-16 sm:gap-20 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] lg:gap-28">
         <div className="order-2 lg:order-1">
           <ScrollReveal>
             <SectionHeader
@@ -17,14 +25,13 @@ export function WhatThisIsSection() {
                   Not an app. <span className="text-gradient-gold">A system.</span>
                 </>
               }
-              titleClassName="mt-4 text-balance text-3xl font-semibold tracking-tight text-zinc-50 sm:text-4xl"
             />
-            <div className="mt-8 space-y-5 text-pretty text-base leading-relaxed text-zinc-300 sm:text-[17px] sm:leading-relaxed">
-              <p>
-                Cauris is a personal intelligence system that turns everyday input into structured
-                memory, connected insight, and clearer decisions — not another notes app.
+            <div className="mt-12 space-y-7 text-pretty text-base leading-relaxed sm:mt-14 sm:text-[17px] sm:leading-relaxed">
+              <p className="font-medium text-zinc-200">
+                Cauris is in active development: a personal intelligence system that turns everyday input
+                into structured memory, connected insight, and clearer decisions — not another notes app.
               </p>
-              <p className="text-zinc-400">
+              <p className="text-zinc-500">
                 It doesn&apos;t just store information.
                 <br />
                 <span className="text-zinc-200">It organizes meaning.</span>

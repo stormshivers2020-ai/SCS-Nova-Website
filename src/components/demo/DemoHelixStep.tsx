@@ -8,6 +8,7 @@ import {
   demoHelixIntro,
   demoHelixNodes,
   demoHelixPanel,
+  demoPhaseEyebrows,
 } from "@/data/caurisDemoContent";
 
 export function DemoHelixStep() {
@@ -31,7 +32,7 @@ export function DemoHelixStep() {
   return (
     <div className={demoUi.region} role="region" aria-labelledby={titleId}>
       <div className={demoUi.introMax}>
-        <p className={demoUi.kicker}>Guided preview</p>
+        <p className={demoUi.phaseEyebrow}>{demoPhaseEyebrows.helix}</p>
         <h2 id={titleId} className={demoUi.stepTitle}>
           {demoHelixIntro.title}
         </h2>
@@ -51,15 +52,18 @@ export function DemoHelixStep() {
 
       <div className={`${demoUi.sectionY} ${demoUi.gridSplitWide} lg:min-h-0`}>
         {/* —— Helix visual —— */}
-        <div
-          className={`relative overflow-hidden ${demoUi.roundedPanel} border ${demoUi.borderHairline} bg-gradient-to-b from-white/[0.04] to-black/50 p-6 sm:p-8 lg:min-h-[min(420px,52vh)] ${demoUi.panelInset}`}
-          style={{
-            backgroundImage:
-              "radial-gradient(ellipse 65% 50% at 45% 35%, rgba(88, 60, 180, 0.16), transparent 65%), radial-gradient(ellipse 45% 40% at 80% 75%, rgba(244, 176, 66, 0.06), transparent 55%)",
-          }}
-        >
-          <p className={demoUi.kicker}>Pattern layer</p>
-          <figure className="relative mt-6">
+        <div className={`relative overflow-hidden ${demoUi.productMain} p-6 sm:p-8 lg:min-h-[min(420px,52vh)]`}>
+          <div
+            className="pointer-events-none absolute inset-0"
+            style={{
+              background:
+                "radial-gradient(ellipse 65% 50% at 45% 35%, rgba(88, 60, 180, 0.18), transparent 65%), radial-gradient(ellipse 45% 40% at 80% 75%, rgba(244, 176, 66, 0.08), transparent 55%)",
+            }}
+            aria-hidden
+          />
+          <div className="relative z-[1]">
+          <p className={`${demoUi.kickerTrack} text-zinc-500`}>Pattern layer</p>
+          <figure className="relative mt-7">
             <svg
               viewBox="0 0 120 100"
               className="mx-auto h-[min(340px,52vw)] w-full max-w-lg"
@@ -145,13 +149,12 @@ export function DemoHelixStep() {
               })}
             </svg>
           </figure>
+          </div>
         </div>
 
         {/* —— Relationship summary —— */}
         <aside className={demoUi.stickyAside}>
-          <div
-            className={`relative overflow-hidden ${demoUi.roundedPanel} border ${demoUi.borderHairline} bg-gradient-to-b from-white/[0.035] to-transparent p-6 ${demoUi.panelInset}`}
-          >
+          <div className={`relative overflow-hidden ${demoUi.productAside} p-6`}>
             <div
               className="pointer-events-none absolute -right-4 top-0 h-32 w-32 rounded-full bg-cauris-flame/[0.07] blur-3xl"
               aria-hidden

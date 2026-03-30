@@ -4,7 +4,6 @@ import {
   BuildStatusSection,
   CompanyContactSection,
   Hero,
-  Navbar,
   PhilosophySection,
   RangeOSSection,
   SelectedWorkSection,
@@ -24,9 +23,7 @@ export default function Home() {
         <div className="cauris-grain" />
       </div>
 
-      <Navbar />
-
-      <main>
+      <div>
         <Hero />
         <WhatThisIsSection />
         <BCaurisHero />
@@ -39,7 +36,7 @@ export default function Home() {
         <PhilosophySection />
         <TheFutureSection />
         <CompanyContactSection />
-      </main>
+      </div>
     </div>
   );
 }

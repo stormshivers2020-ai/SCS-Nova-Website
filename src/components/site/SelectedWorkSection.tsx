@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { SectionShell } from "@/components/section-shell";
+import { publicImagePath } from "@/lib/publicImagePath";
 
 type WorkItem =
   | {
@@ -49,7 +50,7 @@ const WORK_ITEMS: WorkItem[] = [
     alt: "B-Cauris visual identity preview",
     category: "Visual Direction",
     title: "B-Cauris Visual Identity",
-    description: "Visual system for the operational / work side of the platform — in development.",
+    description: "Operational-side visual system — in development, shown as direction only.",
   },
   {
     kind: "dual-apparel",
@@ -70,53 +71,48 @@ const WORK_ITEMS: WorkItem[] = [
   },
 ];
 
-function imageSrc(file: string) {
-  return `/${encodeURIComponent(file)}`;
-}
-
 export function SelectedWorkSection() {
   return (
     <SectionShell
       id="selected-work"
       aria-labelledby="selected-work-heading"
-      className="relative border-t border-white/[0.06] bg-gradient-to-b from-black via-zinc-950/38 to-black !py-24 md:!py-32 lg:!py-36"
+      className="relative overflow-hidden border-t border-white/[0.08] bg-gradient-to-b from-black via-zinc-950/32 to-black !py-28 md:!py-36 lg:!py-40"
     >
       <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_90%_50%_at_50%_0%,rgba(232,148,58,0.07),transparent_58%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_90%_50%_at_50%_0%,rgba(232,148,58,0.09),transparent_58%)]"
         aria-hidden
       />
 
       <div className="relative">
         <ScrollReveal>
-          <p className="font-mono text-xs font-medium uppercase tracking-[0.26em] text-zinc-500 sm:text-sm sm:tracking-[0.22em]">
+          <p className="cauris-kicker">
             Selected Work
           </p>
           <h2
             id="selected-work-heading"
-            className="mt-4 max-w-4xl text-pretty text-3xl font-semibold tracking-tight text-zinc-100 sm:mt-5 sm:text-4xl md:text-[2.5rem] md:leading-tight"
+            className="mt-5 max-w-4xl text-pretty text-3xl font-semibold tracking-[-0.02em] text-zinc-100 sm:mt-6 sm:text-4xl md:text-[2.85rem] md:leading-[1.06]"
           >
             Product, web, and brand — in parallel
           </h2>
-          <p className="mt-8 max-w-3xl text-pretty text-base font-medium leading-relaxed text-zinc-300 sm:text-lg sm:leading-relaxed">
-            A curated slice of what SCS Nova is shaping now: live web work, Cauris and B-Cauris
-            product direction, and early brand extensions. Not a full portfolio — a clear signal of
-            craft and momentum.
+          <p className="mt-10 max-w-3xl text-pretty text-base font-medium leading-relaxed text-zinc-200 sm:mt-11 sm:text-lg sm:leading-relaxed">
+            Shipped web work, in-development product identity, and early apparel concepts — not a full
+            portfolio, but real output from the studio.
           </p>
         </ScrollReveal>
 
-        <div className="mt-14 grid gap-5 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+        <div className="mt-16 grid gap-6 sm:mt-20 sm:grid-cols-2 lg:grid-cols-3 lg:gap-7">
           {WORK_ITEMS.map((item, i) => (
             <ScrollReveal
               key={item.title}
               delayMs={i * 70}
-              className={`flex flex-col overflow-hidden rounded-2xl border border-white/[0.1] bg-gradient-to-b from-white/[0.045] to-white/[0.012] shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_28px_56px_rgba(0,0,0,0.4)] ring-1 ring-cauris-gold/[0.08] transition-[border-color,box-shadow] duration-500 hover:border-cauris-gold/20 hover:shadow-[0_0_48px_rgba(244,176,66,0.06)] ${
+              className={`flex flex-col overflow-hidden rounded-brand border border-white/[0.11] bg-gradient-to-b from-white/[0.085] to-white/[0.024] shadow-cauris-elevate-sm ring-1 ring-cauris-gold/[0.1] backdrop-blur-md transition-[border-color,box-shadow,transform] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:border-cauris-gold/22 hover:shadow-[0_0_56px_rgba(244,176,66,0.08)] motion-reduce:transition-none motion-reduce:hover:translate-y-0 ${
                 item.kind === "dual-apparel" ? "sm:col-span-2 lg:col-span-2" : ""
               }`}
             >
               {item.kind === "single" && (
-                <div className="relative aspect-[16/10] w-full border-b border-white/[0.08] bg-zinc-950/50">
+                <div className="relative aspect-[16/10] w-full border-b border-white/[0.09] bg-zinc-950/36 backdrop-blur-sm">
                   <Image
-                    src={imageSrc(item.file)}
+                    src={publicImagePath(item.file)}
                     alt={item.alt}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -126,11 +122,11 @@ export function SelectedWorkSection() {
               )}
 
               {item.kind === "dual-apparel" && (
-                <div className="grid grid-cols-2 border-b border-white/[0.08] bg-zinc-950/50">
+                <div className="grid grid-cols-2 border-b border-white/[0.09] bg-zinc-950/36 backdrop-blur-sm">
                   {item.files.map(({ file, alt }) => (
                     <div key={file} className="relative aspect-square border-r border-white/[0.06] last:border-r-0">
                       <Image
-                        src={imageSrc(file)}
+                        src={publicImagePath(file)}
                         alt={alt}
                         fill
                         sizes="(max-width: 1024px) 50vw, 25vw"
@@ -152,14 +148,14 @@ export function SelectedWorkSection() {
                 </div>
               )}
 
-              <div className="flex flex-1 flex-col p-6 sm:p-7">
-                <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-cauris-flame/85 sm:text-[11px]">
+              <div className="flex flex-1 flex-col p-7 sm:p-8">
+                <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-cauris-flame/88 sm:text-[11px]">
                   {item.category}
                 </p>
-                <h3 className="mt-3 text-lg font-semibold tracking-tight text-zinc-50 sm:text-xl">
+                <h3 className="mt-4 text-lg font-semibold tracking-[-0.02em] text-zinc-50 sm:text-xl">
                   {item.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-zinc-500 sm:text-[15px] sm:leading-relaxed">
+                <p className="mt-3.5 text-sm leading-relaxed text-zinc-500 sm:text-[15px] sm:leading-relaxed">
                   {item.description}
                 </p>
               </div>

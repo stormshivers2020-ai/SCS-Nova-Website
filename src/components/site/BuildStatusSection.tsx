@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { SectionShell } from "@/components/section-shell";
 
@@ -7,14 +8,14 @@ const items = [
     status: "In development",
     statusVariant: "development" as const,
     description:
-      "Life-side intelligence: capture, structure, patterns, and insight. Guided demo available on this site.",
+      "Life-side intelligence — capture through structure to insight. Guided browser demo on this site.",
   },
   {
     name: "B-Cauris",
     status: "In development",
     statusVariant: "development" as const,
     description:
-      "Work-side companion for operational memory and workflow clarity. Building alongside Cauris.",
+      "Work-side operational memory and workflow clarity. Built in parallel with Cauris.",
   },
   {
     name: "Apparel",
@@ -29,43 +30,42 @@ export function BuildStatusSection() {
     <SectionShell
       id="build-status"
       aria-labelledby="build-status-heading"
-      className="relative border-t border-white/[0.06] bg-gradient-to-b from-black via-zinc-950/35 to-black !py-24 md:!py-32 lg:!py-36"
+      className="relative overflow-hidden border-t border-white/[0.08] bg-gradient-to-b from-black via-zinc-950/24 to-black !py-28 md:!py-36 lg:!py-40"
     >
       <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_90%_55%_at_50%_0%,rgba(232,148,58,0.08),transparent_60%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_90%_55%_at_50%_0%,rgba(232,148,58,0.095),transparent_60%)]"
         aria-hidden
       />
 
       <div className="relative">
         <ScrollReveal>
-          <p className="font-mono text-xs font-medium uppercase tracking-[0.26em] text-zinc-500 sm:text-sm sm:tracking-[0.22em]">
+          <p className="cauris-kicker">
             Ecosystem status
           </p>
           <h2
             id="build-status-heading"
-            className="mt-4 max-w-3xl text-pretty text-3xl font-semibold tracking-tight text-zinc-100 sm:mt-5 sm:text-4xl md:text-[2.5rem] md:leading-tight"
+            className="mt-6 max-w-3xl text-pretty text-3xl font-semibold tracking-[-0.02em] text-zinc-100 sm:mt-7 sm:text-4xl md:text-[2.9rem] md:leading-[1.06]"
           >
             Actively in build
           </h2>
-          <p className="mt-8 max-w-3xl text-pretty text-base font-medium leading-relaxed text-zinc-300 sm:text-lg sm:leading-relaxed">
-            This is a living ecosystem — not a frozen launch page. Cauris and B-Cauris are in
-            development in parallel; apparel is queued as a brand extension. What you see here is the
-            current shape of the work.
+          <p className="mt-10 max-w-3xl text-pretty text-base font-medium leading-relaxed text-zinc-200 sm:mt-11 sm:text-lg sm:leading-relaxed">
+            Cauris and B-Cauris move forward in stages; apparel is queued behind them. This page tracks
+            where things stand — not a one-day launch story.
           </p>
         </ScrollReveal>
 
-        <div className="mt-14 grid gap-5 sm:mt-16 md:grid-cols-3 md:gap-6 lg:mt-20">
+        <div className="mt-16 grid gap-6 sm:mt-20 md:grid-cols-3 md:gap-7 lg:mt-24">
           {items.map((item, i) => (
             <ScrollReveal
               key={item.name}
               delayMs={i * 90}
-              className="group relative overflow-hidden rounded-2xl border border-white/[0.1] bg-gradient-to-b from-white/[0.05] to-white/[0.015] p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_24px_48px_rgba(0,0,0,0.35)] backdrop-blur-sm transition-[border-color,box-shadow] duration-500 hover:border-cauris-gold/25 hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.07),0_28px_56px_rgba(0,0,0,0.4),0_0_48px_rgba(244,176,66,0.05)] sm:p-7"
+              className="group relative overflow-hidden rounded-brand border border-white/[0.11] bg-gradient-to-b from-white/[0.09] to-white/[0.024] p-7 shadow-cauris-elevate-sm ring-1 ring-white/[0.04] backdrop-blur-md transition-[border-color,box-shadow,transform] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:border-cauris-gold/28 hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_32px_64px_rgba(0,0,0,0.32),0_0_52px_rgba(244,176,66,0.07)] motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:p-8"
             >
               <div className="pointer-events-none absolute -right-6 top-0 h-24 w-24 rounded-full bg-cauris-flame/[0.06] opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100" />
 
               <div className="relative flex flex-col gap-4">
                 <div className="flex flex-wrap items-baseline justify-between gap-2 gap-y-1">
-                  <h3 className="text-xl font-semibold tracking-tight text-zinc-50 sm:text-2xl">
+                  <h3 className="text-xl font-semibold tracking-[-0.02em] text-zinc-50 sm:text-2xl">
                     {item.name}
                   </h3>
                   <span
@@ -86,6 +86,35 @@ export function BuildStatusSection() {
             </ScrollReveal>
           ))}
         </div>
+
+        <ScrollReveal delayMs={280} className="mt-16 border-t border-white/[0.07] pt-12 sm:mt-20 sm:pt-14">
+          <p className="text-center text-sm font-medium leading-relaxed text-zinc-500">
+            <Link
+              href="/demo"
+              className="text-zinc-400 underline decoration-white/[0.12] underline-offset-4 transition-colors hover:text-cauris-dawn hover:decoration-cauris-gold/35"
+            >
+              Cauris demo
+            </Link>
+            <span className="mx-2 text-zinc-700" aria-hidden>
+              ·
+            </span>
+            <Link
+              href="/rangeos-demo"
+              className="text-zinc-400 underline decoration-white/[0.12] underline-offset-4 transition-colors hover:text-cauris-dawn hover:decoration-cauris-gold/35"
+            >
+              RangeOS demo
+            </Link>
+            <span className="mx-2 text-zinc-700" aria-hidden>
+              ·
+            </span>
+            <Link
+              href="/#scs-nova"
+              className="text-zinc-400 underline decoration-white/[0.12] underline-offset-4 transition-colors hover:text-cauris-dawn hover:decoration-cauris-gold/35"
+            >
+              Contact &amp; requests
+            </Link>
+          </p>
+        </ScrollReveal>
       </div>
     </SectionShell>
   );

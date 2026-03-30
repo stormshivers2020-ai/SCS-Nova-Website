@@ -7,6 +7,7 @@ import {
   demoCompassIntro,
   demoCompassMain,
   demoCompassSupport,
+  demoPhaseEyebrows,
 } from "@/data/caurisDemoContent";
 
 export function DemoCompassStep() {
@@ -15,7 +16,7 @@ export function DemoCompassStep() {
   return (
     <div className={demoUi.region} role="region" aria-labelledby={titleId}>
       <div className={demoUi.introMax}>
-        <p className={demoUi.kicker}>Guided preview</p>
+        <p className={demoUi.phaseEyebrow}>{demoPhaseEyebrows.compass}</p>
         <h2 id={titleId} className={demoUi.stepTitle}>
           {demoCompassIntro.title}
         </h2>
@@ -36,7 +37,7 @@ export function DemoCompassStep() {
       <div className={`${demoUi.sectionY} ${demoUi.gridSplit}`}>
         <div className="flex flex-col gap-8 sm:gap-10">
           <article
-            className="demo-compass-hero relative overflow-hidden rounded-2xl border border-white/[0.09] bg-gradient-to-br from-white/[0.05] via-black/50 to-black/60 p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.05),0_0_80px_rgba(244,176,66,0.06)] ring-1 ring-cauris-gold/[0.14] sm:p-9"
+            className="demo-compass-hero relative overflow-hidden rounded-brand border border-white/[0.12] bg-gradient-to-br from-white/[0.09] via-black/34 to-black/44 p-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.07),0_0_88px_rgba(244,176,66,0.08),0_28px_72px_rgba(0,0,0,0.3)] ring-1 ring-cauris-gold/[0.15] backdrop-blur-md sm:p-10"
             style={{
               backgroundImage:
                 "linear-gradient(105deg, rgba(244, 176, 66, 0.07) 0%, transparent 42%), radial-gradient(ellipse 55% 45% at 100% 50%, rgba(88, 60, 180, 0.12), transparent 60%)",
@@ -51,11 +52,11 @@ export function DemoCompassStep() {
               aria-hidden
             />
             <div className="relative max-w-2xl pr-0 sm:pr-4">
-              <p className={`${demoUi.kickerTrack} text-cauris-dawn/75`}>Orientation</p>
-              <h3 className="mt-4 text-xl font-semibold tracking-tight text-zinc-50 sm:text-2xl">
+              <p className={`${demoUi.kickerTrack} text-cauris-dawn/82`}>Orientation</p>
+              <h3 className="mt-5 text-xl font-semibold tracking-[-0.02em] text-zinc-50 sm:text-2xl">
                 {demoCompassMain.title}
               </h3>
-              <p className="mt-4 text-pretty text-sm leading-relaxed text-zinc-400 sm:text-[15px]">
+              <p className="mt-4 text-pretty text-sm font-medium leading-relaxed text-zinc-400 sm:text-[15px]">
                 {demoCompassMain.body}
               </p>
             </div>
@@ -65,7 +66,7 @@ export function DemoCompassStep() {
             {demoCompassGuidance.map((item, i) => (
               <li
                 key={item.title}
-                className="demo-compass-card group relative overflow-hidden rounded-xl border border-white/[0.07] bg-gradient-to-b from-white/[0.028] to-transparent p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.035)] transition duration-500 hover:border-cauris-gold/22 hover:shadow-[0_0_36px_rgba(244,176,66,0.06)]"
+                className="demo-compass-card group relative overflow-hidden rounded-brand border border-white/[0.1] bg-gradient-to-b from-white/[0.06] to-white/[0.015] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.055),0_16px_40px_rgba(0,0,0,0.18)] ring-1 ring-white/[0.04] transition duration-500 hover:border-cauris-gold/26 hover:shadow-[0_0_44px_rgba(244,176,66,0.08)]"
                 style={{ animationDelay: `${110 + i * 70}ms` }}
               >
                 <div
@@ -84,9 +85,7 @@ export function DemoCompassStep() {
         </div>
 
         <aside className={demoUi.stickyAside}>
-          <div
-            className={`relative overflow-hidden ${demoUi.roundedPanel} border ${demoUi.borderHairline} bg-gradient-to-b from-white/[0.025] to-black/45 p-6 ${demoUi.panelInset}`}
-          >
+          <div className={`relative overflow-hidden ${demoUi.productAside} p-6`}>
             <div
               className="pointer-events-none absolute left-0 top-1/2 h-32 w-32 -translate-x-1/3 -translate-y-1/2 rounded-full bg-cauris-flame/[0.05] blur-3xl"
               aria-hidden

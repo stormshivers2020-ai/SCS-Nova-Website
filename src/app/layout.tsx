@@ -1,23 +1,62 @@
-import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import { Navbar } from "@/components/site/Navbar";
+import { OrganizationJsonLd } from "./OrganizationJsonLd";
+import { SITE_DESCRIPTION, SITE_TITLE, siteMetadataBase } from "@/data/siteMeta";
 
 const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-inter",
   display: "swap",
 });
 
-const jetbrainsMono = JetBrains_Mono({
+const playfair = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-mono",
+  variable: "--font-playfair",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "SCS Nova / Cauris",
-  description:
-    "SCS Nova builds digital and brand work for companies. Cauris and B-Cauris are life- and work-intelligence products in development — explore the guided Cauris demo and studio contact on this site.",
+  metadataBase: siteMetadataBase(),
+  title: {
+    default: SITE_TITLE,
+    template: "%s | SCS Nova",
+  },
+  description: SITE_DESCRIPTION,
+  applicationName: "SCS Nova",
+  category: "technology",
+  formatDetection: { telephone: false },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "SCS Nova",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    images: [
+      {
+        url: "/logo.png",
+        width: 320,
+        height: 320,
+        alt: "Cauris mark — SCS Nova",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "SCS Nova",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#000000",
+  colorScheme: "dark",
 };
 
 export default function RootLayout({
@@ -26,25 +65,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body
-        className={`${inter.variable} ${jetbrainsMono.variable} min-h-screen bg-black font-sans text-zinc-100`}
-      >
-        <div className="relative min-h-screen bg-black">
-          <div
-            className="pointer-events-none fixed inset-0 z-0"
-            aria-hidden="true"
-          >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/FULL-BACKGROUND.png"
-              alt=""
-              className="absolute inset-0 h-full w-full object-cover opacity-35"
-            />
-            <div className="absolute inset-0 bg-black/55" />
-          </div>
-          <div className="relative z-10">{children}</div>
+    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+      <body className="min-h-screen bg-black text-zinc-100 antialiased">
+        <OrganizationJsonLd />
+        <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+          <img
+            src="/background.png"
+            alt=""
+            aria-hidden
+            decoding="async"
+            fetchPriority="high"
+            className="h-full w-full object-cover opacity-[0.18]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/55 to-black/80" />
         </div>
+        <Navbar />
+        <main className="relative">{children}</main>
       </body>
     </html>
   );

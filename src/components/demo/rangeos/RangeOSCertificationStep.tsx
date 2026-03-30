@@ -1,5 +1,6 @@
 import { demoUi } from "@/components/demo/demoUi";
 import { rangeOSDemoUi } from "@/components/demo/rangeOSDemoUi";
+import { rangeOSPhaseEyebrows } from "@/data/rangeOSDemoContent";
 import {
   rangeOSCertificationDemoNote,
   rangeOSCertificationFunnelKicker,
@@ -43,7 +44,7 @@ function FunnelStageCard({ stage, isLast }: { stage: RangeOSCertFunnelStage; isL
           <h3 className="text-base font-semibold tracking-tight text-zinc-50 sm:text-lg">
             {stage.title}
           </h3>
-          <p className="mt-3 text-sm leading-relaxed text-zinc-500 sm:text-[15px] sm:leading-relaxed">
+          <p className="mt-3 text-sm font-medium leading-relaxed text-zinc-500 sm:text-[15px] sm:leading-relaxed">
             {stage.description}
           </p>
           <ul className="mt-4 flex flex-wrap gap-2" aria-label="Context for this stage">
@@ -68,6 +69,7 @@ export function RangeOSCertificationStep() {
   return (
     <div className={demoUi.region} role="region" aria-labelledby={headingId}>
       <header className={demoUi.introMax}>
+        <p className={demoUi.phaseEyebrow}>{rangeOSPhaseEyebrows.certification}</p>
         <h2 id={headingId} className={demoUi.stepTitle}>
           {intro.title}
         </h2>
@@ -80,8 +82,8 @@ export function RangeOSCertificationStep() {
             className={rangeOSDemoUi.darkFeaturePanel}
             aria-labelledby="rangeos-funnel-label"
           >
-            <div className="border-b border-white/[0.06] pb-5">
-              <p id="rangeos-funnel-label" className={demoUi.kicker}>
+            <div className="border-b border-white/[0.07] pb-5">
+              <p id="rangeos-funnel-label" className={`${demoUi.kickerTrack} text-zinc-500`}>
                 {rangeOSCertificationFunnelKicker}
               </p>
             </div>

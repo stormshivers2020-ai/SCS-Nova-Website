@@ -7,6 +7,7 @@ import {
   demoInsightIntro,
   demoInsightMain,
   demoInsightSupport,
+  demoPhaseEyebrows,
 } from "@/data/caurisDemoContent";
 
 export function DemoInsightStep() {
@@ -15,7 +16,7 @@ export function DemoInsightStep() {
   return (
     <div className={demoUi.region} role="region" aria-labelledby={titleId}>
       <div className={demoUi.introMax}>
-        <p className={demoUi.kicker}>Guided preview</p>
+        <p className={demoUi.phaseEyebrow}>{demoPhaseEyebrows.insight}</p>
         <h2 id={titleId} className={demoUi.stepTitle}>
           {demoInsightIntro.title}
         </h2>
@@ -36,7 +37,7 @@ export function DemoInsightStep() {
       <div className={`${demoUi.sectionY} ${demoUi.gridSplit}`}>
         <div className="flex flex-col gap-8 sm:gap-10">
           <article
-            className="demo-insight-hero relative overflow-hidden rounded-2xl border border-white/[0.1] bg-gradient-to-b from-white/[0.06] to-black/55 p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_0_72px_rgba(88,60,180,0.1)] ring-1 ring-cauris-gold/[0.12] sm:p-8"
+            className="demo-insight-hero relative overflow-hidden rounded-brand border border-white/[0.13] bg-gradient-to-b from-white/[0.095] to-black/34 p-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_0_80px_rgba(88,60,180,0.12),0_28px_64px_rgba(0,0,0,0.28)] ring-1 ring-cauris-gold/[0.14] backdrop-blur-md sm:p-9"
             style={{
               backgroundImage:
                 "radial-gradient(ellipse 70% 55% at 50% 0%, rgba(244, 176, 66, 0.09), transparent 58%), radial-gradient(ellipse 60% 50% at 85% 100%, rgba(88, 60, 180, 0.14), transparent 55%)",
@@ -55,11 +56,11 @@ export function DemoInsightStep() {
               }}
             />
             <div className="relative">
-              <p className={`${demoUi.kickerTrack} text-cauris-dawn/80`}>Primary read</p>
-              <h3 className="mt-4 text-xl font-semibold tracking-tight text-zinc-50 sm:text-2xl">
+              <p className={`${demoUi.kickerTrack} text-cauris-dawn/85`}>Primary read</p>
+              <h3 className="mt-5 text-xl font-semibold tracking-[-0.02em] text-zinc-50 sm:text-2xl">
                 {demoInsightMain.title}
               </h3>
-              <p className="mt-4 max-w-2xl text-pretty text-sm leading-relaxed text-zinc-400 sm:text-[15px]">
+              <p className="mt-4 max-w-2xl text-pretty text-sm font-medium leading-relaxed text-zinc-400 sm:text-[15px]">
                 {demoInsightMain.body}
               </p>
             </div>
@@ -69,7 +70,7 @@ export function DemoInsightStep() {
             {demoInsightCards.map((card, i) => (
               <li
                 key={card.title}
-                className="demo-insight-card group relative overflow-hidden rounded-xl border border-white/[0.08] bg-gradient-to-b from-white/[0.035] to-transparent p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] transition duration-500 hover:border-indigo-400/25 hover:shadow-[0_0_40px_rgba(88,60,180,0.08)]"
+                className="demo-insight-card group relative overflow-hidden rounded-brand border border-white/[0.11] bg-gradient-to-b from-white/[0.07] to-white/[0.02] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.065),0_18px_44px_rgba(0,0,0,0.2)] ring-1 ring-white/[0.04] backdrop-blur-md transition duration-500 hover:border-indigo-400/28 hover:shadow-[0_0_48px_rgba(88,60,180,0.1)]"
                 style={{ animationDelay: `${120 + i * 75}ms` }}
               >
                 <div
@@ -88,9 +89,7 @@ export function DemoInsightStep() {
         </div>
 
         <aside className={demoUi.stickyAside}>
-          <div
-            className={`relative overflow-hidden ${demoUi.roundedPanel} border ${demoUi.borderHairline} bg-gradient-to-b from-white/[0.03] to-black/40 p-6 ${demoUi.panelInset}`}
-          >
+          <div className={`relative overflow-hidden ${demoUi.productAside} p-6`}>
             <div
               className="pointer-events-none absolute right-0 top-0 h-28 w-28 translate-x-1/4 -translate-y-1/4 rounded-full bg-indigo-500/[0.08] blur-3xl"
               aria-hidden

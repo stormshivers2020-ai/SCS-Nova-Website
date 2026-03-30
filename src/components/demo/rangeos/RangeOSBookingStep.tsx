@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { demoUi } from "@/components/demo/demoUi";
 import { rangeOSDemoUi } from "@/components/demo/rangeOSDemoUi";
+import { rangeOSPhaseEyebrows } from "@/data/rangeOSDemoContent";
 import {
   rangeOSBookingCtaLabels,
   rangeOSBookingFlowPanel,
@@ -43,10 +44,10 @@ function BookingOptionCard({
     <button
       type="button"
       onClick={onSelect}
-      className={`w-full rounded-2xl border p-5 text-left shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] transition-[border-color,box-shadow,transform,background-color] duration-300 ease-out motion-reduce:transition-none sm:p-6 ${
+      className={`w-full rounded-brand border p-5 text-left shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] transition-[border-color,box-shadow,transform,background-color] duration-[var(--cauris-duration-surface)] ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none sm:p-6 ${
         selected
           ? "border-cauris-gold/35 bg-cauris-flame/[0.07] ring-1 ring-cauris-gold/[0.15] shadow-[0_0_36px_rgba(244,176,66,0.08)]"
-          : `border-white/[0.08] bg-gradient-to-b from-white/[0.035] to-white/[0.01] ring-1 ring-white/[0.04] motion-reduce:hover:translate-y-0 hover:-translate-y-0.5 hover:border-cauris-gold/22 hover:shadow-[0_0_28px_rgba(244,176,66,0.05)]`
+          : `border-white/[0.1] bg-gradient-to-b from-white/[0.065] to-white/[0.018] ring-1 ring-white/[0.05] backdrop-blur-md motion-reduce:hover:translate-y-0 hover:-translate-y-0.5 hover:border-cauris-gold/22 hover:shadow-[0_0_28px_rgba(244,176,66,0.06)]`
       } ${demoUi.focusRing}`}
     >
       <span className="inline-flex rounded-full border border-white/[0.1] bg-black/30 px-2.5 py-0.5 font-mono text-[9px] font-medium uppercase tracking-[0.16em] text-cauris-dawn/85 sm:text-[10px]">
@@ -92,6 +93,7 @@ export function RangeOSBookingStep() {
   return (
     <div className={demoUi.region} role="region" aria-labelledby={headingId}>
       <header className={demoUi.introMax}>
+        <p className={demoUi.phaseEyebrow}>{rangeOSPhaseEyebrows.booking}</p>
         <h2 id={headingId} className={demoUi.stepTitle}>
           {intro.title}
         </h2>
@@ -101,7 +103,7 @@ export function RangeOSBookingStep() {
       <div className={`${demoUi.sectionY} ${demoUi.gridSplit}`}>
         <div className="space-y-10">
           <section aria-labelledby="rangeos-booking-paths-label">
-            <p id="rangeos-booking-paths-label" className={demoUi.kicker}>
+            <p id="rangeos-booking-paths-label" className={`${demoUi.kickerTrack} text-zinc-500`}>
               Booking paths
             </p>
             <div className="mt-4 grid gap-4 sm:grid-cols-2">
@@ -122,7 +124,7 @@ export function RangeOSBookingStep() {
           >
             <div className="flex flex-wrap items-end justify-between gap-4 border-b border-white/[0.06] pb-5">
               <div>
-                <p id="rangeos-schedule-label" className={demoUi.kicker}>
+                <p id="rangeos-schedule-label" className={`${demoUi.kickerTrack} text-zinc-500`}>
                   Schedule
                 </p>
                 <p className="mt-2 text-sm font-medium text-zinc-400">
@@ -224,27 +226,31 @@ export function RangeOSBookingStep() {
                   type="button"
                   disabled={inquirySent || !selected}
                   onClick={() => setInquirySent(true)}
-                  className={`inline-flex min-h-11 items-center justify-center rounded-full bg-gradient-to-b from-cauris-flame/95 to-cauris-ember/95 px-8 text-sm font-semibold text-black shadow-glow-gold transition duration-200 motion-reduce:transition-none enabled:hover:from-cauris-dawn enabled:hover:to-cauris-flame disabled:cursor-not-allowed disabled:opacity-40 disabled:shadow-none ${demoUi.focusRing}`}
+                  className={`inline-flex min-h-12 items-center justify-center rounded-full bg-gradient-to-b from-cauris-flame/95 to-cauris-ember/95 px-8 text-sm font-semibold text-black shadow-glow-gold cauris-transition-interactive enabled:hover:from-cauris-dawn enabled:hover:to-cauris-flame disabled:cursor-not-allowed disabled:opacity-40 disabled:shadow-none ${demoUi.focusRing}`}
                 >
                   {inquirySent ? rangeOSBookingCtaLabels.primarySent : rangeOSBookingCtaLabels.primaryIdle}
                 </button>
                 <button
                   type="button"
                   onClick={resetFlow}
-                  className={`inline-flex min-h-11 items-center justify-center rounded-full border border-white/[0.12] px-6 text-sm font-medium text-zinc-400 transition duration-200 motion-reduce:transition-none hover:border-cauris-gold/25 hover:text-zinc-200 ${demoUi.focusRing}`}
+                  className={`inline-flex min-h-12 items-center justify-center rounded-full border border-white/[0.12] px-6 text-sm font-medium text-zinc-400 cauris-transition-interactive hover:border-cauris-gold/25 hover:text-zinc-200 ${demoUi.focusRing}`}
                 >
                   {rangeOSBookingCtaLabels.secondary}
                 </button>
               </div>
               {inquirySent ? (
                 <p
-                  className="text-sm font-medium text-cauris-dawn/90 sm:text-right"
+                  className="max-w-md text-sm font-medium leading-relaxed text-cauris-dawn/90 sm:text-right"
                   role="status"
                 >
-                  In production this routes to your range’s inbox or POS handoff.
+                  Shipped builds: handoff hits your inbox or desk queue — your staff confirm, take
+                  payment, assign lanes on your rules.
                 </p>
               ) : (
-                <p className="text-sm text-zinc-600 sm:text-right">No payment or live hold — preview only.</p>
+                <p className="max-w-xs text-sm leading-relaxed text-zinc-500 sm:max-w-sm sm:text-right">
+                  Preview never charges a card or creates a hold — it only shows the customer-facing
+                  flow.
+                </p>
               )}
             </div>
           </section>

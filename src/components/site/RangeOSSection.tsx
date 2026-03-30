@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { SectionShell } from "@/components/section-shell";
-import { buildBusinessMailto } from "@/data/siteContact";
+import { buildBusinessMailto, MAILTO_SUBJECTS } from "@/data/siteContact";
 
 const features = [
   {
@@ -117,11 +117,11 @@ function RangePricingCard({
   delayMs: number;
 }) {
   const shell =
-    "flex h-full flex-col rounded-2xl border bg-gradient-to-b p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_24px_48px_rgba(0,0,0,0.38)] transition-[border-color,box-shadow,transform] duration-500 sm:p-7";
+    "flex h-full flex-col rounded-brand border bg-gradient-to-b p-7 shadow-cauris-elevate-sm ring-1 ring-white/[0.04] backdrop-blur-md transition-[border-color,box-shadow,transform] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] sm:p-8";
   const idle =
-    "border-white/[0.1] from-white/[0.035] to-white/[0.01] ring-1 ring-white/[0.04] hover:-translate-y-0.5 hover:border-white/[0.14] hover:ring-white/[0.06]";
+    "border-white/[0.11] from-white/[0.065] to-white/[0.02] ring-1 ring-white/[0.05] hover:-translate-y-0.5 hover:border-white/[0.16] hover:ring-white/[0.07]";
   const spotlight =
-    "border-cauris-gold/25 from-white/[0.05] to-white/[0.015] ring-1 ring-cauris-gold/[0.12] shadow-[inset_0_1px_0_rgba(255,255,255,0.07),0_28px_56px_rgba(0,0,0,0.45)] hover:-translate-y-0.5";
+    "border-cauris-gold/25 from-white/[0.09] to-white/[0.028] ring-1 ring-cauris-gold/[0.13] shadow-[inset_0_1px_0_rgba(255,255,255,0.07),0_28px_56px_rgba(0,0,0,0.3)] hover:-translate-y-0.5";
 
   return (
     <ScrollReveal
@@ -134,7 +134,7 @@ function RangePricingCard({
           aria-hidden
         />
       ) : null}
-      <h3 className="text-lg font-semibold tracking-tight text-zinc-50 sm:text-xl">{plan.title}</h3>
+      <h3 className="text-lg font-semibold tracking-[-0.02em] text-zinc-50 sm:text-xl">{plan.title}</h3>
       <p className="mt-5 text-2xl font-semibold tracking-tight text-zinc-50 sm:text-[1.65rem]">
         {plan.price}
       </p>
@@ -154,16 +154,16 @@ function RangePricingCard({
 }
 
 export function RangeOSSection() {
-  const mailtoStart = buildBusinessMailto({ subject: "RangeOS — get started" });
+  const mailtoRange = buildBusinessMailto({ subject: MAILTO_SUBJECTS.rangeOS });
 
   return (
     <SectionShell
       id="range-os"
       aria-labelledby="range-os-heading"
-      className="relative border-t border-white/[0.06] bg-gradient-to-b from-black via-zinc-950/40 to-black !py-24 md:!py-32 lg:!py-36"
+      className="relative scroll-mt-[5.5rem] overflow-hidden border-t border-white/[0.08] bg-gradient-to-b from-black via-zinc-950/26 to-black !py-28 md:!py-36 lg:!py-40"
     >
       <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_0%,rgba(232,148,58,0.07),transparent_55%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_72%_52%_at_50%_0%,rgba(232,148,58,0.1),transparent_56%)]"
         aria-hidden
       />
 
@@ -171,29 +171,30 @@ export function RangeOSSection() {
         <ScrollReveal>
           <h2
             id="range-os-heading"
-            className="max-w-4xl text-pretty text-3xl font-semibold tracking-tight text-zinc-100 sm:text-4xl md:text-[2.5rem] md:leading-tight"
+            className="max-w-4xl text-pretty text-3xl font-semibold tracking-[-0.025em] text-zinc-100 sm:text-4xl md:text-[2.95rem] md:leading-[1.05]"
           >
             RangeOS<span className="text-gradient-gold">™</span>
           </h2>
-          <p className="mt-5 max-w-3xl text-pretty text-lg font-medium leading-relaxed text-zinc-300 sm:text-xl sm:leading-relaxed">
+          <p className="mt-7 max-w-3xl text-pretty text-lg font-medium leading-relaxed text-zinc-200 sm:mt-8 sm:text-xl sm:leading-relaxed">
             A Complete Website + Inventory + Booking System for Gun Ranges
           </p>
-          <p className="mt-6 max-w-2xl text-pretty text-base font-medium leading-relaxed text-zinc-400 sm:text-lg sm:leading-relaxed">
-            Built to help ranges attract customers, showcase inventory, and increase bookings.
+          <p className="mt-7 max-w-2xl text-pretty text-base font-medium leading-relaxed text-zinc-500 sm:mt-8 sm:text-lg sm:leading-relaxed">
+            Built to help ranges attract customers, showcase inventory, and increase bookings —
+            offered and scoped by SCS Nova (Maryland).
           </p>
         </ScrollReveal>
 
-        <div className="mt-14 grid gap-5 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+        <div className="mt-16 grid gap-6 sm:mt-20 sm:grid-cols-2 lg:grid-cols-3 lg:gap-7">
           {features.map((f, i) => (
             <ScrollReveal
               key={f.title}
               delayMs={60 + i * 70}
-              className="flex flex-col rounded-2xl border border-white/[0.1] bg-gradient-to-b from-white/[0.04] to-white/[0.01] p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_24px_48px_rgba(0,0,0,0.38)] ring-1 ring-cauris-gold/[0.08] transition-[border-color,box-shadow,transform] duration-500 hover:-translate-y-1 hover:border-cauris-gold/20 hover:shadow-[0_0_48px_rgba(244,176,66,0.07)] sm:p-7"
+              className="flex flex-col rounded-brand border border-white/[0.11] bg-gradient-to-b from-white/[0.085] to-white/[0.024] p-7 shadow-cauris-elevate-sm ring-1 ring-cauris-gold/[0.11] backdrop-blur-md transition-[border-color,box-shadow,transform] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:border-cauris-gold/24 hover:shadow-[0_0_56px_rgba(244,176,66,0.09)] motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:p-8"
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.02] ring-1 ring-cauris-gold/[0.06]">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/[0.1] bg-white/[0.04] ring-1 ring-cauris-gold/[0.08] backdrop-blur-sm">
                 <FeatureIcon name={f.icon} />
               </div>
-              <h3 className="mt-5 text-base font-semibold tracking-tight text-zinc-50 sm:text-lg">
+              <h3 className="mt-6 text-base font-semibold tracking-[-0.02em] text-zinc-50 sm:text-lg">
                 {f.title}
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-zinc-500 sm:text-[15px] sm:leading-relaxed">
@@ -203,20 +204,20 @@ export function RangeOSSection() {
           ))}
         </div>
 
-        <ScrollReveal delayMs={120} className="mx-auto mt-16 max-w-3xl text-center sm:mt-20 md:mt-24">
+        <ScrollReveal delayMs={120} className="mx-auto mt-20 max-w-3xl text-center sm:mt-24 md:mt-28">
           <p className="text-pretty text-lg font-medium leading-relaxed text-zinc-200 sm:text-xl sm:leading-relaxed">
-            This isn’t just a website. It’s a system designed to bring in customers and show what your
-            business actually offers.
+            More than a brochure site: inventory, booking, and programs in one customer-facing system —
+            the walkthrough on this site is sample UI, not a live range connection.
           </p>
         </ScrollReveal>
 
-        <div className="mt-16 border-t border-white/[0.06] pt-14 sm:mt-20 sm:pt-16 md:mt-24 md:pt-20">
+        <div className="mt-20 border-t border-white/[0.08] pt-20 sm:mt-24 sm:pt-24 md:mt-28 md:pt-28">
           <ScrollReveal delayMs={40}>
-            <p className="font-mono text-xs font-medium uppercase tracking-[0.26em] text-zinc-500 sm:text-sm sm:tracking-[0.22em]">
+            <p className="cauris-kicker">
               Pricing
             </p>
           </ScrollReveal>
-          <div className="mt-10 grid gap-5 sm:mt-12 md:grid-cols-2 md:gap-6">
+          <div className="mt-12 grid gap-6 sm:mt-14 md:grid-cols-2 md:gap-7">
             {pricingPlans.map((plan, i) => (
               <RangePricingCard key={plan.title} plan={plan} delayMs={80 + i * 80} />
             ))}
@@ -224,25 +225,23 @@ export function RangeOSSection() {
         </div>
 
         <ScrollReveal delayMs={200} className="mt-16 sm:mt-20 md:mt-24">
-          <div className="rounded-2xl border border-white/[0.1] bg-gradient-to-b from-white/[0.04] to-white/[0.01] p-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_24px_56px_rgba(0,0,0,0.42)] ring-1 ring-cauris-gold/[0.1] sm:p-10 md:p-12">
+          <div className="rounded-brand-lg border border-white/[0.11] bg-gradient-to-b from-white/[0.08] to-white/[0.022] p-8 shadow-cauris-elevate-sm ring-1 ring-cauris-gold/[0.11] backdrop-blur-md sm:p-10 md:p-12">
             <div className="flex flex-col items-center text-center">
-              <div className="flex w-full max-w-md flex-col gap-3 sm:flex-row sm:justify-center sm:gap-4">
+              <div className="flex w-full max-w-md flex-col gap-3.5 sm:flex-row sm:justify-center sm:gap-4">
                 <Link
                   href="/rangeos-demo"
                   aria-label="Open the guided RangeOS product demo"
-                  className="inline-flex min-h-[44px] flex-1 items-center justify-center rounded-xl border border-cauris-gold/28 bg-cauris-flame/[0.1] px-6 text-sm font-semibold tracking-tight text-cauris-dawn shadow-[0_0_40px_rgba(244,176,66,0.08)] transition-[border-color,background-color,box-shadow,color,transform] duration-300 ease-out motion-reduce:transition-none hover:-translate-y-0.5 motion-reduce:hover:translate-y-0 hover:border-cauris-flame/45 hover:bg-cauris-flame/[0.14] hover:text-zinc-50 hover:shadow-[0_0_52px_rgba(244,176,66,0.12)] sm:flex-none sm:px-8 sm:text-base"
+                  className="cauris-btn-primary-card"
                 >
-                  See Demo
+                  Product demo
                 </Link>
-                <a
-                  href={mailtoStart}
-                  className="inline-flex min-h-[44px] flex-1 items-center justify-center rounded-xl border border-white/[0.12] bg-white/[0.03] px-6 text-sm font-semibold tracking-tight text-zinc-200 transition-[border-color,background-color,color,transform] duration-300 ease-out motion-reduce:transition-none hover:-translate-y-0.5 motion-reduce:hover:translate-y-0 hover:border-cauris-gold/25 hover:bg-white/[0.05] hover:text-zinc-50 sm:flex-none sm:px-8 sm:text-base"
-                >
-                  Get Started
+                <a href={mailtoRange} className="cauris-btn-tertiary-card">
+                  Email range inquiry
                 </a>
               </div>
-              <p className="mt-8 max-w-md text-pretty text-sm font-medium leading-relaxed text-zinc-500 sm:text-base">
-                Built for real businesses. Ready when you are.
+              <p className="mt-8 max-w-lg text-pretty text-sm font-medium leading-relaxed text-zinc-500 sm:text-base">
+                The demo is simulated and browser-only. Email opens a real thread with a preset subject
+                so your range context reaches the studio without playing inbox roulette.
               </p>
             </div>
           </div>

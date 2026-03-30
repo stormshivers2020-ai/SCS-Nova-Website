@@ -1,8 +1,9 @@
+import Link from "next/link";
 import { demoUi } from "@/components/demo/demoUi";
+import { rangeOSPhaseEyebrows } from "@/data/rangeOSDemoContent";
 import {
   rangeOSRequestDemoCtas,
   rangeOSRequestDemoIntro,
-  rangeOSRequestDemoKicker,
   rangeOSRequestDemoSubjects,
   rangeOSRequestDemoSupportLine,
 } from "@/data/rangeOSDemoRequest";
@@ -46,7 +47,7 @@ export function RangeOSRequestDemoStep() {
   return (
     <div className={demoUi.region} role="region" aria-labelledby={headingId}>
       <div className="mx-auto max-w-xl">
-        <div className="relative overflow-hidden rounded-2xl border border-white/[0.1] bg-gradient-to-b from-white/[0.05] to-white/[0.012] p-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_28px_64px_rgba(0,0,0,0.45)] ring-1 ring-cauris-gold/[0.12] sm:p-10 md:p-12">
+        <div className="relative overflow-hidden rounded-brand-lg border border-white/[0.13] bg-gradient-to-b from-white/[0.095] to-white/[0.025] p-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_32px_72px_rgba(0,0,0,0.32)] ring-1 ring-cauris-gold/[0.14] backdrop-blur-md sm:p-10 md:p-12">
           <div
             className="pointer-events-none absolute -right-24 -top-24 h-48 w-48 rounded-full bg-cauris-flame/[0.07] blur-3xl"
             aria-hidden
@@ -56,14 +57,14 @@ export function RangeOSRequestDemoStep() {
             aria-hidden
           />
 
-          <p className={`text-center ${demoUi.kicker}`}>{rangeOSRequestDemoKicker}</p>
+          <p className={`text-center ${demoUi.phaseEyebrow}`}>{rangeOSPhaseEyebrows.requestDemo}</p>
           <h2
             id={headingId}
-            className="mt-4 text-balance text-center text-2xl font-semibold tracking-tight text-zinc-50 sm:text-3xl md:text-[1.75rem] md:leading-snug"
+            className="mt-5 text-balance text-center text-2xl font-semibold tracking-[-0.03em] text-zinc-50 sm:text-3xl md:text-[1.85rem] md:leading-[1.12]"
           >
             <RequestDemoTitle text={intro.title} />
           </h2>
-          <p className="mx-auto mt-6 text-pretty text-center text-sm font-medium leading-relaxed text-zinc-400 sm:text-base">
+          <p className="mx-auto mt-6 max-w-md text-pretty text-center text-sm font-medium leading-relaxed text-zinc-400 sm:text-base">
             {intro.lead}
           </p>
 
@@ -90,8 +91,16 @@ export function RangeOSRequestDemoStep() {
             {SCS_NOVA_BUSINESS_EMAIL}
           </a>
 
-          <p className="mt-8 text-center text-sm font-medium leading-relaxed text-zinc-600 sm:text-base">
+          <p className="mt-8 text-center text-sm font-medium leading-relaxed text-zinc-500 sm:text-[15px]">
             {rangeOSRequestDemoSupportLine}
+          </p>
+          <p className="mt-6 text-center text-sm text-zinc-600">
+            <Link
+              href="/#scs-nova"
+              className="font-medium text-zinc-500 underline decoration-white/[0.12] underline-offset-4 transition-colors hover:text-cauris-dawn hover:decoration-cauris-gold/35"
+            >
+              Studio services &amp; other inquiries — SCS Nova contact
+            </Link>
           </p>
         </div>
       </div>

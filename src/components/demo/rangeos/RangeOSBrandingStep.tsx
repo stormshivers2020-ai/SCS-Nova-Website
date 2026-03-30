@@ -1,5 +1,6 @@
 import { demoUi } from "@/components/demo/demoUi";
 import { rangeOSDemoUi } from "@/components/demo/rangeOSDemoUi";
+import { rangeOSPhaseEyebrows } from "@/data/rangeOSDemoContent";
 import {
   rangeOSBrandingConsistencyItems,
   rangeOSBrandingIdentityKicker,
@@ -26,7 +27,7 @@ function SupportAside() {
 
 function IdentityPlaceholder() {
   return (
-    <div className="relative overflow-hidden rounded-2xl border border-white/[0.1] bg-gradient-to-b from-zinc-900/90 to-black p-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_28px_56px_rgba(0,0,0,0.45)] ring-1 ring-cauris-gold/[0.12] sm:p-10">
+    <div className="relative overflow-hidden rounded-brand border border-white/[0.12] bg-gradient-to-b from-zinc-900/62 to-black/76 p-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.075),0_32px_68px_rgba(0,0,0,0.32)] ring-1 ring-cauris-gold/[0.14] backdrop-blur-md sm:p-10">
       <div
         className="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full bg-cauris-flame/[0.08] blur-3xl"
         aria-hidden
@@ -35,7 +36,7 @@ function IdentityPlaceholder() {
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_20%_30%,rgba(244,176,66,0.1),transparent_55%)]"
         aria-hidden
       />
-      <p className={`relative ${demoUi.kicker}`}>{rangeOSBrandingIdentityKicker}</p>
+      <p className={`relative ${demoUi.kickerTrack} text-zinc-500`}>{rangeOSBrandingIdentityKicker}</p>
       <div className="relative mt-8 flex flex-col items-center gap-8 sm:flex-row sm:items-center sm:justify-center sm:gap-12">
         <div className="relative">
           <div
@@ -65,14 +66,14 @@ function IdentityPlaceholder() {
 function ColorThemeRow() {
   return (
     <section aria-labelledby="rangeos-brand-colors-label">
-      <p id="rangeos-brand-colors-label" className={demoUi.kicker}>
+      <p id="rangeos-brand-colors-label" className={`${demoUi.kickerTrack} text-zinc-500`}>
         Color & theme
       </p>
       <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {rangeOSDemoBrandSwatches.map((s) => (
           <div
             key={s.id}
-            className="overflow-hidden rounded-xl border border-white/[0.08] bg-white/[0.02] shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] ring-1 ring-white/[0.04] transition-[border-color,box-shadow] duration-300 ease-out motion-reduce:transition-none hover:border-cauris-gold/20 hover:shadow-[0_0_24px_rgba(244,176,66,0.06)]"
+            className="overflow-hidden rounded-brand border border-white/[0.1] bg-white/[0.03] shadow-[inset_0_1px_0_rgba(255,255,255,0.05),0_12px_32px_rgba(0,0,0,0.15)] ring-1 ring-white/[0.05] transition-[border-color,box-shadow] duration-300 ease-out motion-reduce:transition-none hover:border-cauris-gold/24 hover:shadow-[0_0_32px_rgba(244,176,66,0.08)]"
           >
             <div className={`h-20 w-full ${s.swatchClass}`} />
             <div className="border-t border-white/[0.06] p-4">
@@ -89,10 +90,10 @@ function ColorThemeRow() {
 function HeroFraming() {
   return (
     <section aria-labelledby="rangeos-brand-hero-label">
-      <p id="rangeos-brand-hero-label" className={demoUi.kicker}>
+      <p id="rangeos-brand-hero-label" className={`${demoUi.kickerTrack} text-zinc-500`}>
         Hero framing
       </p>
-      <div className="relative mt-4 overflow-hidden rounded-2xl border border-white/[0.1] bg-black p-1 ring-1 ring-cauris-gold/[0.1]">
+      <div className="relative mt-4 overflow-hidden rounded-brand border border-white/[0.11] bg-black p-1 ring-1 ring-cauris-gold/[0.12] shadow-[0_24px_56px_rgba(0,0,0,0.28)]">
         <div
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_90%_70%_at_50%_0%,rgba(244,176,66,0.12),transparent_60%)]"
           aria-hidden
@@ -122,10 +123,10 @@ function HeroFraming() {
 function HierarchyStrip() {
   return (
     <section aria-labelledby="rangeos-brand-type-label">
-      <p id="rangeos-brand-type-label" className={demoUi.kicker}>
+      <p id="rangeos-brand-type-label" className={`${demoUi.kickerTrack} text-zinc-500`}>
         Visual hierarchy
       </p>
-      <div className="mt-4 space-y-6 rounded-2xl border border-white/[0.08] bg-gradient-to-b from-white/[0.03] to-transparent p-6 sm:p-8">
+      <div className="mt-4 space-y-6 rounded-brand border border-white/[0.11] bg-gradient-to-b from-white/[0.07] to-white/[0.02] p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_20px_48px_rgba(0,0,0,0.22)] ring-1 ring-white/[0.05] backdrop-blur-md sm:p-8">
         {rangeOSBrandingTypeSamples.map((row) => (
           <div
             key={row.role}
@@ -143,7 +144,7 @@ function HierarchyStrip() {
 function ConsistencyPanel() {
   return (
     <section
-      className="rounded-2xl border border-cauris-gold/20 bg-gradient-to-b from-cauris-flame/[0.06] to-transparent p-6 shadow-[0_0_40px_rgba(244,176,66,0.06)] sm:p-8"
+      className="rounded-brand border border-cauris-gold/24 bg-gradient-to-b from-cauris-flame/[0.08] to-transparent p-6 shadow-[0_0_48px_rgba(244,176,66,0.08),inset_0_1px_0_rgba(255,255,255,0.05)] ring-1 ring-cauris-gold/[0.1] sm:p-8"
       aria-labelledby="rangeos-brand-consistency-label"
     >
       <div
@@ -156,7 +157,7 @@ function ConsistencyPanel() {
       >
         Brand consistency
       </h3>
-      <p className="mt-2 text-sm text-zinc-500">
+      <p className="mt-2 text-sm font-medium text-zinc-500">
         One system, repeated with discipline — so every page feels like the same range.
       </p>
       <ul className="mt-6 space-y-3">
@@ -181,6 +182,7 @@ export function RangeOSBrandingStep() {
   return (
     <div className={demoUi.region} role="region" aria-labelledby={headingId}>
       <header className={demoUi.introMax}>
+        <p className={demoUi.phaseEyebrow}>{rangeOSPhaseEyebrows.branding}</p>
         <h2 id={headingId} className={demoUi.stepTitle}>
           {intro.title}
         </h2>

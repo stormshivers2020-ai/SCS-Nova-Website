@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import { DemoCompassStep } from "@/components/demo/DemoCompassStep";
 import { DemoEarlyAccessStep } from "@/components/demo/DemoEarlyAccessStep";
 import { DemoHelixStep } from "@/components/demo/DemoHelixStep";
@@ -10,113 +10,55 @@ import { DemoInsightStep } from "@/components/demo/DemoInsightStep";
 import { DemoTimelineStep } from "@/components/demo/DemoTimelineStep";
 import { DemoVaultStep } from "@/components/demo/DemoVaultStep";
 import { DemoWorkspaceStep } from "@/components/demo/DemoWorkspaceStep";
+import {
+  DemoAmbient,
+  DemoProgressBar,
+  DemoStepNavDesktop,
+  DemoStepRegion,
+  useDemoArrowNavigation,
+} from "@/components/demo/shared";
 import { demoUi } from "@/components/demo/demoUi";
 import { demoStepLabels, demoWelcome } from "@/data/caurisDemoContent";
 
 const TOTAL_STEPS = demoStepLabels.length;
 
-function DemoAmbient() {
-  return (
-    <div className="pointer-events-none fixed inset-0 -z-10" aria-hidden>
-      <div className="cauris-ambient absolute inset-0">
-        <div className="cauris-grid" />
-        <div className="cauris-starfield animate-twinkle" />
-        <div className="cauris-vignette" />
-        <div className="cauris-grain" />
-      </div>
-    </div>
-  );
-}
-
-function StepShell({
-  children,
-  stepKey,
-  labelledBy,
-}: {
-  children: React.ReactNode;
-  stepKey: number;
-  labelledBy?: string;
-}) {
-  return (
-    <div
-      key={stepKey}
-      className={demoUi.region}
-      role="region"
-      aria-labelledby={labelledBy}
-    >
-      {children}
-    </div>
-  );
-}
-
-function ProgressBar({ step }: { step: number }) {
-  return (
-    <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
-      <p className={`shrink-0 ${demoUi.kicker}`}>
-        Step {step + 1} of {TOTAL_STEPS}
-      </p>
-      <div
-        className="flex min-w-0 flex-1 flex-nowrap items-center gap-1.5 overflow-x-auto pb-0.5 [-ms-overflow-style:none] [scrollbar-width:none] sm:flex-wrap sm:justify-end sm:overflow-visible sm:pb-0 [&::-webkit-scrollbar]:hidden"
-        role="list"
-        aria-label="Demo progress"
-      >
-        {demoStepLabels.map((label, i) => (
-          <span
-            key={label}
-            role="listitem"
-            title={label}
-            className={`h-1.5 rounded-full transition-all duration-[450ms] ease-out motion-reduce:transition-none ${
-              i === step
-                ? "w-8 bg-gradient-to-r from-cauris-flame to-cauris-ember shadow-glow-gold"
-                : i < step
-                  ? "w-2 bg-cauris-gold/50"
-                  : "w-2 bg-white/[0.08]"
-            }`}
-            aria-current={i === step ? "step" : undefined}
-          />
-        ))}
-      </div>
-    </div>
-  );
-}
-
 function WelcomeStep({ onStart }: { onStart: () => void }) {
   return (
-    <StepShell stepKey={0} labelledBy="demo-welcome-title">
+    <DemoStepRegion stepKey={0} labelledBy="demo-welcome-title">
       <div className="text-center">
         <h1
           id="demo-welcome-title"
-          className="text-balance text-3xl font-semibold tracking-tight text-zinc-50 sm:text-4xl md:text-5xl"
+          className="text-balance text-[1.65rem] font-semibold leading-[1.12] tracking-[-0.03em] text-zinc-50 sm:text-4xl sm:leading-tight md:text-[2.65rem] md:leading-[1.08]"
         >
           <span className="text-gradient-gold">{demoWelcome.title}</span>
         </h1>
-        <p className="mx-auto mt-4 max-w-xl text-pretty text-lg font-medium text-zinc-300 sm:text-xl">
+        <p className="mx-auto mt-5 max-w-xl text-pretty text-lg font-medium leading-snug text-zinc-300 sm:mt-6 sm:text-xl sm:leading-snug">
           {demoWelcome.subheadline}
         </p>
-        <p className="mx-auto mt-6 max-w-2xl text-pretty text-sm leading-relaxed text-zinc-400 sm:text-base">
+        <p className="mx-auto mt-6 max-w-2xl text-pretty text-sm leading-relaxed text-zinc-500 sm:mt-7 sm:text-base sm:leading-relaxed">
           {demoWelcome.body}
         </p>
       </div>
 
-      <div className="relative mx-auto mt-14 max-w-lg">
+      <div className="relative mx-auto mt-16 max-w-lg">
         <div
-          className="pointer-events-none absolute -inset-[20%] rounded-[2rem] bg-cauris-flame/[0.07] blur-3xl"
+          className="pointer-events-none absolute -inset-[20%] rounded-[2rem] bg-cauris-flame/[0.08] blur-3xl"
           aria-hidden
         />
         <div
           className="pointer-events-none absolute -inset-[12%] rounded-[2rem] opacity-60 blur-3xl"
           style={{
             background:
-              "radial-gradient(ellipse at 30% 20%, rgba(88, 60, 180, 0.22), transparent 55%)",
+              "radial-gradient(ellipse at 30% 20%, rgba(88, 60, 180, 0.24), transparent 55%)",
           }}
           aria-hidden
         />
-        <div className="relative overflow-hidden rounded-3xl border border-white/[0.1] bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-1 shadow-[0_0_80px_rgba(88,60,180,0.12),inset_0_1px_0_rgba(255,255,255,0.08)] ring-1 ring-cauris-gold/[0.12]">
-          <div className="rounded-[1.35rem] bg-black/80 p-8 sm:p-10">
+        <div className="demo-welcome-hero relative overflow-hidden rounded-brand-lg border border-white/[0.13] bg-gradient-to-b from-white/[0.1] to-white/[0.025] p-px shadow-[0_0_88px_rgba(88,60,180,0.14),inset_0_1px_0_rgba(255,255,255,0.1)] ring-1 ring-cauris-gold/[0.14] backdrop-blur-md">
+          <div className="rounded-[calc(1.5rem-1px)] bg-black/58 p-7 backdrop-blur-xl sm:p-11">
             <div className="flex flex-col items-center">
               <div className="relative">
                 <div
-                  className="pointer-events-none absolute inset-[-30%] rounded-full bg-cauris-flame/[0.12] blur-2xl"
+                  className="pointer-events-none absolute inset-[-35%] rounded-full bg-cauris-flame/[0.14] blur-2xl"
                   aria-hidden
                 />
                 <Image
@@ -124,28 +66,31 @@ function WelcomeStep({ onStart }: { onStart: () => void }) {
                   alt="Cauris mark"
                   width={120}
                   height={120}
-                  className="relative h-24 w-24 object-contain opacity-95 sm:h-28 sm:w-28"
+                  className="relative h-24 w-24 object-contain opacity-[0.97] drop-shadow-[0_0_28px_rgba(244,176,66,0.18)] sm:h-[7.25rem] sm:w-[7.25rem]"
                 />
               </div>
-              <p className={`mt-6 ${demoUi.kicker}`}>Guided product preview</p>
-              <p className="mt-3 max-w-sm text-pretty text-center text-sm leading-relaxed text-zinc-300">
-                Capture → timeline → patterns → insight → guidance → vault — one thread, end to end.
+              <p className={`mt-7 ${demoUi.phaseEyebrow} text-center text-cauris-dawn/85`}>
+                Sample walkthrough · no data leaves this tab
+              </p>
+              <p className="mt-4 max-w-sm text-pretty text-center text-sm font-medium leading-relaxed text-zinc-300 sm:text-[15px]">
+                Capture → timeline → patterns → insight → guidance → vault — one thread, the arc the
+                product is being built around.
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="mt-12 flex justify-center">
+      <div className="mt-10 flex justify-center px-1 sm:mt-12">
         <button
           type="button"
           onClick={onStart}
-          className={`inline-flex h-12 min-h-11 items-center justify-center rounded-full bg-gradient-to-b from-cauris-flame/95 to-cauris-ember/95 px-10 text-sm font-semibold text-black shadow-glow-gold transition duration-300 hover:from-cauris-dawn hover:to-cauris-flame hover:shadow-glow-gold-lg ${demoUi.focusRing}`}
+          className={`inline-flex h-12 min-h-12 w-full max-w-sm items-center justify-center rounded-full bg-gradient-to-b from-cauris-flame/95 to-cauris-ember/95 px-8 text-sm font-semibold text-black shadow-glow-gold cauris-transition-interactive hover:from-cauris-dawn hover:to-cauris-flame hover:shadow-glow-gold-lg sm:w-auto sm:max-w-none sm:px-10 ${demoUi.focusRing}`}
         >
           {demoWelcome.ctaStart}
         </button>
       </div>
-    </StepShell>
+    </DemoStepRegion>
   );
 }
 
@@ -184,64 +129,54 @@ export function CaurisDemoExperience() {
   const goNext = useCallback(() => setStep((s) => Math.min(TOTAL_STEPS - 1, s + 1)), []);
   const goBack = useCallback(() => setStep((s) => Math.max(0, s - 1)), []);
 
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      const t = e.target;
-      if (t instanceof HTMLInputElement || t instanceof HTMLTextAreaElement) return;
-      if (t instanceof HTMLElement && t.isContentEditable) return;
-      if (e.key === "ArrowRight") goNext();
-      if (e.key === "ArrowLeft") goBack();
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [goNext, goBack]);
+  useDemoArrowNavigation(goNext, goBack);
 
   return (
     <div className="relative min-h-[100dvh] text-zinc-100">
       <DemoAmbient />
 
-      <header className="sticky top-0 z-20 border-b border-white/[0.06] bg-glass-header pt-[env(safe-area-inset-top,0px)]">
-        <div className="container-brand flex flex-col gap-4 py-4 sm:py-5">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <p className="text-sm font-semibold tracking-tight text-zinc-100">
-              Cauris <span className="text-zinc-500">Demo</span>
-            </p>
+      <header className="demo-cauris-header sticky top-0 z-20 border-b border-white/[0.08] pt-[env(safe-area-inset-top,0px)]">
+        <div className="container-brand flex flex-col gap-4 py-3.5 sm:gap-6 sm:py-5">
+          <div className="flex flex-wrap items-start justify-between gap-3">
+            <div className="min-w-0">
+              <p className="text-[13px] font-semibold tracking-[-0.02em] text-zinc-100 sm:text-sm">
+                Cauris <span className="font-medium text-zinc-500">Demo</span>
+              </p>
+              <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-600 sm:text-[11px]">
+                Sample UI · product in development
+              </p>
+            </div>
             <Link
               href="/"
-              className={`shrink-0 rounded-full border border-white/[0.1] px-4 py-2.5 text-xs font-semibold text-zinc-300 transition hover:border-cauris-gold/30 hover:text-cauris-dawn sm:py-2 sm:text-sm ${demoUi.focusRing}`}
+              className={`inline-flex min-h-12 shrink-0 items-center justify-center rounded-full border border-white/[0.11] bg-white/[0.03] px-5 text-xs font-semibold text-zinc-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] cauris-transition-interactive hover:border-cauris-gold/35 hover:bg-white/[0.05] hover:text-cauris-dawn sm:min-h-0 sm:px-4 sm:py-2 sm:text-sm ${demoUi.focusRing}`}
             >
-              Exit Demo
+              Exit
             </Link>
           </div>
-          <ProgressBar step={step} />
-          <nav
-            className="hidden font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-600 xl:block"
-            aria-label="All demo steps"
-          >
-            {demoStepLabels.map((l, i) => (
-              <span key={l} className={i === step ? "text-cauris-dawn" : undefined}>
-                {i + 1}. {l}
-                {i < demoStepLabels.length - 1 ? " · " : ""}
-              </span>
-            ))}
-          </nav>
+          <DemoProgressBar
+            step={step}
+            labels={demoStepLabels}
+            startMono="Start · product tour"
+            progressAriaLabel={(label) => `Demo progress: ${label}`}
+          />
+          <DemoStepNavDesktop labels={demoStepLabels} step={step} />
         </div>
       </header>
 
-      <main className="pb-[max(8.5rem,calc(7.5rem+env(safe-area-inset-bottom,0px)))] pt-2 sm:pb-32">
+      <main className="pb-[max(9.5rem,calc(8rem+env(safe-area-inset-bottom,0px)))] pt-3 sm:pb-32 sm:pt-6">
         <p className="sr-only" aria-live="polite" aria-atomic="true">
           Step {step + 1} of {TOTAL_STEPS}: {demoStepLabels[step]}
         </p>
         {renderStep(step, goToWorkspace)}
       </main>
 
-      <footer className="fixed bottom-0 left-0 right-0 z-20 border-t border-white/[0.06] bg-black/85 pb-[env(safe-area-inset-bottom,0px)] backdrop-blur-md">
-        <div className="container-brand flex items-center justify-between gap-4 py-4">
+      <footer className="demo-cauris-footer fixed bottom-0 left-0 right-0 z-20 border-t border-white/[0.08] pb-[env(safe-area-inset-bottom,0px)]">
+        <div className="container-brand grid w-full grid-cols-2 items-stretch gap-3 py-3.5 sm:flex sm:items-center sm:justify-between sm:gap-4 sm:py-5">
           <button
             type="button"
             onClick={goBack}
             disabled={step === 0}
-            className={`inline-flex min-h-11 min-w-[5.5rem] items-center justify-center rounded-full border border-white/[0.1] px-5 text-sm font-medium text-zinc-300 transition enabled:hover:border-cauris-gold/30 enabled:hover:text-zinc-50 disabled:cursor-not-allowed disabled:opacity-35 ${demoUi.focusRing}`}
+            className={`inline-flex min-h-12 w-full min-w-0 items-center justify-center rounded-full border border-white/[0.11] bg-white/[0.02] px-4 text-sm font-medium text-zinc-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] cauris-transition-interactive enabled:hover:border-cauris-gold/28 enabled:hover:text-zinc-50 disabled:cursor-not-allowed disabled:opacity-35 sm:w-auto sm:min-w-[5.5rem] sm:px-5 ${demoUi.focusRing}`}
           >
             Back
           </button>
@@ -249,14 +184,14 @@ export function CaurisDemoExperience() {
             <button
               type="button"
               onClick={goNext}
-              className={`inline-flex min-h-11 items-center justify-center rounded-full bg-gradient-to-b from-cauris-flame/95 to-cauris-ember/95 px-8 text-sm font-semibold text-black shadow-glow-gold transition hover:from-cauris-dawn hover:to-cauris-flame ${demoUi.focusRing}`}
+              className={`inline-flex min-h-12 w-full items-center justify-center rounded-full bg-gradient-to-b from-cauris-flame/95 to-cauris-ember/95 px-6 text-sm font-semibold text-black shadow-glow-gold cauris-transition-interactive hover:from-cauris-dawn hover:to-cauris-flame hover:shadow-glow-gold-lg sm:w-auto sm:px-8 ${demoUi.focusRing}`}
             >
-              Next
+              Continue
             </button>
           ) : (
             <Link
               href="/"
-              className={`inline-flex min-h-11 items-center justify-center rounded-full border border-cauris-gold/30 bg-cauris-flame/[0.08] px-8 text-sm font-semibold text-cauris-dawn transition hover:bg-cauris-flame/[0.12] ${demoUi.focusRing}`}
+              className={`inline-flex min-h-12 w-full items-center justify-center rounded-full border border-cauris-gold/32 bg-cauris-flame/[0.1] px-6 text-center text-sm font-semibold leading-tight text-cauris-dawn shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] cauris-transition-interactive hover:border-cauris-gold/45 hover:bg-cauris-flame/[0.14] sm:w-auto sm:px-8 ${demoUi.focusRing}`}
             >
               Return home
             </Link>
