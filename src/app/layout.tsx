@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -31,20 +30,18 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} min-h-screen bg-black font-sans text-zinc-100`}
       >
-        <div className="relative min-h-screen">
+        <div className="relative min-h-screen bg-black">
           <div
             className="pointer-events-none fixed inset-0 z-0"
             aria-hidden="true"
           >
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src="/FULL-BACKGROUND.png"
               alt=""
-              fill
-              className="object-cover"
-              sizes="100vw"
-              unoptimized
+              className="absolute inset-0 h-full w-full object-cover opacity-35"
             />
-            <div className="absolute inset-0 bg-black/50" />
+            <div className="absolute inset-0 bg-black/55" />
           </div>
           <div className="relative z-10">{children}</div>
         </div>
