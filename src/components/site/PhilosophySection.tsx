@@ -35,6 +35,10 @@ export function PhilosophySection() {
           <p className="pt-2 text-base font-medium text-zinc-400 sm:text-lg">
             Cauris exists to bring clarity to complexity.
           </p>
+
+          <p className="mx-auto mt-14 max-w-xl border-t border-white/[0.1] pt-12 text-pretty text-lg font-semibold leading-snug text-zinc-100 sm:mt-16 sm:pt-14 sm:text-xl sm:leading-snug">
+            We build systems that help businesses attract customers, manage inventory, and grow.
+          </p>
         </ScrollReveal>
 
         <div

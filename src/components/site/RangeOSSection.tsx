@@ -169,18 +169,22 @@ export function RangeOSSection() {
 
       <div className="relative">
         <ScrollReveal>
+          <p className="cauris-kicker text-zinc-500">
+            Product system · built &amp; offered by SCS Nova
+          </p>
           <h2
             id="range-os-heading"
-            className="max-w-4xl text-pretty text-3xl font-semibold tracking-[-0.025em] text-zinc-100 sm:text-4xl md:text-[2.95rem] md:leading-[1.05]"
+            className="mt-6 max-w-4xl text-pretty text-3xl font-semibold tracking-[-0.025em] text-zinc-100 sm:mt-7 sm:text-4xl md:text-[2.95rem] md:leading-[1.05]"
           >
             RangeOS<span className="text-gradient-gold">™</span>
           </h2>
           <p className="mt-7 max-w-3xl text-pretty text-lg font-medium leading-relaxed text-zinc-200 sm:mt-8 sm:text-xl sm:leading-relaxed">
-            A Complete Website + Inventory + Booking System for Gun Ranges
+            The range-facing product: website, inventory, booking, and programs in one system — for gun
+            ranges.
           </p>
           <p className="mt-7 max-w-2xl text-pretty text-base font-medium leading-relaxed text-zinc-500 sm:mt-8 sm:text-lg sm:leading-relaxed">
-            Built to help ranges attract customers, showcase inventory, and increase bookings —
-            offered and scoped by SCS Nova (Maryland).
+            Built to help ranges attract customers, showcase inventory, and increase bookings — scoped
+            and shipped from our Maryland studio.
           </p>
         </ScrollReveal>
 

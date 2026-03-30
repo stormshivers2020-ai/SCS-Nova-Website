@@ -533,10 +533,21 @@ export function ServicesSection() {
             <span className="text-gradient-gold">website refinement.</span>
           </h2>
           <p className="mt-10 max-w-3xl text-pretty text-base font-medium leading-relaxed text-zinc-200 sm:mt-11 sm:text-lg sm:leading-relaxed">
-            SCS Nova is a small studio: new sites, identity programs, and tight updates to what you
-            already run. Engagements are scoped in writing — clearer presentation, less noise, no agency
-            theater.
+            SCS Nova is the studio: new sites, identity programs, inventory and booking systems, and
+            tight updates to what you already run. Engagements are scoped in writing — clearer
+            presentation, less noise, no agency theater.
           </p>
+          <div className="mt-10 sm:mt-11">
+            <Link
+              href="/#scs-nova"
+              className="cauris-btn-primary inline-flex w-full min-h-12 items-center justify-center sm:w-auto sm:min-w-[220px]"
+            >
+              Build My System
+            </Link>
+            <p className="mt-4 max-w-xl text-pretty text-sm leading-relaxed text-zinc-500">
+              Tell us what you&apos;re building — we&apos;ll reply with a clear next step.
+            </p>
+          </div>
         </ScrollReveal>
 
         <div className="mt-16 sm:mt-20">
@@ -667,15 +678,14 @@ export function ServicesSection() {
 
         <ScrollReveal delayMs={340} className="mt-12 md:mt-14">
           <p className="max-w-2xl text-pretty text-base font-medium leading-relaxed text-zinc-300 sm:text-lg">
-            If you need a new site, a brand reset, or a disciplined pass on what you already ship — use
-            the{" "}
+            Ready to move?{" "}
             <Link
               href="/#scs-nova"
               className="text-cauris-dawn underline decoration-cauris-gold/30 underline-offset-[5px] transition-colors duration-[var(--cauris-duration-hover)] ease-[cubic-bezier(0.22,1,0.36,1)] hover:text-zinc-50 hover:decoration-cauris-flame/55"
             >
-              request-services block
-            </Link>{" "}
-            under SCS Nova. One clear subject line, a human reply.
+              Start Your Project
+            </Link>
+            — one clear subject line under SCS Nova, a human reply.
           </p>
         </ScrollReveal>
       </div>

@@ -91,7 +91,7 @@ export function CompanyContactSection() {
               href={MAILTO_PROJECT}
               className="cauris-btn-primary-card !mt-8 !flex-none !px-7 !py-3.5 sm:!mt-9 sm:!px-8 sm:!py-4"
             >
-              Email a project inquiry
+              Start Your Project
             </a>
             <p className="mt-4 text-pretty text-xs leading-relaxed text-zinc-500 sm:text-sm">
               Opens your mail app with a clear subject — add context in the body; we reply in person.

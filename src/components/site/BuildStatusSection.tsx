@@ -40,7 +40,7 @@ export function BuildStatusSection() {
       <div className="relative">
         <ScrollReveal>
           <p className="cauris-kicker">
-            Ecosystem status
+            Ecosystem status · SCS Nova
           </p>
           <h2
             id="build-status-heading"
@@ -48,6 +48,10 @@ export function BuildStatusSection() {
           >
             Actively in build
           </h2>
+          <p className="mt-6 max-w-2xl text-pretty text-sm font-medium leading-relaxed text-zinc-500 sm:mt-7 sm:text-base">
+            Products and engines we ship alongside client websites, brand work, and range systems — one
+            studio, multiple threads.
+          </p>
           <p className="mt-10 max-w-3xl text-pretty text-base font-medium leading-relaxed text-zinc-200 sm:mt-11 sm:text-lg sm:leading-relaxed">
             Cauris and B-Cauris move forward in stages; apparel is queued behind them. This page tracks
             where things stand — not a one-day launch story.

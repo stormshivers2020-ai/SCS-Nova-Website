@@ -11,6 +11,7 @@ import {
   TheFutureSection,
   TheSystemSection,
   WhatThisIsSection,
+  WhatWeDoSection,
 } from "@/components/site";
 
 export default function Home() {
@@ -25,6 +26,7 @@ export default function Home() {
 
       <div>
         <Hero />
+        <WhatWeDoSection />
         <WhatThisIsSection />
         <BCaurisHero />
         <BuildStatusSection />

@@ -17,7 +17,7 @@ export function TheSystemSection() {
       <div className="relative">
         <ScrollReveal>
           <SectionHeader
-            eyebrow="The system"
+            eyebrow="Cauris · how the engine is structured"
             headingId="the-system-heading"
             title={<span className="text-gradient-gold">The System</span>}
           />

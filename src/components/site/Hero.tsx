@@ -132,20 +132,35 @@ export function Hero() {
               Intelligence for your life.
             </p>
 
+            <p className="hero-reveal mx-auto mt-5 max-w-lg text-pretty text-xs font-medium leading-relaxed text-zinc-500 sm:mt-6 sm:max-w-xl sm:text-sm [animation-delay:0.38s]">
+              <span className="text-zinc-400">SCS Nova</span> is the studio behind this site.{" "}
+              <span className="text-zinc-400">Cauris</span> is the personal intelligence engine we&apos;re
+              building — memory, patterns, and calmer next steps.
+            </p>
+
             <p className="hero-reveal mx-auto mt-8 max-w-lg text-pretty text-sm leading-relaxed text-zinc-400 sm:mt-9 sm:max-w-xl sm:text-[15px] sm:leading-relaxed [animation-delay:0.42s]">
               In active development — a personal intelligence layer that turns everyday capture into
               memory, insight, and calmer next steps.
             </p>
 
-            <div className="hero-reveal mt-14 flex w-full max-w-2xl flex-col gap-4 sm:mt-[4.25rem] sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4 [animation-delay:0.52s]">
+            <p className="hero-reveal mx-auto mt-6 max-w-lg text-center [animation-delay:0.48s]">
+              <Link
+                href="/#memory"
+                className="text-sm font-medium text-zinc-500 underline decoration-white/[0.12] underline-offset-[5px] transition-colors duration-[var(--cauris-duration-hover)] ease-[cubic-bezier(0.22,1,0.36,1)] hover:text-cauris-dawn hover:decoration-cauris-gold/35"
+              >
+                How the Cauris system works
+              </Link>
+            </p>
+
+            <div className="hero-reveal mt-10 flex w-full max-w-2xl flex-col gap-4 sm:mt-12 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4 [animation-delay:0.52s]">
               <Link href="/demo" className="cauris-btn-primary sm:min-w-[200px]">
                 Open the Cauris demo
               </Link>
-              <Link href="/#memory" className="cauris-btn-secondary sm:min-w-[160px]">
-                How the system works
+              <Link href="/#services" className="cauris-btn-secondary sm:min-w-[180px]">
+                Build My System
               </Link>
-              <Link href="/#scs-nova" className="cauris-btn-tertiary">
-                Studio &amp; contact
+              <Link href="/#scs-nova" className="cauris-btn-tertiary sm:min-w-[180px]">
+                Start Your Project
               </Link>
             </div>
 

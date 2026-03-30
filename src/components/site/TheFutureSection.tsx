@@ -21,7 +21,7 @@ export function TheFutureSection() {
       <div className="relative">
         <ScrollReveal>
           <SectionHeader
-            eyebrow="Horizon"
+            eyebrow="Horizon · Cauris roadmap"
             headingId="future-heading"
             title={
               <>

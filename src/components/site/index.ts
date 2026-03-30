@@ -13,3 +13,4 @@ export { SystemCards } from "./SystemCards";
 export { TheFutureSection } from "./TheFutureSection";
 export { TheSystemSection } from "./TheSystemSection";
 export { WhatThisIsSection } from "./WhatThisIsSection";
+export { WhatWeDoSection } from "./WhatWeDoSection";

@@ -18,7 +18,7 @@ export function WhatThisIsSection() {
         <div className="order-2 lg:order-1">
           <ScrollReveal>
             <SectionHeader
-              eyebrow="What this is"
+              eyebrow="Cauris · intelligence engine"
               headingId="what-this-is-heading"
               title={
                 <>
@@ -28,8 +28,9 @@ export function WhatThisIsSection() {
             />
             <div className="mt-12 space-y-7 text-pretty text-base leading-relaxed sm:mt-14 sm:text-[17px] sm:leading-relaxed">
               <p className="font-medium text-zinc-200">
-                Cauris is in active development: a personal intelligence system that turns everyday input
-                into structured memory, connected insight, and clearer decisions — not another notes app.
+                From SCS Nova, in active development: Cauris is a personal intelligence system that turns
+                everyday input into structured memory, connected insight, and clearer decisions — not
+                another notes app.
               </p>
               <p className="text-zinc-500">
                 It doesn&apos;t just store information.

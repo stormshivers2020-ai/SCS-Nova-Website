@@ -23,7 +23,7 @@ export function BCaurisHero() {
           <div className="grid items-center gap-16 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-20 xl:gap-28">
             <div className="order-2 lg:order-1">
               <div className="animate-fade-up flex flex-wrap items-center gap-3 opacity-0 [animation-delay:0.08s]">
-                <p className="cauris-kicker">B-Cauris</p>
+                <p className="cauris-kicker">B-Cauris · work-side engine (SCS Nova)</p>
                 <span className="rounded-full border border-cauris-gold/22 bg-cauris-flame/[0.07] px-2.5 py-0.5 font-mono text-[9px] font-semibold uppercase tracking-[0.18em] text-cauris-dawn sm:text-[10px]">
                   In active development
                 </span>
