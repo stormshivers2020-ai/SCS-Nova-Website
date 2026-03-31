@@ -156,10 +156,10 @@ export function Hero() {
               <Link href="/demo" className="cauris-btn-primary sm:min-w-[200px]">
                 Open the Cauris demo
               </Link>
-              <Link href="/#services" className="cauris-btn-secondary sm:min-w-[180px]">
+              <Link href="/services" className="cauris-btn-secondary sm:min-w-[180px]">
                 Build My System
               </Link>
-              <Link href="/#scs-nova" className="cauris-btn-tertiary sm:min-w-[180px]">
+              <Link href="/services#request-services" className="cauris-btn-tertiary sm:min-w-[180px]">
                 Start Your Project
               </Link>
             </div>

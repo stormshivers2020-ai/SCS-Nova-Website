@@ -65,10 +65,10 @@ export function WhatWeDoSection() {
         </div>
 
         <ScrollReveal delayMs={380} className="mt-14 flex flex-col gap-4 sm:mt-16 sm:flex-row sm:flex-wrap sm:items-center sm:gap-5">
-          <Link href="/#scs-nova" className="cauris-btn-primary w-full sm:w-auto sm:min-w-[220px]">
+          <Link href="/services#request-services" className="cauris-btn-primary w-full sm:w-auto sm:min-w-[220px]">
             Start Your Project
           </Link>
-          <Link href="/#services" className="cauris-btn-secondary w-full sm:w-auto sm:min-w-[200px]">
+          <Link href="/services" className="cauris-btn-secondary w-full sm:w-auto sm:min-w-[200px]">
             Services &amp; investment
           </Link>
         </ScrollReveal>

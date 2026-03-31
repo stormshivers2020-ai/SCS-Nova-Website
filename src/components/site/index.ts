@@ -4,6 +4,7 @@ export { BuildStatusSection } from "./BuildStatusSection";
 export { CompanyContactSection } from "./CompanyContactSection";
 export { Hero } from "./Hero";
 export { LightDemoPromoSection } from "./LightDemoPromoSection";
+export { ManagementDashboardOSSection } from "./ManagementDashboardOSSection";
 export { Navbar } from "./Navbar";
 export { PhilosophySection } from "./PhilosophySection";
 export { RangeOSSection } from "./RangeOSSection";

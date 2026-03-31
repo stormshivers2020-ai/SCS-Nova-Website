@@ -11,8 +11,9 @@ const nav = [
   { href: "/#memory", label: "Memory" },
   { href: "/#insight", label: "Insight" },
   { href: "/#scs-nova", label: "SCS Nova" },
-  { href: "/#services", label: "Services" },
+  { href: "/services", label: "Services" },
   { href: "/#light-style-demo", label: "Light Demo" },
+  { href: "/dashboardos", label: "DashboardOS" },
   { href: "/#range-os", label: "RangeOS" },
   { href: "/#apparel", label: "Apparel" },
 ] as const;

@@ -6,6 +6,7 @@ import {
   Hero,
   PhilosophySection,
   LightDemoPromoSection,
+  ManagementDashboardOSSection,
   RangeOSSection,
   SelectedWorkSection,
   ServicesSection,
@@ -36,6 +37,7 @@ export default function Home() {
         <ServicesSection />
         <LightDemoPromoSection />
         <RangeOSSection />
+        <ManagementDashboardOSSection />
         <TheSystemSection />
         <PhilosophySection />
         <TheFutureSection />
