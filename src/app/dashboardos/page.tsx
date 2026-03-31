@@ -1,6 +1,7 @@
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { SectionShell } from "@/components/section-shell";
 import { buildBusinessMailto } from "@/data/siteContact";
+import Link from "next/link";
 
 const whatItDoes = [
   {
@@ -114,7 +115,7 @@ export default function DashboardOSPage() {
       <SectionShell
         id="dashboardos-hero"
         aria-labelledby="dashboardos-hero-heading"
-        className="relative overflow-hidden bg-gradient-to-b from-black/46 via-zinc-950/14 to-black/34 !py-24 md:!py-32 lg:!py-36"
+        className="relative overflow-hidden bg-gradient-to-b from-black/46 via-zinc-950/14 to-black/34 !py-20 md:!py-32 lg:!py-36"
       >
         <div
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_74%_48%_at_50%_0%,rgba(232,148,58,0.11),transparent_56%)]"
@@ -184,7 +185,7 @@ export default function DashboardOSPage() {
             <ScrollReveal
               key={item.title}
               delayMs={50 + i * 60}
-              className="rounded-brand border border-white/[0.11] bg-gradient-to-b from-white/[0.08] to-white/[0.02] p-6 shadow-cauris-elevate-sm ring-1 ring-cauris-gold/[0.09] sm:p-7"
+              className="rounded-brand border border-white/[0.12] bg-gradient-to-b from-white/[0.09] to-white/[0.022] p-6 shadow-cauris-elevate-sm ring-1 ring-cauris-gold/[0.1] sm:p-7"
             >
               <h3 className="text-base font-semibold tracking-[-0.02em] text-zinc-50 sm:text-lg">{item.title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-zinc-500 sm:text-[15px]">{item.body}</p>
@@ -237,7 +238,7 @@ export default function DashboardOSPage() {
             <ScrollReveal
               key={step.title}
               delayMs={70 + i * 70}
-              className="rounded-brand border border-white/[0.11] bg-gradient-to-b from-white/[0.07] to-white/[0.018] p-7 shadow-cauris-elevate-sm ring-1 ring-white/[0.05] sm:p-8"
+              className="rounded-brand border border-white/[0.12] bg-gradient-to-b from-white/[0.09] to-white/[0.022] p-7 shadow-cauris-elevate-sm ring-1 ring-cauris-gold/[0.1] sm:p-8"
             >
               <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-cauris-flame/75 sm:text-[11px]">
                 Step {i + 1}
@@ -373,7 +374,7 @@ export default function DashboardOSPage() {
             <ScrollReveal
               key={plan.title}
               delayMs={80 + i * 70}
-              className="rounded-brand border border-white/[0.11] bg-gradient-to-b from-white/[0.08] to-white/[0.02] p-7 shadow-cauris-elevate-sm ring-1 ring-cauris-gold/[0.1] sm:p-8"
+              className="rounded-brand border border-white/[0.12] bg-gradient-to-b from-white/[0.09] to-white/[0.022] p-7 shadow-cauris-elevate-sm ring-1 ring-cauris-gold/[0.1] sm:p-8"
             >
               <h3 className="text-xl font-semibold tracking-[-0.03em] text-zinc-50">{plan.title}</h3>
               <p className="mt-4 text-2xl font-semibold tracking-tight text-zinc-100">{plan.price}</p>
@@ -402,6 +403,9 @@ export default function DashboardOSPage() {
             <a href={mailto} className="cauris-btn-tertiary-card">
               Request Demo
             </a>
+            <Link href="/demos" className="cauris-btn-tertiary-card">
+              Demos hub
+            </Link>
             <a href={mailto} className="cauris-btn-tertiary-card">
               Email SCS Nova
             </a>

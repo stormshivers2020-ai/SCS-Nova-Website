@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { SectionShell } from "@/components/section-shell";
 import { buildBusinessMailto, MAILTO_SUBJECTS } from "@/data/siteContact";
@@ -117,22 +118,30 @@ const systems = [
     name: "RangeOS™",
     summary: "Website + inventory + booking system for gun ranges, designed for customer flow and operational clarity.",
     note: "Starting points available",
+    href: "/rangeos",
+    cta: "Explore RangeOS",
   },
   {
     name: "Management DashboardOS",
     summary:
       "Multi-client operating system for managing work, clients, files, workflows, messages, and daily control.",
     note: "Custom scope",
+    href: "/dashboardos",
+    cta: "Explore DashboardOS",
   },
   {
     name: "Cauris",
     summary: "Life-intelligence system for memory, structure, and insight — designed for calmer decisions over time.",
     note: "In active development",
+    href: "/cauris",
+    cta: "Explore Cauris",
   },
   {
     name: "B-Cauris",
     summary: "Work intelligence and operational memory system for teams that need context continuity and execution focus.",
     note: "Custom scope",
+    href: "/b-cauris",
+    cta: "Explore B-Cauris",
   },
 ] as const;
 
@@ -152,11 +161,11 @@ function PricingTierCard({
           : "border-white/[0.14] from-white/[0.12] to-white/[0.06] ring-white/[0.08]"
       }`}
     >
-      <h3 className="text-balance text-2xl font-semibold leading-tight tracking-[-0.03em] text-zinc-50 sm:text-[1.65rem]">
+      <h3 className="text-balance text-[1.65rem] font-semibold leading-tight tracking-[-0.03em] text-zinc-50 sm:text-[1.75rem]">
         {tier.name}
       </h3>
       <p className="mt-2 text-sm font-medium leading-relaxed text-zinc-300 sm:text-base">{tier.tagline}</p>
-      <p className="mt-6 text-[1.9rem] font-semibold leading-none tracking-[-0.03em] text-zinc-100 sm:text-[2.1rem]">
+      <p className="mt-6 text-[2rem] font-semibold leading-none tracking-[-0.03em] text-zinc-100 sm:text-[2.1rem]">
         {tier.price}
       </p>
       <p className="mt-5 text-sm leading-relaxed text-zinc-300 sm:text-[15px] sm:leading-relaxed">
@@ -180,6 +189,12 @@ function PricingTierCard({
         {tier.footnote ? (
           <p className="mt-3 text-xs leading-relaxed text-zinc-300 sm:text-[13px]">{tier.footnote}</p>
         ) : null}
+        <a
+          href="#request-services"
+          className="mt-5 inline-flex min-h-11 w-full items-center justify-center rounded-brand-sm border border-cauris-gold/25 bg-cauris-flame/[0.06] px-4 text-sm font-medium text-zinc-100 transition-colors hover:border-cauris-gold/40 hover:text-cauris-dawn sm:w-auto"
+        >
+          Choose this tier
+        </a>
       </div>
     </ScrollReveal>
   );
@@ -200,7 +215,7 @@ export default function ServicesPage() {
       <SectionShell
         id="services-hero"
         aria-labelledby="services-hero-heading"
-        className="relative overflow-hidden bg-gradient-to-b from-black/46 via-zinc-950/14 to-black/36 !py-24 md:!py-32 lg:!py-36"
+        className="relative overflow-hidden bg-gradient-to-b from-black/46 via-zinc-950/14 to-black/36 !py-20 md:!py-32 lg:!py-36"
       >
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_82%_50%_at_50%_0%,rgba(232,148,58,0.1),transparent_58%)]" />
 
@@ -216,6 +231,21 @@ export default function ServicesPage() {
             SCS Nova builds websites, branded systems, and operational tools designed to help businesses
             present clearly, work smarter, and grow with more control.
           </p>
+          <p className="mt-5 max-w-3xl text-pretty text-sm leading-relaxed text-zinc-400 sm:text-base">
+            This page is the full offer architecture: capabilities, engagement tiers, productized
+            systems, and clear next steps.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-2.5">
+            <a href="#website-pricing" className="inline-flex min-h-10 items-center rounded-full border border-white/[0.14] bg-white/[0.03] px-4 py-2 text-xs font-medium text-zinc-300 ring-1 ring-white/[0.06] sm:text-sm">
+              Website pricing
+            </a>
+            <a href="#product-systems" className="inline-flex min-h-10 items-center rounded-full border border-white/[0.14] bg-white/[0.03] px-4 py-2 text-xs font-medium text-zinc-300 ring-1 ring-white/[0.06] sm:text-sm">
+              Product systems
+            </a>
+            <a href="#request-services" className="inline-flex min-h-10 items-center rounded-full border border-white/[0.14] bg-white/[0.03] px-4 py-2 text-xs font-medium text-zinc-300 ring-1 ring-white/[0.06] sm:text-sm">
+              Start project
+            </a>
+          </div>
           <div className="mt-10 flex max-w-md flex-col gap-3.5 sm:flex-row sm:gap-4">
             <a href={mailto} className="cauris-btn-primary-card">
               Start Your Project
@@ -242,16 +272,20 @@ export default function ServicesPage() {
           <p className="mt-6 max-w-3xl text-pretty text-base leading-relaxed text-zinc-400 sm:text-lg">
             We build systems that help businesses attract customers, manage inventory, and grow.
           </p>
+          <p className="mt-4 max-w-3xl text-pretty text-sm leading-relaxed text-zinc-500 sm:text-base">
+            Engagements are scoped directly with the studio. No generic package theater, no copy-paste
+            proposals.
+          </p>
         </ScrollReveal>
         <div className="mt-12 grid gap-6 sm:mt-14 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
           {pillars.map((pillar, i) => (
             <ScrollReveal
               key={pillar.title}
               delayMs={60 + i * 70}
-              className="rounded-brand border border-white/[0.11] bg-gradient-to-b from-white/[0.07] to-white/[0.018] p-7 shadow-cauris-elevate-sm ring-1 ring-cauris-gold/[0.09] sm:p-8"
+              className="rounded-brand border border-white/[0.12] bg-gradient-to-b from-white/[0.09] to-white/[0.022] p-7 shadow-cauris-elevate-sm ring-1 ring-cauris-gold/[0.1] sm:p-8"
             >
               <h3 className="text-lg font-semibold tracking-[-0.02em] text-zinc-50">{pillar.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-zinc-500 sm:text-[15px]">{pillar.body}</p>
+              <p className="mt-3 text-sm leading-relaxed text-zinc-400 sm:text-[15px]">{pillar.body}</p>
             </ScrollReveal>
           ))}
         </div>
@@ -313,25 +347,28 @@ export default function ServicesPage() {
           <h2 id="product-systems-heading" className="text-3xl font-semibold tracking-[-0.03em] text-zinc-100 sm:text-4xl">
             Product Systems
           </h2>
+          <p className="mt-6 max-w-3xl text-pretty text-base leading-relaxed text-zinc-400 sm:text-lg">
+            Productized systems with dedicated pages and demo paths when available.
+          </p>
         </ScrollReveal>
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
           {systems.map((system, i) => (
             <ScrollReveal
               key={system.name}
               delayMs={90 + i * 70}
-              className="rounded-brand border border-white/[0.11] bg-gradient-to-b from-white/[0.08] to-white/[0.02] p-7 shadow-cauris-elevate-sm ring-1 ring-cauris-gold/[0.1] sm:p-8"
+              className="rounded-brand border border-white/[0.12] bg-gradient-to-b from-white/[0.09] to-white/[0.022] p-7 shadow-cauris-elevate-sm ring-1 ring-cauris-gold/[0.1] sm:p-8"
             >
               <h3 className="text-xl font-semibold tracking-[-0.03em] text-zinc-50">{system.name}</h3>
-              <p className="mt-4 text-sm leading-relaxed text-zinc-400 sm:text-[15px]">{system.summary}</p>
+              <p className="mt-4 text-sm leading-relaxed text-zinc-300 sm:text-[15px]">{system.summary}</p>
               <p className="mt-5 font-mono text-[10px] uppercase tracking-[0.22em] text-zinc-500 sm:text-[11px]">
                 {system.note}
               </p>
-              <a
-                href={mailto}
-                className="mt-6 inline-flex min-h-11 items-center justify-center rounded-brand-sm border border-white/[0.16] bg-white/[0.03] px-4 text-sm font-medium text-zinc-100 transition-colors hover:border-cauris-gold/35 hover:text-cauris-dawn"
+              <Link
+                href={system.href}
+                className="mt-6 inline-flex min-h-11 w-full items-center justify-center rounded-brand-sm border border-white/[0.16] bg-white/[0.03] px-4 text-sm font-medium text-zinc-100 transition-colors hover:border-cauris-gold/35 hover:text-cauris-dawn sm:w-auto"
               >
-                Ask About This System
-              </a>
+                {system.cta}
+              </Link>
             </ScrollReveal>
           ))}
         </div>
@@ -357,6 +394,9 @@ export default function ServicesPage() {
             <a href={mailto} className="cauris-btn-tertiary-card">
               Email SCS Nova
             </a>
+            <Link href="/demos" className="cauris-btn-tertiary-card">
+              View demos
+            </Link>
           </div>
         </ScrollReveal>
       </SectionShell>

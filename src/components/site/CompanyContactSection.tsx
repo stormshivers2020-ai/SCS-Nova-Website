@@ -65,7 +65,7 @@ export function CompanyContactSection() {
               <span className="text-zinc-700" aria-hidden>
                 ·
               </span>
-              <Link href="/#range-os" className={threadLinkClass}>
+              <Link href="/rangeos" className={threadLinkClass}>
                 RangeOS on site
               </Link>
             </p>

@@ -1,18 +1,12 @@
 import {
-  ApparelSection,
-  BCaurisHero,
   BuildStatusSection,
   CompanyContactSection,
+  DemosPreviewSection,
   Hero,
-  PhilosophySection,
-  LightDemoPromoSection,
-  ManagementDashboardOSSection,
-  RangeOSSection,
+  ProductsOverviewSection,
   SelectedWorkSection,
   ServicesSection,
   TheFutureSection,
-  TheSystemSection,
-  WhatThisIsSection,
   WhatWeDoSection,
 } from "@/components/site";
 
@@ -29,18 +23,12 @@ export default function Home() {
       <div>
         <Hero />
         <WhatWeDoSection />
-        <WhatThisIsSection />
-        <BCaurisHero />
-        <BuildStatusSection />
-        <ApparelSection />
+        <ProductsOverviewSection />
         <SelectedWorkSection />
-        <ServicesSection />
-        <LightDemoPromoSection />
-        <RangeOSSection />
-        <ManagementDashboardOSSection />
-        <TheSystemSection />
-        <PhilosophySection />
+        <BuildStatusSection />
         <TheFutureSection />
+        <ServicesSection />
+        <DemosPreviewSection />
         <CompanyContactSection />
       </div>
     </div>

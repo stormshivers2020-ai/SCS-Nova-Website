@@ -5,23 +5,24 @@ import { SectionShell } from "@/components/section-shell";
 const items = [
   {
     name: "Cauris",
-    status: "In development",
+    status: "Origin point",
     statusVariant: "development" as const,
     description:
-      "Life-side intelligence — capture through structure to insight. Guided browser demo on this site.",
+      "Started as a life-intelligence idea: capture, structure, and clearer personal decisions.",
   },
   {
     name: "B-Cauris",
-    status: "In development",
+    status: "Expansion",
     statusVariant: "development" as const,
     description:
-      "Work-side operational memory and workflow clarity. Built in parallel with Cauris.",
+      "Expanded the concept into business-side memory, workflow clarity, and operational guidance.",
   },
   {
-    name: "Apparel",
-    status: "Coming soon",
+    name: "Studio products",
+    status: "Now active",
     statusVariant: "soon" as const,
-    description: "Premium apparel in design — the physical layer of the SCS Nova identity.",
+    description:
+      "From product ideas to client systems, SCS Nova now builds multiple tracks in one ecosystem.",
   },
 ] as const;
 
@@ -40,21 +41,21 @@ export function BuildStatusSection() {
       <div className="relative">
         <ScrollReveal>
           <p className="cauris-kicker">
-            Ecosystem status · SCS Nova
+            Company story · SCS Nova
           </p>
           <h2
             id="build-status-heading"
             className="mt-6 max-w-3xl text-pretty text-3xl font-semibold tracking-[-0.02em] text-zinc-100 sm:mt-7 sm:text-4xl md:text-[2.9rem] md:leading-[1.06]"
           >
-            Actively in build
+            How we started
           </h2>
           <p className="mt-6 max-w-2xl text-pretty text-sm font-medium leading-relaxed text-zinc-500 sm:mt-7 sm:text-base">
-            Products and engines we ship alongside client websites, brand work, and range systems — one
-            studio, multiple threads.
+            SCS Nova began with a core intelligence direction, then expanded into products, demos, and
+            business-facing systems.
           </p>
           <p className="mt-10 max-w-3xl text-pretty text-base font-medium leading-relaxed text-zinc-200 sm:mt-11 sm:text-lg sm:leading-relaxed">
-            Cauris and B-Cauris move forward in stages; apparel is queued behind them. This page tracks
-            where things stand — not a one-day launch story.
+            This is the progression: origin idea, expansion into work systems, then a full company layer
+            that now ships services and productized tools in parallel.
           </p>
         </ScrollReveal>
 

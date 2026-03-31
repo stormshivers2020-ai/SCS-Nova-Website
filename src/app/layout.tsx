@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
+import Image from "next/image";
 import "./globals.css";
 import { Navbar } from "@/components/site/Navbar";
 import { OrganizationJsonLd } from "./OrganizationJsonLd";
@@ -72,12 +73,13 @@ export default function RootLayout({
           className="pointer-events-none fixed inset-0 -z-10 min-h-[100dvh] w-full overflow-hidden"
           aria-hidden
         >
-          <img
+          <Image
             src="/FULL-BACKGROUND.png"
             alt=""
-            aria-hidden
-            decoding="async"
-            fetchPriority="high"
+            aria-hidden={true}
+            priority
+            fill
+            sizes="100vw"
             className="h-full min-h-[100dvh] w-full object-cover opacity-[0.52]"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/32 via-black/14 to-black/40" />

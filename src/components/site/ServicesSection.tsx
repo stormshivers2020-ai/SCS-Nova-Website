@@ -51,13 +51,13 @@ export function ServicesSection() {
           <div className="mt-10 flex w-full max-w-xl flex-col gap-3.5 sm:mt-11 sm:flex-row sm:gap-4">
             <Link
               href="/services"
-              className="cauris-btn-primary inline-flex w-full min-h-12 items-center justify-center sm:w-auto sm:min-w-[220px]"
+              className="cauris-btn-primary-card inline-flex w-full min-h-12 items-center justify-center sm:w-auto sm:min-w-[220px]"
             >
-              View Services
+              Open full services page
             </Link>
             <Link
               href="/services#request-services"
-              className="cauris-btn-secondary inline-flex w-full min-h-12 items-center justify-center sm:w-auto sm:min-w-[220px]"
+              className="cauris-btn-tertiary-card inline-flex w-full min-h-12 items-center justify-center sm:w-auto sm:min-w-[220px]"
             >
               Start Your Project
             </Link>
@@ -72,7 +72,7 @@ export function ServicesSection() {
             <ScrollReveal
               key={s.title}
               delayMs={90 + i * 70}
-              className="flex flex-col rounded-brand border border-white/[0.11] bg-gradient-to-b from-white/[0.08] to-white/[0.022] p-7 shadow-cauris-elevate-sm ring-1 ring-cauris-gold/[0.1] backdrop-blur-md transition-[border-color,box-shadow,transform] duration-[var(--cauris-duration-surface)] ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:border-cauris-gold/20 hover:shadow-[0_0_48px_rgba(244,176,66,0.07)] motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:p-8"
+              className="flex flex-col rounded-brand border border-white/[0.12] bg-gradient-to-b from-white/[0.09] to-white/[0.022] p-7 shadow-cauris-elevate-sm ring-1 ring-cauris-gold/[0.1] backdrop-blur-md transition-[border-color,box-shadow,transform] duration-[var(--cauris-duration-surface)] ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:border-cauris-gold/20 hover:shadow-[0_0_48px_rgba(244,176,66,0.07)] motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:p-8"
             >
               <div className="h-px w-12 bg-gradient-to-r from-cauris-flame/60 to-transparent" />
               <h3 className="mt-6 text-lg font-semibold tracking-[-0.02em] text-zinc-50 sm:text-xl">
@@ -94,7 +94,7 @@ export function ServicesSection() {
             >
               /services
             </Link>
-            .
+            , while this homepage stays focused on company and product direction.
           </p>
         </ScrollReveal>
       </div>

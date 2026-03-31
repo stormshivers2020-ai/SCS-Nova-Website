@@ -145,10 +145,10 @@ export function Hero() {
 
             <p className="hero-reveal mx-auto mt-6 max-w-lg text-center [animation-delay:0.48s]">
               <Link
-                href="/#memory"
+                href="/cauris"
                 className="text-sm font-medium text-zinc-500 underline decoration-white/[0.12] underline-offset-[5px] transition-colors duration-[var(--cauris-duration-hover)] ease-[cubic-bezier(0.22,1,0.36,1)] hover:text-cauris-dawn hover:decoration-cauris-gold/35"
               >
-                How the Cauris system works
+                Explore Cauris
               </Link>
             </p>
 
@@ -167,7 +167,7 @@ export function Hero() {
             <p className="hero-reveal mx-auto mt-10 max-w-lg text-pretty text-center text-[13px] leading-relaxed text-zinc-500 sm:mt-11 sm:text-sm [animation-delay:0.58s]">
               Gun range operator? Explore{" "}
               <Link
-                href="/#range-os"
+                href="/rangeos"
                 className="font-medium text-zinc-400 underline decoration-white/[0.14] underline-offset-[5px] transition-colors duration-[var(--cauris-duration-hover)] ease-[cubic-bezier(0.22,1,0.36,1)] hover:text-cauris-dawn hover:decoration-cauris-gold/40"
               >
                 RangeOS™
