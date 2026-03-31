@@ -146,36 +146,39 @@ function PricingTierCard({
   return (
     <ScrollReveal
       delayMs={delayMs}
-      className={`rounded-brand border bg-gradient-to-b p-7 shadow-cauris-elevate-sm ring-1 backdrop-blur-md sm:p-8 ${
+      className={`h-full rounded-brand border bg-gradient-to-b p-6 shadow-cauris-elevate-sm ring-1 backdrop-blur-sm sm:p-8 ${
         tier.featured
-          ? "border-cauris-gold/28 from-white/[0.11] to-white/[0.03] ring-cauris-gold/[0.16]"
-          : "border-white/[0.12] from-white/[0.07] to-white/[0.018] ring-white/[0.06]"
-      } ${tier.flagship ? "md:col-span-2 lg:col-span-4" : ""}`}
+          ? "border-cauris-gold/28 from-white/[0.16] to-white/[0.08] ring-cauris-gold/[0.2]"
+          : "border-white/[0.14] from-white/[0.12] to-white/[0.06] ring-white/[0.08]"
+      }`}
     >
-      <h3 className="text-xl font-semibold tracking-[-0.03em] text-zinc-50">
-        {tier.name} <span className="text-zinc-400">— {tier.tagline}</span>
+      <h3 className="text-balance text-2xl font-semibold leading-tight tracking-[-0.03em] text-zinc-50 sm:text-[1.65rem]">
+        {tier.name}
       </h3>
-      <p className="mt-4 text-2xl font-semibold tracking-tight text-zinc-100">{tier.price}</p>
-      <p className="mt-4 text-sm leading-relaxed text-zinc-500 sm:text-[15px]">
-        <span className="text-zinc-300">Best for · </span>
+      <p className="mt-2 text-sm font-medium leading-relaxed text-zinc-300 sm:text-base">{tier.tagline}</p>
+      <p className="mt-6 text-[1.9rem] font-semibold leading-none tracking-[-0.03em] text-zinc-100 sm:text-[2.1rem]">
+        {tier.price}
+      </p>
+      <p className="mt-5 text-sm leading-relaxed text-zinc-300 sm:text-[15px] sm:leading-relaxed">
+        <span className="text-zinc-100/90">Best for · </span>
         {tier.bestFor}
       </p>
-      <ul className="mt-6 flex flex-col gap-2.5 border-t border-white/[0.08] pt-6">
+      <ul className="mt-8 flex flex-col gap-3 border-t border-white/[0.12] pt-7">
         {tier.features.map((f) => (
-          <li key={f} className="flex gap-3 text-sm leading-relaxed text-zinc-200 sm:text-[15px]">
+          <li key={f} className="flex gap-3 text-sm leading-relaxed text-zinc-100 sm:text-[15px] sm:leading-relaxed">
             <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-cauris-flame/65" aria-hidden />
             <span>{f}</span>
           </li>
         ))}
       </ul>
-      <div className="mt-6 border-t border-white/[0.08] pt-5">
+      <div className="mt-8 border-t border-white/[0.12] pt-6">
         {tier.turnaround ? (
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-zinc-500 sm:text-[11px]">
-            Timeline · <span className="text-zinc-300">{tier.turnaround}</span>
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-zinc-400 sm:text-[11px]">
+            Timeline · <span className="text-zinc-200">{tier.turnaround}</span>
           </p>
         ) : null}
         {tier.footnote ? (
-          <p className="mt-3 text-xs leading-relaxed text-zinc-400 sm:text-[13px]">{tier.footnote}</p>
+          <p className="mt-3 text-xs leading-relaxed text-zinc-300 sm:text-[13px]">{tier.footnote}</p>
         ) : null}
       </div>
     </ScrollReveal>
@@ -268,10 +271,12 @@ export default function ServicesPage() {
             Studio pricing architecture
           </h2>
         </ScrollReveal>
-        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-6">
-          {pricingTiers.map((tier, i) => (
-            <PricingTierCard key={tier.name} tier={tier} delayMs={80 + i * 70} />
-          ))}
+        <div className="mx-auto mt-12 w-full max-w-7xl px-1 sm:mt-14 sm:px-2">
+          <div className="grid grid-cols-1 gap-7 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
+            {pricingTiers.map((tier, i) => (
+              <PricingTierCard key={tier.name} tier={tier} delayMs={80 + i * 70} />
+            ))}
+          </div>
         </div>
       </SectionShell>
 
