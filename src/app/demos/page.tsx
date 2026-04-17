@@ -31,10 +31,10 @@ const demoItems: readonly DemoItem[] = [
   {
     name: "Management DashboardOS Demo",
     explainer:
-      "A multi-client operating system for managing work, clients, tasks, files, and daily control.",
-    status: "Coming into view",
-    cta: "Explore Product",
-    href: "/dashboardos",
+      "A consulting operations system for employee time, billable client work, payroll hours, and billing — connected to the tools your team already uses.",
+    status: "Live demo",
+    cta: "View DashboardOS Demo",
+    href: "/demo/dashboardos",
   },
   {
     name: "B-Cauris Demo",

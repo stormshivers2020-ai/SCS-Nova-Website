@@ -647,6 +647,52 @@ body {
   }
 }
 
+/* —— DashboardOS demo — product surfaces + light stagger —— */
+@media (prefers-reduced-motion: no-preference) {
+  .demo-dashboardos-product {
+    animation: demo-dashboardos-surface-in 0.55s var(--cauris-ease-out-expo) both;
+  }
+
+  .demo-dashboardos-stagger > * {
+    animation: demo-dashboardos-surface-in 0.48s var(--cauris-ease-out-expo) both;
+  }
+
+  .demo-dashboardos-stagger > *:nth-child(1) {
+    animation-delay: 0ms;
+  }
+
+  .demo-dashboardos-stagger > *:nth-child(2) {
+    animation-delay: 55ms;
+  }
+
+  .demo-dashboardos-stagger > *:nth-child(3) {
+    animation-delay: 110ms;
+  }
+
+  .demo-dashboardos-stagger > *:nth-child(4) {
+    animation-delay: 165ms;
+  }
+}
+
+@keyframes demo-dashboardos-surface-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .demo-dashboardos-product,
+  .demo-dashboardos-stagger > * {
+    animation: none;
+  }
+}
+
 /* —— Demo Workspace — restrained bubble / signal entrance —— */
 @media (prefers-reduced-motion: no-preference) {
   .demo-workspace-bubble {

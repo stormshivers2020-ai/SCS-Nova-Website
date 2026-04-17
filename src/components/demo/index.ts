@@ -6,6 +6,7 @@ export {
   useDemoArrowNavigation,
 } from "./shared";
 export { CaurisDemoExperience } from "./CaurisDemoExperience";
+export { DashboardOSDemoExperience } from "./DashboardOSDemoExperience";
 export { DemoCompassStep } from "./DemoCompassStep";
 export { DemoEarlyAccessStep } from "./DemoEarlyAccessStep";
 export { DemoHelixStep } from "./DemoHelixStep";

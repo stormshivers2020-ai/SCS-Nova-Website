@@ -181,6 +181,31 @@ export function Hero() {
               </Link>
               .
             </p>
+
+            <div className="hero-reveal mx-auto mt-12 w-full max-w-xl border-t border-white/[0.08] pt-10 text-center [animation-delay:0.62s]">
+              <p className="cauris-kicker text-zinc-500">DashboardOS</p>
+              <p className="mt-4 text-balance text-base font-semibold leading-snug tracking-[-0.02em] text-zinc-200 sm:text-lg">
+                Run your consulting operations with structure and clarity.
+              </p>
+              <p className="mx-auto mt-3 max-w-lg text-pretty text-sm leading-relaxed text-zinc-500 sm:text-[15px] sm:leading-relaxed">
+                DashboardOS tracks employee work, billable hours, and client activity across your entire operation —
+                all in one system.
+              </p>
+              <div className="mt-6 flex w-full max-w-md flex-col items-stretch gap-3 sm:mx-auto sm:items-center">
+                <Link
+                  href="/demo/dashboardos"
+                  className="cauris-btn-secondary inline-flex min-h-12 w-full items-center justify-center sm:w-auto sm:min-w-[240px]"
+                >
+                  View DashboardOS Demo
+                </Link>
+                <Link
+                  href="/dashboardos"
+                  className="text-sm font-medium text-zinc-400 underline decoration-white/[0.14] underline-offset-[5px] transition-colors duration-[var(--cauris-duration-hover)] ease-[cubic-bezier(0.22,1,0.36,1)] hover:text-cauris-dawn hover:decoration-cauris-gold/40"
+                >
+                  Explore DashboardOS
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>

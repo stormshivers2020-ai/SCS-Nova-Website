@@ -4,57 +4,57 @@ import { SectionShell } from "@/components/section-shell";
 
 const featureBlocks = [
   {
-    title: "Manage Clients",
-    body: "Keep every client in their own workspace so nothing gets mixed up.",
+    title: "Employee time and payroll",
+    body: "Clock in and clock out with hours tied to clients, locations, and billable vs non-billable work.",
   },
   {
-    title: "Store Files & Content",
-    body: "Keep files, assets, and reusable materials organized in one place.",
+    title: "Client and location visibility",
+    body: "Track delivery by account and by store or site so billing and reviews stay aligned with reality.",
   },
   {
-    title: "Plan Workflows",
-    body: "Turn recurring work into step-by-step systems so nothing gets missed.",
+    title: "Tool-based work",
+    body: "Record work performed in MarginEdge, Restaurant365, QuickBooks, and other systems your team already runs.",
   },
   {
-    title: "Track Communication",
-    body: "See messages, follow-ups, and client activity more clearly.",
+    title: "Work types and billing",
+    body: "Structure PMIX mapping, invoice review, bookkeeping, and reporting so invoices match what was delivered.",
+  },
+  {
+    title: "Workload and performance",
+    body: "See department load, utilization, and delivery patterns without social metrics or content calendars.",
   },
   {
     title: "Today View",
-    body: "Know what needs attention right now across tasks, alerts, and work in motion.",
-  },
-  {
-    title: "Smart Guidance",
-    body: "Get signals on what needs attention, what is behind, and what to do next.",
+    body: "One place for managers to see what the team is on, what is billable, and what must move for payroll.",
   },
 ] as const;
 
 const industryTags = [
-  "Content creators",
-  "Sales professionals",
-  "Restaurants",
-  "Service businesses",
-  "Agencies",
-  "Talent / creators",
-  "General operations",
+  "Consulting firms",
+  "Multi-client operators",
+  "Accounting and advisory",
+  "Restaurant and hospitality groups",
+  "Finance and operations",
+  "Professional services",
+  "Multi-site teams",
 ] as const;
 
-const steps = [
+const howItWorksColumns = [
   {
-    title: "Add your clients",
-    body: "Each client gets their own workspace.",
+    title: "Employees",
+    bullets: [
+      "Clock in and out",
+      "Select client, location, tool, and work type",
+      "Log time against billable or internal work",
+    ] as const,
   },
   {
-    title: "Add your work",
-    body: "Upload files, create templates, and organize what you use.",
-  },
-  {
-    title: "Build workflows",
-    body: "Turn work into repeatable systems so nothing gets missed.",
-  },
-  {
-    title: "Use Today View",
-    body: "See what matters right now across tasks, messages, alerts, and work.",
+    title: "Managers",
+    bullets: [
+      "See work and hours across the team",
+      "Track billable delivery by client and location",
+      "Support invoices, payroll, and performance reviews",
+    ] as const,
   },
 ] as const;
 
@@ -62,17 +62,17 @@ const pricingPreview = [
   {
     title: "Starter",
     price: "$29/month",
-    body: "1 client • full system access • ideal for individuals",
+    body: "Smaller consulting teams centralizing time, clients, and billing signals.",
   },
   {
     title: "Growth",
     price: "$79-$99/month",
-    body: "Up to 5 clients • workflows • templates • alerts",
+    body: "Growing firms coordinating more accounts, locations, and concurrent client work.",
   },
   {
     title: "Scale",
     price: "$149-$299/month",
-    body: "10+ clients • team support • advanced usage",
+    body: "Larger practices that need deeper workload, payroll, and billing visibility.",
   },
 ] as const;
 
@@ -90,21 +90,29 @@ export function ManagementDashboardOSSection() {
 
       <div className="relative">
         <ScrollReveal>
-          <p className="cauris-kicker text-zinc-500">Management DashboardOS</p>
+          <p className="cauris-kicker text-zinc-500">DashboardOS</p>
           <h2
             id="dashboard-os-heading"
             className="mt-6 max-w-4xl text-pretty text-3xl font-semibold tracking-[-0.025em] text-zinc-100 sm:mt-7 sm:text-4xl md:text-[2.95rem] md:leading-[1.05]"
           >
-            Run all your clients. In one system.
+            Run your consulting operations with structure and clarity.
           </h2>
           <p className="mt-7 max-w-3xl text-pretty text-lg font-medium leading-relaxed text-zinc-200 sm:text-xl sm:leading-relaxed">
-            SCS Nova Management DashboardOS is a multi-client operating system built to help you manage
-            work, clients, and daily tasks from one place.
+            DashboardOS tracks employee work, billable hours, and client activity across your entire operation — all
+            in one system. It is a consulting operations layer, not a social or content platform.
           </p>
           <p className="mt-6 max-w-3xl text-pretty text-base leading-relaxed text-zinc-500 sm:text-lg sm:leading-relaxed">
-            It is not just a dashboard. It is a system that helps you stay organized, know what needs
-            to be done, and move faster without losing control.
+            It connects time, work, clients, employees, and billing — including work performed inside tools like
+            MarginEdge, Restaurant365, and QuickBooks.
           </p>
+          <div className="mt-10 flex flex-wrap gap-3.5">
+            <Link
+              href="/demo/dashboardos"
+              className="cauris-btn-secondary inline-flex min-h-12 w-full items-center justify-center sm:w-auto sm:min-w-[240px]"
+            >
+              View DashboardOS Demo
+            </Link>
+          </div>
         </ScrollReveal>
 
         <div className="mt-16 grid gap-6 sm:mt-20 sm:grid-cols-2 lg:grid-cols-3 lg:gap-7">
@@ -127,11 +135,11 @@ export function ManagementDashboardOSSection() {
         <div className="mt-20 border-t border-white/[0.09] pt-16 sm:mt-24 sm:pt-20">
           <ScrollReveal delayMs={100}>
             <h3 className="text-2xl font-semibold tracking-[-0.03em] text-zinc-100 sm:text-3xl">
-              Built for real work
+              Built for consulting delivery
             </h3>
             <p className="mt-6 max-w-3xl text-pretty text-base leading-relaxed text-zinc-400 sm:text-lg sm:leading-relaxed">
-              This system works across industries and is designed for people managing clients, tasks,
-              communication, and daily operations.
+              For firms that need operational discipline across staff, clients, and billing — without content
+              workflows, posting tools, or engagement tracking.
             </p>
             <ul className="mt-8 flex flex-wrap gap-2.5 sm:mt-9 sm:gap-3">
               {industryTags.map((tag) => (
@@ -147,23 +155,40 @@ export function ManagementDashboardOSSection() {
         </div>
 
         <div className="mt-20 border-t border-white/[0.09] pt-16 sm:mt-24 sm:pt-20">
+          <ScrollReveal delayMs={110}>
+            <h3 className="text-2xl font-semibold tracking-[-0.03em] text-zinc-100 sm:text-3xl">
+              Built to work with your existing tools
+            </h3>
+            <p className="mt-6 max-w-3xl text-pretty text-base leading-relaxed text-zinc-400 sm:text-lg sm:leading-relaxed">
+              DashboardOS does not replace MarginEdge, Restaurant365, or QuickBooks. It tracks the work performed
+              inside them and connects it to time, billing, clients, and employees.
+            </p>
+          </ScrollReveal>
+        </div>
+
+        <div className="mt-20 border-t border-white/[0.09] pt-16 sm:mt-24 sm:pt-20">
           <ScrollReveal delayMs={120}>
             <p className="cauris-kicker text-zinc-500">How it works</p>
           </ScrollReveal>
           <div className="mt-10 grid gap-6 sm:mt-12 md:grid-cols-2 md:gap-7">
-            {steps.map((step, i) => (
+            {howItWorksColumns.map((col, i) => (
               <ScrollReveal
-                key={step.title}
+                key={col.title}
                 delayMs={160 + i * 70}
                 className="rounded-brand border border-white/[0.11] bg-gradient-to-b from-white/[0.07] to-white/[0.018] p-7 shadow-cauris-elevate-sm ring-1 ring-white/[0.05] backdrop-blur-md sm:p-8"
               >
                 <p className="font-mono text-[10px] font-medium uppercase tracking-[0.22em] text-cauris-flame/75 sm:text-[11px]">
-                  Step {i + 1}
+                  {col.title}
                 </p>
-                <h4 className="mt-4 text-lg font-semibold tracking-[-0.02em] text-zinc-50">{step.title}</h4>
-                <p className="mt-3 text-sm leading-relaxed text-zinc-500 sm:text-[15px] sm:leading-relaxed">
-                  {step.body}
-                </p>
+                <h4 className="mt-4 text-lg font-semibold tracking-[-0.02em] text-zinc-50">How {col.title.toLowerCase()} use it</h4>
+                <ul className="mt-4 flex flex-col gap-2.5 text-sm leading-relaxed text-zinc-500 sm:text-[15px] sm:leading-relaxed">
+                  {col.bullets.map((b) => (
+                    <li key={b} className="flex gap-2">
+                      <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-cauris-flame/55" aria-hidden />
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
               </ScrollReveal>
             ))}
           </div>

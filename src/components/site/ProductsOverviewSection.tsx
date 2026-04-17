@@ -23,7 +23,7 @@ const systems = [
   },
   {
     name: "DashboardOS",
-    line: "Multi-client operating system for managing work, clients, files, workflows, and control.",
+    line: "Consulting operations system for employee time, billable work, clients, payroll hours, and billing.",
     href: "/dashboardos",
     cta: "Explore DashboardOS",
   },

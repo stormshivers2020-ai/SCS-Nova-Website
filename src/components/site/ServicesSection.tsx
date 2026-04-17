@@ -16,7 +16,7 @@ const services = [
   },
   {
     title: "Productized systems",
-    body: "RangeOS, Management DashboardOS, and intelligence products scoped for real business use.",
+    body: "RangeOS, DashboardOS for consulting operations, and intelligence products scoped for real business use.",
   },
 ] as const;
 

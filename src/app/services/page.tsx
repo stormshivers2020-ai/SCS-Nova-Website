@@ -91,7 +91,7 @@ const systems = [
   {
     name: "Management DashboardOS",
     summary:
-      "Multi-client operating system for managing work, clients, files, workflows, messages, and daily control.",
+      "Consulting operations system for tracking employee work, billable hours, payroll time, and client delivery across tools like MarginEdge, Restaurant365, and QuickBooks.",
     note: "Custom scope",
     href: "/dashboardos",
     cta: "Explore DashboardOS",

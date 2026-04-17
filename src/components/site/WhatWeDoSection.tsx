@@ -42,8 +42,30 @@ export function WhatWeDoSection() {
             title="Systems built for real business growth."
           />
           <p className="mt-10 max-w-3xl text-pretty text-base font-medium leading-relaxed text-zinc-300 sm:mt-11 sm:text-lg sm:leading-relaxed">
-            We build systems that help businesses attract customers, manage inventory, and grow.
+            We build systems that help businesses:
           </p>
+          <ul className="mt-6 max-w-3xl list-none space-y-3 text-pretty text-base leading-relaxed text-zinc-400 sm:text-lg">
+            <li className="flex gap-3">
+              <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-cauris-flame/65" aria-hidden />
+              <span>Track work across teams, clients, and tools</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-cauris-flame/65" aria-hidden />
+              <span>Manage clients and delivery with clear structure</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-cauris-flame/65" aria-hidden />
+              <span>Monitor operations and workload in one place</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-cauris-flame/65" aria-hidden />
+              <span>Understand performance with honest operational signals</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-cauris-flame/65" aria-hidden />
+              <span>Stay organized at scale as the business grows</span>
+            </li>
+          </ul>
         </ScrollReveal>
 
         <div className="mt-14 grid gap-6 sm:mt-16 sm:grid-cols-2 sm:gap-7 lg:mt-20">
