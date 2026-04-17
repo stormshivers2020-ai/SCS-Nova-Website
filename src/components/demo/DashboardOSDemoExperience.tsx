@@ -149,7 +149,6 @@ function WelcomeStep({ onStart }: { onStart: () => void }) {
             </div>
           </div>
         </div>
-      </div>
 
       <div className="relative z-10 mt-12 flex flex-col items-center gap-4 px-1 sm:mt-16">
         <button
@@ -831,7 +830,7 @@ function PerformanceInsightsStep({ titleId }: { titleId: string }) {
             <div className={dosToolbar}>
               <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-500">Signals · sample analytics</p>
             </div>
-            <div className="demo-dashboardos-stagger grid gap-3.5 p-4 sm:grid-cols-2 sm:gap-4 sm:p-5 md:p-6">
+            <div className="grid gap-3.5 p-4 sm:grid-cols-2 sm:gap-4 sm:p-5 md:p-6">
               {performanceInsightsPanels.map((panel) => (
                 <div
                   key={panel.key}
@@ -900,27 +899,39 @@ function EarlyAccessStep() {
 
   return (
     <DemoStepRegion stepKey={9} labelledBy={titleId}>
-      <div className="mx-auto max-w-3xl text-center lg:mx-0 lg:max-w-none lg:text-left">
-        <p className={demoUi.phaseEyebrow}>{dashboardOSPhaseEyebrows[9]}</p>
-        <h2 id={titleId} className="mt-4 text-balance text-2xl font-semibold tracking-[-0.03em] text-zinc-50 sm:text-3xl md:text-[2.35rem] md:leading-[1.08]">
-          {dashboardOSDemoEarlyAccess.title}
-        </h2>
-        <p className="mx-auto mt-5 max-w-2xl text-pretty text-base font-medium leading-relaxed text-zinc-300 sm:text-lg lg:mx-0">
-          {dashboardOSDemoEarlyAccess.body}
-        </p>
-      </div>
-      <div
-        className={`${demoUi.sectionYLoose} flex w-full max-w-2xl flex-col items-stretch gap-3.5 sm:mx-0 sm:max-w-none sm:flex-row sm:flex-wrap sm:justify-start sm:gap-4`}
-      >
-        <a href={mailRequestDemo} className="cauris-btn-secondary inline-flex min-h-12 w-full items-center justify-center sm:w-auto sm:min-w-[200px]">
-          Request Demo
-        </a>
-        <a href={mailStartSystem} className="cauris-btn-primary-card inline-flex min-h-12 w-full items-center justify-center sm:w-auto sm:min-w-[200px]">
-          Start Your System
-        </a>
-        <a href={mailEmailNova} className="cauris-btn-tertiary-card inline-flex min-h-12 w-full items-center justify-center sm:w-auto sm:min-w-[200px]">
-          Email SCS Nova
-        </a>
+      <div className="mx-auto max-w-3xl space-y-6 text-center sm:space-y-7 lg:mx-0 lg:max-w-none lg:text-left">
+        <div className="mx-auto max-w-2xl space-y-4 text-pretty sm:space-y-5 lg:mx-0">
+          <p className={demoUi.phaseEyebrow}>{dashboardOSPhaseEyebrows[9]}</p>
+          <h2
+            id={titleId}
+            className="text-balance text-2xl font-semibold tracking-[-0.03em] text-zinc-50 sm:text-3xl md:text-[2.35rem] md:leading-[1.08]"
+          >
+            {dashboardOSDemoEarlyAccess.title}
+          </h2>
+          <p className="text-base font-medium leading-[1.65] text-zinc-400 sm:text-lg">
+            {dashboardOSDemoEarlyAccess.body}
+          </p>
+        </div>
+        <div className="mx-auto flex w-full max-w-xl flex-col items-stretch gap-3 sm:max-w-none sm:flex-row sm:flex-wrap sm:justify-start sm:gap-4">
+          <a
+            href={mailRequestDemo}
+            className="cauris-btn-secondary inline-flex min-h-12 w-full items-center justify-center transition duration-200 ease-out motion-safe:active:scale-[0.98] sm:w-auto sm:min-w-[11.5rem]"
+          >
+            Request Demo
+          </a>
+          <a
+            href={mailStartSystem}
+            className="cauris-btn-primary-card inline-flex min-h-12 w-full items-center justify-center transition duration-200 ease-out motion-safe:active:scale-[0.98] sm:w-auto sm:min-w-[11.5rem]"
+          >
+            Start Your System
+          </a>
+          <a
+            href={mailEmailNova}
+            className="cauris-btn-tertiary-card inline-flex min-h-12 w-full items-center justify-center transition duration-200 ease-out motion-safe:active:scale-[0.98] sm:w-auto sm:min-w-[11.5rem]"
+          >
+            Email SCS Nova
+          </a>
+        </div>
       </div>
     </DemoStepRegion>
   );
@@ -974,7 +985,7 @@ export function DashboardOSDemoExperience() {
       <DemoAmbient />
 
       <header className="demo-cauris-header sticky top-0 z-20 border-b border-white/[0.08] pt-[env(safe-area-inset-top,0px)]">
-        <div className="container-brand flex flex-col gap-4 py-3.5 sm:gap-6 sm:py-5">
+        <div className="container-brand flex flex-col gap-5 py-4 sm:gap-7 sm:py-6">
           <div className="flex flex-wrap items-start justify-between gap-3">
             <div className="min-w-0">
               <p className="text-[13px] font-semibold tracking-[-0.02em] text-zinc-100 sm:text-sm">
@@ -1002,7 +1013,7 @@ export function DashboardOSDemoExperience() {
         </div>
       </header>
 
-      <main className="pb-[max(9.5rem,calc(8rem+env(safe-area-inset-bottom,0px)))] pt-3 sm:pb-32 sm:pt-6">
+      <main className="pb-[max(10rem,calc(8.5rem+env(safe-area-inset-bottom,0px)))] pt-4 sm:pb-32 sm:pt-8">
         <p className="sr-only" aria-live="polite" aria-atomic="true">
           Step {step + 1} of {TOTAL_STEPS}: {dashboardOSDemoStepLabels[step]}
         </p>
@@ -1012,13 +1023,13 @@ export function DashboardOSDemoExperience() {
       </main>
 
       <footer className="demo-cauris-footer fixed bottom-0 left-0 right-0 z-20 border-t border-white/[0.08] pb-[env(safe-area-inset-bottom,0px)]">
-        <div className="container-brand grid w-full grid-cols-2 items-stretch gap-3 py-3.5 sm:flex sm:items-center sm:justify-between sm:gap-4 sm:py-5">
+        <div className="container-brand grid w-full grid-cols-2 items-stretch gap-3 py-4 sm:flex sm:items-center sm:justify-between sm:gap-4 sm:py-5">
           <button
             type="button"
             onClick={goBack}
             disabled={step === 0}
             aria-label={step === 0 ? "Back" : `Back to ${dashboardOSDemoStepLabels[step - 1]}`}
-            className={`inline-flex min-h-12 w-full min-w-0 items-center justify-center rounded-full border border-white/[0.11] bg-white/[0.02] px-4 text-sm font-medium text-zinc-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] cauris-transition-interactive enabled:hover:border-cauris-gold/28 enabled:hover:text-zinc-50 disabled:cursor-not-allowed disabled:opacity-35 sm:w-auto sm:min-w-[5.5rem] sm:px-5 ${demoUi.focusRing}`}
+            className={`inline-flex min-h-12 w-full min-w-0 items-center justify-center rounded-full border border-white/[0.11] bg-white/[0.02] px-4 text-sm font-medium text-zinc-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] transition duration-200 ease-out cauris-transition-interactive motion-safe:active:scale-[0.98] enabled:hover:border-cauris-gold/28 enabled:hover:text-zinc-50 disabled:cursor-not-allowed disabled:opacity-35 sm:w-auto sm:min-w-[5.5rem] sm:px-5 ${demoUi.focusRing}`}
           >
             Back
           </button>
@@ -1027,7 +1038,7 @@ export function DashboardOSDemoExperience() {
               type="button"
               onClick={goNext}
               aria-label={`Next: ${dashboardOSDemoStepLabels[step + 1]}`}
-              className={`inline-flex min-h-12 w-full items-center justify-center rounded-full bg-gradient-to-b from-cauris-flame/95 to-cauris-ember/95 px-6 text-sm font-semibold text-black shadow-glow-gold cauris-transition-interactive hover:from-cauris-dawn hover:to-cauris-flame hover:shadow-glow-gold-lg sm:w-auto sm:px-8 ${demoUi.focusRing}`}
+              className={`inline-flex min-h-12 w-full items-center justify-center rounded-full bg-gradient-to-b from-cauris-flame/95 to-cauris-ember/95 px-6 text-sm font-semibold text-black shadow-glow-gold transition duration-200 ease-out cauris-transition-interactive motion-safe:active:scale-[0.98] hover:from-cauris-dawn hover:to-cauris-flame hover:shadow-glow-gold-lg sm:w-auto sm:px-8 ${demoUi.focusRing}`}
             >
               Continue
             </button>
@@ -1035,7 +1046,7 @@ export function DashboardOSDemoExperience() {
             <Link
               href={EXIT_HREF}
               aria-label="Return to the DashboardOS product page"
-              className={`inline-flex min-h-12 w-full items-center justify-center rounded-full border border-cauris-gold/32 bg-cauris-flame/[0.1] px-6 text-center text-sm font-semibold leading-tight text-cauris-dawn shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] cauris-transition-interactive hover:border-cauris-gold/45 hover:bg-cauris-flame/[0.14] sm:w-auto sm:px-8 ${demoUi.focusRing}`}
+              className={`inline-flex min-h-12 w-full items-center justify-center rounded-full border border-cauris-gold/32 bg-cauris-flame/[0.1] px-6 text-center text-sm font-semibold leading-tight text-cauris-dawn shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] transition duration-200 ease-out cauris-transition-interactive motion-safe:active:scale-[0.98] hover:border-cauris-gold/45 hover:bg-cauris-flame/[0.14] sm:w-auto sm:px-8 ${demoUi.focusRing}`}
             >
               Return to DashboardOS
             </Link>
