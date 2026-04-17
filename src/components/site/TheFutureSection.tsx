@@ -49,7 +49,7 @@ export function TheFutureSection() {
         </ScrollReveal>
 
         <ScrollReveal delayMs={180} className="mt-16 max-w-2xl sm:mt-20">
-          <p className="text-pretty text-base leading-relaxed text-zinc-500 sm:text-lg">
+          <p className="text-pretty text-base leading-relaxed text-zinc-300 sm:text-lg">
             The roadmap is long; the commitment is to ship carefully — premium, human-centered, and
             built to last.
           </p>

@@ -76,7 +76,7 @@ export function DemoCompassStep() {
                 <h4 className="relative text-sm font-semibold leading-snug tracking-tight text-zinc-100">
                   {item.title}
                 </h4>
-                <p className="relative mt-3 text-sm leading-relaxed text-zinc-500">
+                <p className="relative mt-3 text-sm leading-relaxed text-zinc-400">
                   {item.detail}
                 </p>
               </li>
@@ -90,7 +90,7 @@ export function DemoCompassStep() {
               className="pointer-events-none absolute left-0 top-1/2 h-32 w-32 -translate-x-1/3 -translate-y-1/2 rounded-full bg-cauris-flame/[0.05] blur-3xl"
               aria-hidden
             />
-            <p className={`relative ${demoUi.kickerTrack} text-zinc-500`}>{demoCompassSupport.title}</p>
+            <p className={`relative ${demoUi.kickerTrack} text-zinc-400`}>{demoCompassSupport.title}</p>
             <p className="relative mt-4 text-sm leading-relaxed text-zinc-400">
               {demoCompassSupport.body}
             </p>

@@ -16,7 +16,7 @@ export function BcaurisOperationalVisual() {
           <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-zinc-400">
             Workspace
           </span>
-          <span className="truncate font-mono text-[8px] uppercase tracking-[0.14em] text-zinc-500">
+          <span className="truncate font-mono text-[8px] uppercase tracking-[0.14em] text-zinc-400">
             context · memory · flow
           </span>
         </div>
@@ -29,10 +29,10 @@ export function BcaurisOperationalVisual() {
       <div className="relative mt-4 space-y-2.5">
         <div className="rounded-lg border border-white/[0.1] bg-white/[0.05] px-3 py-2.5 backdrop-blur-sm">
           <div className="flex items-center justify-between gap-2">
-            <span className="font-mono text-[8px] uppercase tracking-[0.16em] text-zinc-500">
+            <span className="font-mono text-[8px] uppercase tracking-[0.16em] text-zinc-400">
               Input
             </span>
-            <span className="font-mono text-[7px] text-zinc-500">file + note</span>
+            <span className="font-mono text-[7px] text-zinc-400">file + note</span>
           </div>
           <p className="mt-1.5 text-[11px] leading-snug text-zinc-400">
             Screenshot and spreadsheet attached…
@@ -50,7 +50,7 @@ export function BcaurisOperationalVisual() {
           </p>
         </div>
         <div className="rounded-lg border border-white/[0.08] bg-white/[0.04] px-3 py-2 backdrop-blur-sm">
-          <p className="font-mono text-[9px] leading-relaxed text-zinc-500">
+          <p className="font-mono text-[9px] leading-relaxed text-zinc-400">
             Prior fix available · same pattern as last week
           </p>
         </div>
@@ -62,10 +62,10 @@ export function BcaurisOperationalVisual() {
           <span className="font-mono text-[8px] uppercase tracking-[0.12em] text-zinc-400">
             Invoice Review
           </span>
-          <span className="font-mono text-[8px] text-zinc-500">3 similar tasks</span>
+          <span className="font-mono text-[8px] text-zinc-400">3 similar tasks</span>
         </div>
         <div className="flex items-center justify-between rounded-lg border border-white/[0.08] bg-zinc-950/40 px-3 py-2">
-          <span className="font-mono text-[8px] uppercase tracking-[0.12em] text-zinc-500">
+          <span className="font-mono text-[8px] uppercase tracking-[0.12em] text-zinc-400">
             Monthly reporting pattern
           </span>
           <span className="font-mono text-[7px] uppercase tracking-[0.1em] text-cauris-flame/90">
@@ -79,7 +79,7 @@ export function BcaurisOperationalVisual() {
         {["workflow memory", "screenshot", "files"].map((tag) => (
           <span
             key={tag}
-            className="rounded border border-white/[0.1] bg-white/[0.04] px-2 py-0.5 font-mono text-[7px] uppercase tracking-[0.12em] text-zinc-500"
+            className="rounded border border-white/[0.1] bg-white/[0.04] px-2 py-0.5 font-mono text-[7px] uppercase tracking-[0.12em] text-zinc-400"
           >
             {tag}
           </span>

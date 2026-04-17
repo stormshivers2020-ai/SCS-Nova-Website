@@ -21,7 +21,7 @@ export function DemoProgressBar({
     <div className="flex flex-col gap-3 sm:gap-4">
       <div className="flex flex-wrap items-start justify-between gap-x-3 gap-y-2 sm:items-end">
         <div className="min-w-0 flex-1 pr-1">
-          <p className="font-mono text-[10px] font-medium uppercase tracking-[0.22em] text-zinc-500 sm:text-[11px]">
+          <p className="font-mono text-[10px] font-medium uppercase tracking-[0.22em] text-zinc-400 sm:text-[11px]">
             {step === 0 ? startMono : `Tour · step ${step + 1} of ${total}`}
           </p>
           <p className="mt-2 line-clamp-2 text-base font-semibold leading-snug tracking-[-0.02em] text-zinc-100 sm:line-clamp-none sm:text-xl sm:leading-tight">
@@ -29,7 +29,7 @@ export function DemoProgressBar({
           </p>
         </div>
         <p
-          className="shrink-0 font-mono text-xs tabular-nums text-zinc-500 sm:text-sm"
+          className="shrink-0 font-mono text-xs tabular-nums text-zinc-400 sm:text-sm"
           aria-hidden
         >
           {step + 1}/{total}

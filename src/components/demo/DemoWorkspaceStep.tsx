@@ -69,7 +69,7 @@ export function DemoWorkspaceStep() {
               aria-hidden
             />
             <div className="relative z-[1] flex flex-1 flex-col">
-            <p className={`${demoUi.kickerTrack} text-zinc-500`}>Thread</p>
+            <p className={`${demoUi.kickerTrack} text-zinc-400`}>Thread</p>
             <div className="mt-5 flex flex-1 flex-col gap-3.5" role="log" aria-live="polite">
               {thread.map((m, i) => (
                 <div
@@ -83,7 +83,7 @@ export function DemoWorkspaceStep() {
                   }`}
                   style={{ animationDelay: `${Math.min(i, 8) * 70}ms` }}
                 >
-                  <span className="text-[10px] font-semibold uppercase tracking-wider text-zinc-500">
+                  <span className="text-[10px] font-semibold uppercase tracking-wider text-zinc-400">
                     {m.role === "user" ? "You" : "Cauris"}
                   </span>
                   <p className="mt-1 text-sm leading-relaxed">{m.body}</p>
@@ -124,7 +124,7 @@ export function DemoWorkspaceStep() {
                   }
                 }}
                 placeholder={demoWorkspaceComposer.placeholder}
-                className="min-h-12 flex-1 rounded-xl border border-white/[0.12] bg-black/62 px-4 py-3 text-sm text-zinc-100 placeholder:text-zinc-600 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] focus:border-cauris-gold/38 focus:outline-none focus:ring-1 focus:ring-cauris-flame/40 sm:min-h-11"
+                className="min-h-12 flex-1 rounded-xl border border-white/[0.12] bg-black/62 px-4 py-3 text-sm text-zinc-100 placeholder:text-zinc-400 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] focus:border-cauris-gold/38 focus:outline-none focus:ring-1 focus:ring-cauris-flame/40 sm:min-h-11"
               />
               <button
                 type="button"
@@ -134,7 +134,7 @@ export function DemoWorkspaceStep() {
                 {demoWorkspaceComposer.sendLabel}
               </button>
             </div>
-            <p className="mt-2 text-center text-[11px] text-zinc-500">{demoWorkspaceComposer.helper}</p>
+            <p className="mt-2 text-center text-[11px] text-zinc-400">{demoWorkspaceComposer.helper}</p>
             </div>
           </div>
         </div>
@@ -169,7 +169,7 @@ export function DemoWorkspaceStep() {
                 </li>
               ))}
             </ul>
-            <p className="relative mt-6 rounded-xl border border-white/[0.06] bg-black/35 px-4 py-3 text-xs leading-relaxed text-zinc-500">
+            <p className="relative mt-6 rounded-xl border border-white/[0.06] bg-black/35 px-4 py-3 text-xs leading-relaxed text-zinc-400">
               {demoWorkspaceStructuredSignals.footerSummary}
             </p>
           </div>

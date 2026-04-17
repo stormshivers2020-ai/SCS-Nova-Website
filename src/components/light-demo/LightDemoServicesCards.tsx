@@ -47,7 +47,7 @@ export function LightDemoServicesCards() {
                 <h3 className="text-lg font-semibold tracking-[-0.02em] text-neutral-900 sm:text-xl">
                   {card.title}
                 </h3>
-                <p className="mt-4 flex-1 text-pretty text-base leading-relaxed text-neutral-600">
+                <p className="mt-4 flex-1 text-pretty text-base leading-relaxed text-neutral-700">
                   {card.description}
                 </p>
               </article>

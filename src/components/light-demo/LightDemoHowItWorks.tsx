@@ -56,7 +56,7 @@ export function LightDemoHowItWorks() {
               <h3 className="mt-3 text-lg font-semibold tracking-[-0.02em] text-neutral-900 sm:text-xl">
                 {pillar.title}
               </h3>
-              <p className="mt-3 text-pretty text-base leading-relaxed text-neutral-600">
+              <p className="mt-3 text-pretty text-base leading-relaxed text-neutral-700">
                 {pillar.line}
               </p>
             </li>

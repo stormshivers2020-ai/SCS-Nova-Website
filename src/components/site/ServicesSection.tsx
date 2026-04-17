@@ -62,7 +62,7 @@ export function ServicesSection() {
               Start Your Project
             </Link>
           </div>
-          <p className="mt-4 max-w-xl text-pretty text-sm leading-relaxed text-zinc-500">
+          <p className="mt-4 max-w-xl text-pretty text-sm leading-relaxed text-zinc-300">
             Tell us what you&apos;re building — we&apos;ll reply with a clear next step.
           </p>
         </ScrollReveal>
@@ -78,7 +78,7 @@ export function ServicesSection() {
               <h3 className="mt-6 text-lg font-semibold tracking-[-0.02em] text-zinc-50 sm:text-xl">
                 {s.title}
               </h3>
-              <p className="mt-4 text-sm leading-relaxed text-zinc-500 sm:text-[15px] sm:leading-relaxed">
+              <p className="mt-4 text-sm leading-relaxed text-zinc-300 sm:text-[15px] sm:leading-relaxed">
                 {s.body}
               </p>
             </ScrollReveal>

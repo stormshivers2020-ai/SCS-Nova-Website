@@ -44,7 +44,7 @@ export function WhatWeDoSection() {
           <p className="mt-10 max-w-3xl text-pretty text-base font-medium leading-relaxed text-zinc-300 sm:mt-11 sm:text-lg sm:leading-relaxed">
             We build systems that help businesses:
           </p>
-          <ul className="mt-6 max-w-3xl list-none space-y-3 text-pretty text-base leading-relaxed text-zinc-400 sm:text-lg">
+          <ul className="mt-6 max-w-3xl list-none space-y-3 text-pretty text-base leading-relaxed text-zinc-300 sm:text-lg">
             <li className="flex gap-3">
               <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-cauris-flame/65" aria-hidden />
               <span>Track work across teams, clients, and tools</span>
@@ -79,7 +79,7 @@ export function WhatWeDoSection() {
               <h3 className="mt-5 text-lg font-semibold tracking-[-0.02em] text-zinc-50 sm:text-xl">
                 {pillar.title}
               </h3>
-              <p className="mt-4 text-pretty text-sm leading-relaxed text-zinc-500 sm:text-[15px] sm:leading-relaxed">
+              <p className="mt-4 text-pretty text-sm leading-relaxed text-zinc-300 sm:text-[15px] sm:leading-relaxed">
                 {pillar.body}
               </p>
             </ScrollReveal>

@@ -20,8 +20,8 @@ function OwnershipModelCard({ model }: { model: RangeOSOwnershipModel }) {
         />
       ) : null}
       <h3 className="text-lg font-semibold tracking-[-0.02em] text-zinc-50 sm:text-xl">{model.title}</h3>
-      <p className="mt-2 text-sm font-medium leading-relaxed text-zinc-500">{model.tagline}</p>
-      <p className="mt-1 font-mono text-[10px] font-medium uppercase tracking-[0.2em] text-zinc-600 sm:text-[11px]">
+      <p className="mt-2 text-sm font-medium leading-relaxed text-zinc-400">{model.tagline}</p>
+      <p className="mt-1 font-mono text-[10px] font-medium uppercase tracking-[0.2em] text-zinc-400 sm:text-[11px]">
         Typical investment
       </p>
       <p className="mt-2 text-2xl font-semibold tracking-[-0.02em] text-zinc-50 sm:text-[1.65rem]">
@@ -56,13 +56,13 @@ export function RangeOSOwnershipStep() {
       </header>
 
       <div className={demoUi.sectionY}>
-        <p className={`${demoUi.kickerTrack} text-zinc-500`}>How to engage</p>
+        <p className={`${demoUi.kickerTrack} text-zinc-400`}>How to engage</p>
         <div className="mt-6 grid gap-5 md:grid-cols-2 md:gap-6">
           {rangeOSDemoOwnershipModels.map((model) => (
             <OwnershipModelCard key={model.id} model={model} />
           ))}
         </div>
-        <p className="mx-auto mt-10 max-w-2xl text-center text-sm font-medium leading-relaxed text-zinc-500 sm:mt-12 sm:text-[15px]">
+        <p className="mx-auto mt-10 max-w-2xl text-center text-sm font-medium leading-relaxed text-zinc-400 sm:mt-12 sm:text-[15px]">
           {rangeOSOwnershipSupportLine}
         </p>
       </div>

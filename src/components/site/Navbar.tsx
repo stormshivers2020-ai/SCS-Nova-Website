@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navLinkClass =
-  "inline-flex min-h-[44px] shrink-0 items-center justify-center rounded-md px-3 py-2 text-[12px] font-medium text-zinc-400 transition-colors duration-[var(--cauris-duration-hover)] ease-[cubic-bezier(0.22,1,0.36,1)] hover:text-cauris-dawn focus:outline-none focus-visible:ring-2 focus-visible:ring-cauris-flame/55 focus-visible:ring-offset-2 focus-visible:ring-offset-black md:min-h-0 md:px-2 md:text-[13px]";
+  "inline-flex min-h-[44px] shrink-0 items-center justify-center rounded-md px-3 py-2 text-[12px] font-medium text-zinc-300 transition-colors duration-[var(--cauris-duration-hover)] ease-[cubic-bezier(0.22,1,0.36,1)] hover:text-cauris-dawn focus:outline-none focus-visible:ring-2 focus-visible:ring-cauris-flame/55 focus-visible:ring-offset-2 focus-visible:ring-offset-black md:min-h-0 md:px-2 md:text-[13px]";
 
 const nav = [
   { href: "/", label: "Home" },
@@ -41,7 +41,7 @@ export function Navbar() {
             />
           </span>
           <span className="hidden truncate lg:inline">
-            SCS Nova <span className="text-zinc-500">/</span>{" "}
+            SCS Nova <span className="text-zinc-400">/</span>{" "}
             <span className="text-gradient-gold">Cauris</span>
           </span>
         </Link>
@@ -60,7 +60,7 @@ export function Navbar() {
               key={item.href}
               href={item.href}
               aria-current={isActive ? "page" : undefined}
-              className={`${navLinkClass} ${isActive ? "bg-white/[0.05] text-zinc-100 ring-1 ring-cauris-gold/[0.2]" : "text-zinc-500"}`}
+              className={`${navLinkClass} ${isActive ? "bg-white/[0.05] text-zinc-100 ring-1 ring-cauris-gold/[0.2]" : "text-zinc-300"}`}
             >
               {item.label}
             </Link>

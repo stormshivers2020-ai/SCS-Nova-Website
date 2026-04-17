@@ -169,7 +169,7 @@ export function RangeOSSection() {
 
       <div className="relative">
         <ScrollReveal>
-          <p className="cauris-kicker text-zinc-500">
+          <p className="cauris-kicker">
             Product system · built &amp; offered by SCS Nova
           </p>
           <h2
@@ -182,7 +182,7 @@ export function RangeOSSection() {
             The range-facing product: website, inventory, booking, and programs in one system — for gun
             ranges.
           </p>
-          <p className="mt-7 max-w-2xl text-pretty text-base font-medium leading-relaxed text-zinc-500 sm:mt-8 sm:text-lg sm:leading-relaxed">
+          <p className="mt-7 max-w-2xl text-pretty text-base font-medium leading-relaxed text-zinc-300 sm:mt-8 sm:text-lg sm:leading-relaxed">
             Built to help ranges attract customers, showcase inventory, and increase bookings — scoped
             and shipped from our Maryland studio.
           </p>
@@ -201,7 +201,7 @@ export function RangeOSSection() {
               <h3 className="mt-6 text-base font-semibold tracking-[-0.02em] text-zinc-50 sm:text-lg">
                 {f.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-zinc-500 sm:text-[15px] sm:leading-relaxed">
+              <p className="mt-3 text-sm leading-relaxed text-zinc-300 sm:text-[15px] sm:leading-relaxed">
                 {f.description}
               </p>
             </ScrollReveal>
@@ -243,7 +243,7 @@ export function RangeOSSection() {
                   Email range inquiry
                 </a>
               </div>
-              <p className="mt-8 max-w-lg text-pretty text-sm font-medium leading-relaxed text-zinc-500 sm:text-base">
+              <p className="mt-8 max-w-lg text-pretty text-sm font-medium leading-relaxed text-zinc-300 sm:text-base">
                 The demo is simulated and browser-only. Email opens a real thread with a preset subject
                 so your range context reaches the studio without playing inbox roulette.
               </p>

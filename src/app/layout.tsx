@@ -82,7 +82,7 @@ export default function RootLayout({
             sizes="100vw"
             className="h-full min-h-[100dvh] w-full object-cover opacity-[0.52]"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/32 via-black/14 to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/24 via-black/10 to-black/30" />
         </div>
         <Navbar />
         <main className="relative">{children}</main>

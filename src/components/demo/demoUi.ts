@@ -9,22 +9,22 @@ export const demoUi = {
   introMax: "max-w-3xl",
   /** Mono label track only — add your own `text-*` color. */
   kickerTrack: "cauris-kicker",
-  kicker: "cauris-kicker text-zinc-600",
+  kicker: "cauris-kicker",
   /** Phase line under eyebrow — product chapter, not “Guided preview”. */
   phaseEyebrow:
     "font-mono text-[10px] font-medium uppercase leading-relaxed tracking-[0.2em] text-cauris-flame/78 sm:text-[11px] sm:tracking-[0.22em]",
   stepTitle:
     "mt-4 text-[1.5rem] font-semibold leading-[1.12] tracking-[-0.03em] text-zinc-50 sm:text-3xl sm:leading-[1.08] md:text-[2.05rem]",
-  lead: "mt-4 text-pretty text-sm font-medium leading-relaxed text-zinc-400 sm:text-base sm:leading-relaxed",
+  lead: "mt-4 text-pretty text-sm font-medium leading-relaxed text-zinc-300 sm:text-base sm:leading-relaxed",
   leadDim:
-    "mt-3 max-w-2xl text-pretty text-sm leading-relaxed text-zinc-500 sm:text-base sm:leading-relaxed",
-  footnote: "mt-3 max-w-xl text-[11px] leading-relaxed text-zinc-500",
+    "mt-3 max-w-2xl text-pretty text-sm leading-relaxed text-zinc-400 sm:text-base sm:leading-relaxed",
+  footnote: "mt-3 max-w-xl text-[11px] leading-relaxed text-zinc-400",
   /** Primary product surface — main canvas (thread, timeline, helix, etc.). */
   productMain:
-    "rounded-brand border border-white/[0.12] bg-gradient-to-b from-white/[0.085] to-white/[0.018] shadow-[inset_0_1px_0_rgba(255,255,255,0.075),0_28px_72px_rgba(0,0,0,0.32)] ring-1 ring-cauris-gold/[0.09] backdrop-blur-md",
+    "rounded-brand border border-white/[0.12] bg-gradient-to-b from-white/[0.095] to-white/[0.03] shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_28px_72px_rgba(0,0,0,0.26)] ring-1 ring-cauris-gold/[0.1] backdrop-blur-md",
   /** Secondary column — metadata, summaries, “system” readouts. */
   productAside:
-    "rounded-brand border border-white/[0.1] bg-gradient-to-b from-white/[0.065] to-black/[0.22] shadow-[inset_0_1px_0_rgba(255,255,255,0.055),0_20px_56px_rgba(0,0,0,0.26)] ring-1 ring-white/[0.05] backdrop-blur-md",
+    "rounded-brand border border-white/[0.11] bg-gradient-to-b from-white/[0.078] to-black/[0.14] shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_20px_56px_rgba(0,0,0,0.22)] ring-1 ring-white/[0.06] backdrop-blur-md",
   /** Space below intro before main two-column layout. */
   sectionY: "mt-10 sm:mt-12",
   /** Slightly looser top spacing (e.g. Early Access after dense headline). */

@@ -134,7 +134,7 @@ export default function DashboardOSPage() {
           aria-hidden
         />
         <ScrollReveal className="relative">
-          <p className="cauris-kicker text-zinc-500">DashboardOS</p>
+          <p className="cauris-kicker">DashboardOS</p>
           <h1
             id="dashboardos-hero-heading"
             className="mt-5 max-w-5xl text-pretty text-3xl font-semibold tracking-[-0.028em] text-zinc-100 sm:text-4xl md:text-[3rem] md:leading-[1.05]"
@@ -145,7 +145,7 @@ export default function DashboardOSPage() {
             DashboardOS is built for consulting firms that need to track employee work, billable hours, and client
             activity across multiple accounts, locations, and tools.
           </p>
-          <p className="mt-5 max-w-3xl text-pretty text-sm leading-relaxed text-zinc-400 sm:text-base sm:leading-relaxed">
+          <p className="mt-5 max-w-3xl text-pretty text-sm leading-relaxed text-zinc-300 sm:text-base sm:leading-relaxed">
             It connects the work your team does inside tools like MarginEdge, Restaurant365, and QuickBooks to time,
             billing, and performance.
           </p>
@@ -177,7 +177,7 @@ export default function DashboardOSPage() {
             hours, billable client delivery, and billing — without treating the practice like a content or social
             workflow tool.
           </p>
-          <p className="mt-5 max-w-3xl text-pretty text-base font-medium leading-relaxed text-zinc-500 sm:text-lg">
+          <p className="mt-5 max-w-3xl text-pretty text-base font-medium leading-relaxed text-zinc-300 sm:text-lg">
             Time, work, clients, employees, and invoices stay connected so leaders can see the real shape of the
             operation.
           </p>
@@ -202,7 +202,7 @@ export default function DashboardOSPage() {
               className="rounded-brand border border-white/[0.12] bg-gradient-to-b from-white/[0.09] to-white/[0.022] p-6 shadow-cauris-elevate-sm ring-1 ring-cauris-gold/[0.1] sm:p-7"
             >
               <h3 className="text-base font-semibold tracking-[-0.02em] text-zinc-50 sm:text-lg">{item.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-zinc-500 sm:text-[15px]">{item.body}</p>
+              <p className="mt-3 text-sm leading-relaxed text-zinc-300 sm:text-[15px]">{item.body}</p>
             </ScrollReveal>
           ))}
         </div>
@@ -220,7 +220,7 @@ export default function DashboardOSPage() {
           >
             Built for consulting delivery
           </h2>
-          <p className="mt-6 max-w-3xl text-pretty text-base leading-relaxed text-zinc-400 sm:text-lg">
+          <p className="mt-6 max-w-3xl text-pretty text-base leading-relaxed text-zinc-300 sm:text-lg">
             The product is aimed at firms that live in client work, tools, and billing — not social feeds or content
             calendars.
           </p>
@@ -305,7 +305,7 @@ export default function DashboardOSPage() {
           <h2 id="dashboardos-workflows-heading" className="text-3xl font-semibold tracking-[-0.03em] text-zinc-100 sm:text-4xl">
             Typical workstreams
           </h2>
-          <p className="mt-6 max-w-3xl text-pretty text-base leading-relaxed text-zinc-400 sm:text-lg">
+          <p className="mt-6 max-w-3xl text-pretty text-base leading-relaxed text-zinc-300 sm:text-lg">
             Examples of client delivery your firm can structure and measure — not social posts or influencer
             campaigns.
           </p>
@@ -332,7 +332,7 @@ export default function DashboardOSPage() {
           <h2 id="dashboardos-smart-system-heading" className="text-3xl font-semibold tracking-[-0.03em] text-zinc-100 sm:text-4xl">
             Operational visibility
           </h2>
-          <p className="mt-6 max-w-3xl text-pretty text-base leading-relaxed text-zinc-400 sm:text-lg">
+          <p className="mt-6 max-w-3xl text-pretty text-base leading-relaxed text-zinc-300 sm:text-lg">
             See where billable work, payroll hours, and client commitments stand — before small gaps become revenue
             or staffing problems.
           </p>
@@ -359,7 +359,7 @@ export default function DashboardOSPage() {
           <h2 id="dashboardos-today-view-heading" className="text-3xl font-semibold tracking-[-0.03em] text-zinc-100 sm:text-4xl">
             Today View
           </h2>
-          <p className="mt-6 max-w-3xl text-pretty text-base leading-relaxed text-zinc-400 sm:text-lg">
+          <p className="mt-6 max-w-3xl text-pretty text-base leading-relaxed text-zinc-300 sm:text-lg">
             A single place to see what the team is working on, which clients need attention, and what must move for
             payroll and billing this week.
           </p>
@@ -375,7 +375,7 @@ export default function DashboardOSPage() {
           <h2 id="dashboardos-automation-heading" className="text-3xl font-semibold tracking-[-0.03em] text-zinc-100 sm:text-4xl">
             Automation
           </h2>
-          <p className="mt-6 max-w-3xl text-pretty text-base leading-relaxed text-zinc-400 sm:text-lg">
+          <p className="mt-6 max-w-3xl text-pretty text-base leading-relaxed text-zinc-300 sm:text-lg">
             Light-touch rules that support compliance and billing discipline — not growth hacks or engagement
             chasing.
           </p>
@@ -402,7 +402,7 @@ export default function DashboardOSPage() {
           <h2 id="dashboardos-teams-heading" className="text-3xl font-semibold tracking-[-0.03em] text-zinc-100 sm:text-4xl">
             Built for teams
           </h2>
-          <p className="mt-6 max-w-3xl text-pretty text-base leading-relaxed text-zinc-400 sm:text-lg">
+          <p className="mt-6 max-w-3xl text-pretty text-base leading-relaxed text-zinc-300 sm:text-lg">
             Give managers and partners a shared view of staff time, client load, and billing readiness — without
             asking people to live inside a social or content tool.
           </p>
@@ -428,7 +428,7 @@ export default function DashboardOSPage() {
             >
               <h3 className="text-xl font-semibold tracking-[-0.03em] text-zinc-50">{plan.title}</h3>
               <p className="mt-4 text-2xl font-semibold tracking-tight text-zinc-100">{plan.price}</p>
-              <p className="mt-4 text-sm leading-relaxed text-zinc-500 sm:text-[15px]">{plan.line}</p>
+              <p className="mt-4 text-sm leading-relaxed text-zinc-300 sm:text-[15px]">{plan.line}</p>
             </ScrollReveal>
           ))}
         </div>
@@ -465,7 +465,7 @@ export default function DashboardOSPage() {
       </SectionShell>
 
       <SectionShell className="border-t border-white/[0.08] !py-10">
-        <p className="text-center font-mono text-[10px] uppercase tracking-[0.24em] text-zinc-600 sm:text-[11px]">
+        <p className="text-center font-mono text-[10px] uppercase tracking-[0.24em] text-zinc-300 sm:text-[11px]">
           SCS Nova DashboardOS · Consulting operations system
         </p>
       </SectionShell>

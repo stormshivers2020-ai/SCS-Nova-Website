@@ -82,7 +82,7 @@ export function LightDemoContactForm() {
       >
         Send message
       </button>
-      <p className="text-center text-xs leading-relaxed text-neutral-500">
+      <p className="text-center text-xs leading-relaxed text-neutral-600">
         Opens your email app with this note filled in — add or edit before sending.
       </p>
     </form>

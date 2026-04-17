@@ -25,7 +25,7 @@ const EXIT_HREF = "/dashboardos";
 /** DashboardOS-only layout tokens (does not change shared `demoUi` consumers). */
 const dosSurface = `${demoUi.productMain} demo-dashboardos-product overflow-hidden`;
 const dosToolbar =
-  "flex min-h-[2.75rem] flex-wrap items-center justify-between gap-2 border-b border-white/[0.07] bg-zinc-950/50 px-4 py-3 backdrop-blur-sm sm:min-h-[3rem] sm:gap-3 sm:px-5 sm:py-3.5";
+  "flex min-h-[2.75rem] flex-wrap items-center justify-between gap-2 border-b border-white/[0.07] bg-zinc-950/42 px-4 py-3 backdrop-blur-sm sm:min-h-[3rem] sm:gap-3 sm:px-5 sm:py-3.5";
 const dosInset = "px-4 py-6 sm:px-6 sm:py-7";
 const dosGrid = `${demoUi.gridSplit} gap-8 sm:gap-10 md:gap-12 lg:gap-16`;
 const dosAside = `${demoUi.stickyAside} lg:top-[8.25rem]`;
@@ -72,7 +72,7 @@ function WelcomeStep({ onStart }: { onStart: () => void }) {
           <p className="mx-auto max-w-xl text-pretty text-lg font-medium leading-snug text-zinc-300 sm:text-xl sm:leading-snug">
             {dashboardOSDemoWelcome.subheadline}
           </p>
-          <p className="mx-auto max-w-2xl text-pretty text-sm leading-[1.65] text-zinc-500 sm:text-base">
+          <p className="mx-auto max-w-2xl text-pretty text-sm leading-[1.65] text-zinc-300 sm:text-base">
             {dashboardOSDemoWelcome.body}
           </p>
         </div>
@@ -90,7 +90,7 @@ function WelcomeStep({ onStart }: { onStart: () => void }) {
             aria-hidden
           />
 
-          <div className="demo-welcome-hero relative overflow-hidden rounded-brand-lg border border-white/[0.13] bg-gradient-to-b from-zinc-900/68 to-black/82 p-px shadow-[0_0_88px_rgba(244,176,66,0.12),inset_0_1px_0_rgba(255,255,255,0.1)] ring-1 ring-cauris-gold/[0.15] backdrop-blur-md">
+          <div className="demo-welcome-hero relative overflow-hidden rounded-brand-lg border border-white/[0.13] bg-gradient-to-b from-zinc-900/58 to-black/70 p-px shadow-[0_0_88px_rgba(244,176,66,0.12),inset_0_1px_0_rgba(255,255,255,0.1)] ring-1 ring-cauris-gold/[0.15] backdrop-blur-md">
             <div
               className="pointer-events-none absolute inset-0 opacity-[0.14]"
               aria-hidden
@@ -100,7 +100,7 @@ function WelcomeStep({ onStart }: { onStart: () => void }) {
                 backgroundSize: "20px 20px",
               }}
             />
-            <div className="relative rounded-[calc(1.5rem-1px)] bg-black/38 backdrop-blur-xl">
+            <div className="relative rounded-[calc(1.5rem-1px)] bg-black/24 backdrop-blur-xl">
               <div className="flex items-center gap-2 border-b border-white/[0.08] px-3 py-2.5 sm:px-4">
                 <span className="flex gap-1.5" aria-hidden>
                   <span className="h-2 w-2 rounded-full bg-zinc-600 shadow-[inset_0_1px_0_rgba(255,255,255,0.12)]" />
@@ -109,7 +109,7 @@ function WelcomeStep({ onStart }: { onStart: () => void }) {
                 </span>
                 <div className="mx-auto flex min-w-0 flex-1 justify-center sm:mx-0 sm:justify-start sm:pl-2">
                   <span className="truncate rounded-md border border-white/[0.09] bg-zinc-950/88 px-3 py-1 font-mono text-[10px] text-zinc-400 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] sm:text-[11px]">
-                    dashboardos<span className="text-zinc-600">.ops</span>
+                    dashboardos<span className="text-zinc-400">.ops</span>
                     <span className="text-cauris-flame/75"> / consulting</span>
                   </span>
                 </div>
@@ -125,11 +125,11 @@ function WelcomeStep({ onStart }: { onStart: () => void }) {
                       className={`flex items-center justify-between rounded-lg border px-3 py-2.5 text-left text-xs transition-colors duration-200 ${
                         i === 0
                           ? "border-cauris-gold/25 bg-cauris-flame/[0.08] text-zinc-200"
-                          : "border-white/[0.07] text-zinc-500 hover:border-white/[0.1] hover:text-zinc-400"
+                          : "border-white/[0.07] text-zinc-300 hover:border-white/[0.1] hover:text-zinc-200"
                       }`}
                     >
                       <span>{label}</span>
-                      <span className="font-mono text-[10px] text-zinc-600">sample</span>
+                      <span className="font-mono text-[10px] text-zinc-400">sample</span>
                     </div>
                   ))}
                 </div>
@@ -158,7 +158,7 @@ function WelcomeStep({ onStart }: { onStart: () => void }) {
         >
           {dashboardOSDemoWelcome.ctaStart}
         </button>
-        <p className="max-w-sm text-center font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-600 sm:text-[11px]">
+        <p className="max-w-sm text-center font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-400 sm:text-[11px]">
           Sample UI · consulting operations only · not live client data
         </p>
       </div>
@@ -169,16 +169,16 @@ function WelcomeStep({ onStart }: { onStart: () => void }) {
 
 const employeeWorkLogFields = [
   { label: "Clock in", value: "7:00 AM" },
-  { label: "Client", value: "Don Titos" },
-  { label: "Location", value: "DC" },
+  { label: "Client", value: "Summit Dining Co." },
+  { label: "Location", value: "Downtown DC" },
   { label: "Tool", value: "MarginEdge" },
   { label: "Work type", value: "Invoice Review" },
   { label: "Duration", value: "1.5 hrs" },
 ] as const;
 
 const employeeWorkSummary = [
-  { label: "Employee", value: "Storm" },
-  { label: "Work logged", value: "Invoice review" },
+  { label: "Employee", value: "Alex Carter" },
+  { label: "Work logged", value: "Invoice Review" },
   { label: "Time", value: "1.5 hours" },
   { label: "Status", value: "Logged", highlight: true },
 ] as const;
@@ -202,7 +202,7 @@ function EmployeeWorkStep({ titleId }: { titleId: string }) {
 
           <div className={`${demoUi.sectionY} ${dosSurface} p-0`}>
             <div className={dosToolbar}>
-              <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-500">Time entry · sample log</p>
+              <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-400">Time entry · sample log</p>
               <span className="rounded-md border border-cauris-gold/25 bg-cauris-flame/[0.08] px-2.5 py-1 font-mono text-[9px] uppercase tracking-[0.16em] text-cauris-flame/90">
                 Draft saved
               </span>
@@ -215,13 +215,13 @@ function EmployeeWorkStep({ titleId }: { titleId: string }) {
                 backgroundSize: "20px 20px",
               }}
             >
-              <ul className="relative divide-y divide-white/[0.06] rounded-xl border border-white/[0.09] bg-black/40 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
+              <ul className="relative divide-y divide-white/[0.06] rounded-xl border border-white/[0.09] bg-black/32 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
                 {employeeWorkLogFields.map((row) => (
                   <li
                     key={row.label}
                     className="flex flex-col gap-0.5 px-4 py-3.5 transition-colors duration-200 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:px-5 sm:py-3.5 sm:hover:bg-white/[0.025]"
                   >
-                    <span className="text-[11px] font-medium uppercase tracking-[0.12em] text-zinc-500 sm:text-xs sm:normal-case sm:tracking-normal">
+                    <span className="text-[11px] font-medium uppercase tracking-[0.12em] text-zinc-400 sm:text-xs sm:normal-case sm:tracking-normal">
                       {row.label}
                     </span>
                     <span className="text-sm font-medium text-zinc-100 sm:text-right">{row.value}</span>
@@ -236,12 +236,12 @@ function EmployeeWorkStep({ titleId }: { titleId: string }) {
           <div className={`${demoUi.productAside} p-5 sm:p-6 md:p-7`}>
             <p className={demoUi.phaseEyebrow}>Structured summary</p>
             <p className="mt-3 text-sm font-medium leading-relaxed text-zinc-300">What operations sees from this log</p>
-            <dl className="mt-6 space-y-0 divide-y divide-white/[0.07] rounded-xl border border-white/[0.09] bg-black/30">
+            <dl className="mt-6 space-y-0 divide-y divide-white/[0.07] rounded-xl border border-white/[0.09] bg-black/24">
               {employeeWorkSummary.map((row) => (
                 <div key={row.label} className="flex flex-col gap-1 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:px-5 sm:py-4">
-                  <dt className="text-xs font-medium uppercase tracking-[0.14em] text-zinc-500">{row.label}</dt>
+                  <dt className="text-xs font-medium uppercase tracking-[0.14em] text-zinc-400">{row.label}</dt>
                   <dd className="text-sm text-zinc-100 sm:text-right">
-                    {row.highlight ? (
+                    {"highlight" in row && row.highlight ? (
                       <span className="inline-flex items-center rounded-full border border-emerald-500/35 bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-300/95">
                         {row.value}
                       </span>
@@ -252,7 +252,7 @@ function EmployeeWorkStep({ titleId }: { titleId: string }) {
                 </div>
               ))}
             </dl>
-            <p className="mt-6 text-xs leading-relaxed text-zinc-600">
+            <p className="mt-6 text-xs leading-relaxed text-zinc-400">
               Illustrative only — your firm’s fields, approvals, and integrations are configured in a live build.
             </p>
           </div>
@@ -264,21 +264,26 @@ function EmployeeWorkStep({ titleId }: { titleId: string }) {
 
 const clientLocationDemoBlocks = [
   {
-    headline: "Don Titos (DC)",
+    headline: "Summit Dining Co. (Downtown DC)",
     variant: "single" as const,
-    locations: [{ tasks: ["Invoice review · Storm · 1.5 h", "PMIX prep · 1.0 h"] as const }],
+    locations: [
+      { tasks: ["Invoice Review · Alex Carter · 1.5 h", "PMIX Mapping · Taylor Morgan · 1.0 h"] as const },
+    ],
   },
   {
-    headline: "Above the Dunes (NJ)",
+    headline: "Harbor Foods Management (Baltimore Harbor)",
     variant: "single" as const,
-    locations: [{ tasks: ["Bookkeeping · 2.5 h", "MarginEdge counts · 0.5 h"] as const }],
+    locations: [{ tasks: ["Bookkeeping · Jordan Blake · 2.5 h", "Reporting · Casey Rivera · 0.5 h"] as const }],
   },
   {
-    headline: "Eli’s",
+    headline: "BluePeak Restaurant Group",
     variant: "multi" as const,
     locations: [
-      { name: "Arlington" as const, tasks: ["Invoice batch · R365 · 2.0 h"] as const },
-      { name: "Old Town" as const, tasks: ["Recipe audit · MarginEdge · 1.5 h", "QuickBooks recon · 1.0 h"] as const },
+      { name: "Arlington VA" as const, tasks: ["Invoice Review · Restaurant365 · 2.0 h"] as const },
+      {
+        name: "Silver Spring MD" as const,
+        tasks: ["PMIX Mapping · MarginEdge · 1.5 h", "Data Reconciliation · QuickBooks · 1.0 h"] as const,
+      },
     ],
   },
 ] as const;
@@ -302,13 +307,13 @@ function ClientLocationStep({ titleId }: { titleId: string }) {
 
           <div className={`${demoUi.sectionY} ${dosSurface} p-0`}>
             <div className={dosToolbar}>
-              <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-500">Delivery map · sample rollups</p>
+              <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-400">Delivery map · sample rollups</p>
             </div>
             <div className={`space-y-6 sm:space-y-7 ${dosInset}`}>
               {clientLocationDemoBlocks.map((block) => (
                 <div
                   key={block.headline}
-                  className="rounded-2xl border border-white/[0.09] bg-black/35 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] ring-1 ring-white/[0.04] transition-shadow duration-300 hover:shadow-[0_20px_48px_rgba(0,0,0,0.35)]"
+                  className="rounded-2xl border border-white/[0.09] bg-black/28 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] ring-1 ring-white/[0.04] transition-shadow duration-300 hover:shadow-[0_20px_48px_rgba(0,0,0,0.35)]"
                 >
                   <div className="flex flex-wrap items-center justify-between gap-2 border-b border-white/[0.07] px-4 py-3 sm:px-5">
                     <p className="text-sm font-semibold tracking-tight text-zinc-100">{block.headline}</p>
@@ -326,7 +331,7 @@ function ClientLocationStep({ titleId }: { titleId: string }) {
                             Store / location · {loc.name}
                           </p>
                         ) : (
-                          <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-500">
+                          <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-400">
                             Work at this site
                           </p>
                         )}
@@ -360,8 +365,9 @@ function ClientLocationStep({ titleId }: { titleId: string }) {
                 </span>
                 <div>
                   <p className="text-sm font-semibold text-zinc-200">Client</p>
-                  <p className="mt-1 text-xs leading-relaxed text-zinc-500">
-                    Accounts like Don Titos, Above the Dunes, and Eli’s — each owns its own delivery thread.
+                  <p className="mt-1 text-xs leading-relaxed text-zinc-400">
+                    Accounts like Summit Dining Co., Harbor Foods Management, and BluePeak Restaurant Group — each
+                    owns its own delivery thread.
                   </p>
                 </div>
               </li>
@@ -371,13 +377,14 @@ function ClientLocationStep({ titleId }: { titleId: string }) {
                 </span>
                 <div>
                   <p className="text-sm font-semibold text-zinc-200">Store / location</p>
-                  <p className="mt-1 text-xs leading-relaxed text-zinc-500">
-                    DC, NJ, or multiple sites under one client — tasks stay pinned to the place they were performed.
+                  <p className="mt-1 text-xs leading-relaxed text-zinc-400">
+                    Downtown DC, Baltimore Harbor, or multiple sites under one client — tasks stay pinned to the place
+                    they were performed.
                   </p>
                 </div>
               </li>
             </ol>
-            <p className="mt-6 text-xs leading-relaxed text-zinc-600">
+            <p className="mt-6 text-xs leading-relaxed text-zinc-400">
               Sample names only — not affiliated businesses or live client data.
             </p>
           </div>
@@ -390,7 +397,7 @@ function ClientLocationStep({ titleId }: { titleId: string }) {
 const toolWorkTypeMappings = [
   { tool: "MarginEdge", workType: "Invoice Review" },
   { tool: "Restaurant365", workType: "PMIX Mapping" },
-  { tool: "QuickBooks", workType: "Reconciliation" },
+  { tool: "QuickBooks", workType: "Data Reconciliation" },
 ] as const;
 
 function ToolWorkTypeStep({ titleId }: { titleId: string }) {
@@ -412,7 +419,7 @@ function ToolWorkTypeStep({ titleId }: { titleId: string }) {
 
           <div className={`${demoUi.sectionY} ${dosSurface} p-0`}>
             <div className={dosToolbar}>
-              <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-500">Platform · work type map</p>
+              <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-400">Platform · work type map</p>
             </div>
             <ul className="divide-y divide-white/[0.06]">
               {toolWorkTypeMappings.map((row, i) => (
@@ -426,12 +433,12 @@ function ToolWorkTypeStep({ titleId }: { titleId: string }) {
                     <span className="shrink-0 rounded-lg border border-white/[0.11] bg-zinc-950/70 px-3 py-2 font-mono text-xs font-medium text-cauris-dawn/95 ring-1 ring-cauris-gold/18">
                       {row.tool}
                     </span>
-                    <span className="font-mono text-sm text-zinc-500" aria-hidden>
+                    <span className="font-mono text-sm text-zinc-400" aria-hidden>
                       →
                     </span>
                     <span className="min-w-0 text-sm font-medium leading-snug text-zinc-200">{row.workType}</span>
                   </div>
-                  <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-600 sm:text-right">sample tag</span>
+                  <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-400 sm:text-right">sample tag</span>
                 </li>
               ))}
             </ul>
@@ -441,14 +448,14 @@ function ToolWorkTypeStep({ titleId }: { titleId: string }) {
         <aside className={dosAside}>
           <div className={`${demoUi.productAside} p-5 sm:p-6 md:p-7`}>
             <p className={demoUi.phaseEyebrow}>Why this layer exists</p>
-            <p className="mt-3 text-sm leading-relaxed text-zinc-500">
+            <p className="mt-3 text-sm leading-relaxed text-zinc-400">
               Partners and finance rarely argue about <span className="text-zinc-400">where</span> work happened — they
               argue about <span className="text-zinc-400">what kind of work</span> it was. Tool + work type tags make
               that explicit at capture.
             </p>
-            <div className="mt-6 rounded-xl border border-white/[0.08] bg-black/25 p-4">
-              <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-600">In practice</p>
-              <p className="mt-2 text-xs leading-relaxed text-zinc-500">
+            <div className="mt-6 rounded-xl border border-white/[0.08] bg-black/20 p-4">
+              <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-400">In practice</p>
+              <p className="mt-2 text-xs leading-relaxed text-zinc-400">
                 MarginEdge, Restaurant365, and QuickBooks stay the systems of record. DashboardOS is the operations
                 memory sitting above them.
               </p>
@@ -493,10 +500,10 @@ function BillableWorkStep({ titleId }: { titleId: string }) {
                     : "border-white/[0.1] bg-gradient-to-br from-white/[0.06] to-black/50 ring-white/[0.05]"
                 }`}
               >
-                <div className="flex flex-col gap-4 rounded-[calc(1rem-1px)] bg-black/40 px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:gap-6 sm:px-6 sm:py-5">
+                <div className="flex flex-col gap-4 rounded-[calc(1rem-1px)] bg-black/32 px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:gap-6 sm:px-6 sm:py-5">
                   <div className="flex min-w-0 flex-wrap items-center gap-x-3 gap-y-2">
                     <span className="text-base font-semibold tracking-tight text-zinc-100">{card.activity}</span>
-                    <span className="font-mono text-sm text-zinc-500" aria-hidden>
+                    <span className="font-mono text-sm text-zinc-400" aria-hidden>
                       →
                     </span>
                     <span
@@ -509,7 +516,7 @@ function BillableWorkStep({ titleId }: { titleId: string }) {
                       {card.label}
                     </span>
                   </div>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-600 sm:text-right">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-400 sm:text-right">
                     {card.bucket === "billable" ? "Counts toward revenue" : "Firm time · not invoiced"}
                   </p>
                 </div>
@@ -521,11 +528,11 @@ function BillableWorkStep({ titleId }: { titleId: string }) {
         <aside className={dosAside}>
           <div className={`${demoUi.productAside} p-5 sm:p-6 md:p-7`}>
             <p className={demoUi.phaseEyebrow}>At a glance</p>
-            <p className="mt-3 text-sm leading-relaxed text-zinc-500">
+            <p className="mt-3 text-sm leading-relaxed text-zinc-400">
               When billable and non-billable are explicit on every entry, utilization and invoicing debates shrink — the
               ledger already speaks both languages.
             </p>
-            <div className="mt-6 space-y-3 rounded-xl border border-white/[0.08] bg-black/25 p-4">
+            <div className="mt-6 space-y-3 rounded-xl border border-white/[0.08] bg-black/20 p-4">
               <div className="flex items-center justify-between gap-3">
                 <span className="text-xs font-medium text-zinc-400">Billable mix</span>
                 <span className="font-mono text-xs text-cauris-dawn/90">sample</span>
@@ -533,7 +540,7 @@ function BillableWorkStep({ titleId }: { titleId: string }) {
               <div className="h-2 w-full overflow-hidden rounded-full bg-white/[0.06]">
                 <div className="h-full w-[68%] rounded-full bg-gradient-to-r from-cauris-flame to-cauris-gold" />
               </div>
-              <p className="text-[11px] leading-relaxed text-zinc-600">Illustrative bar — not derived from the cards.</p>
+              <p className="text-[11px] leading-relaxed text-zinc-400">Illustrative bar — not derived from the cards.</p>
             </div>
           </div>
         </aside>
@@ -543,7 +550,7 @@ function BillableWorkStep({ titleId }: { titleId: string }) {
 }
 
 const payrollHoursEmployeeDemo = {
-  name: "Storm",
+  name: "Alex Carter",
   lines: ["7.5 hrs worked", "6.0 hrs billable"] as const,
 } as const;
 
@@ -576,7 +583,7 @@ function PayrollHoursStep({ titleId }: { titleId: string }) {
 
           <div className={`${demoUi.sectionY} ${dosSurface} p-0`}>
             <div className={dosToolbar}>
-              <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-500">Hours · sample employee</p>
+              <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-400">Hours · sample employee</p>
             </div>
             <div className={dosInset}>
               <div className="rounded-xl border border-white/[0.1] bg-zinc-950/40 p-5 ring-1 ring-white/[0.04] sm:p-6">
@@ -590,10 +597,10 @@ function PayrollHoursStep({ titleId }: { titleId: string }) {
                       className={`flex items-start gap-3 rounded-lg border px-4 py-3 text-sm font-medium leading-snug text-zinc-100 ${
                         i === 1
                           ? "border-cauris-gold/22 bg-cauris-flame/[0.06]"
-                          : "border-white/[0.07] bg-black/30"
+                          : "border-white/[0.07] bg-black/24"
                       }`}
                     >
-                      <span className="mt-0.5 font-mono text-xs text-zinc-500" aria-hidden>
+                      <span className="mt-0.5 font-mono text-xs text-zinc-400" aria-hidden>
                         —
                       </span>
                       <span>{line}</span>
@@ -609,14 +616,14 @@ function PayrollHoursStep({ titleId }: { titleId: string }) {
           <div className={`${demoUi.productAside} p-5 sm:p-6 md:p-7`}>
             <p className={demoUi.phaseEyebrow}>Summary</p>
             <p className="mt-3 text-sm font-medium leading-relaxed text-zinc-300">Rollup for this sample period</p>
-            <dl className="mt-6 space-y-0 divide-y divide-white/[0.07] rounded-xl border border-white/[0.09] bg-black/30">
+            <dl className="mt-6 space-y-0 divide-y divide-white/[0.07] rounded-xl border border-white/[0.09] bg-black/24">
               {payrollHoursSummaryDemo.map((row) => (
                 <div key={row.label} className="px-4 py-4 sm:px-5">
                   <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
-                    <dt className="text-xs font-medium uppercase tracking-[0.14em] text-zinc-500">{row.label}</dt>
+                    <dt className="text-xs font-medium uppercase tracking-[0.14em] text-zinc-400">{row.label}</dt>
                     <dd className="font-mono text-lg font-semibold tracking-tight text-zinc-100 sm:text-right">{row.value}</dd>
                   </div>
-                  {"note" in row ? <p className="mt-2 text-[11px] leading-relaxed text-zinc-600">{row.note}</p> : null}
+                  {"note" in row ? <p className="mt-2 text-[11px] leading-relaxed text-zinc-400">{row.note}</p> : null}
                 </div>
               ))}
             </dl>
@@ -628,7 +635,7 @@ function PayrollHoursStep({ titleId }: { titleId: string }) {
 }
 
 const invoiceGenerationDemo = {
-  clientLabel: "Client: Don Titos",
+  clientLabel: "Client: Summit Dining Co.",
   lines: ["12 hrs billable", "invoice: $720"] as const,
 } as const;
 
@@ -651,7 +658,7 @@ function InvoiceGenerationStep({ titleId }: { titleId: string }) {
 
           <div className={`${demoUi.sectionY} ${dosSurface} p-0`}>
             <div className={dosToolbar}>
-              <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-500">Draft invoice · sample</p>
+              <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-400">Draft invoice · sample</p>
               <span className="rounded-md border border-amber-500/30 bg-amber-500/10 px-2.5 py-1 font-mono text-[9px] uppercase tracking-[0.16em] text-amber-200/90">
                 Preview
               </span>
@@ -669,14 +676,14 @@ function InvoiceGenerationStep({ titleId }: { titleId: string }) {
                         i === 1 ? "font-semibold text-cauris-dawn" : "text-zinc-300"
                       }`}
                     >
-                      <span className="mt-1.5 font-mono text-xs text-zinc-500" aria-hidden>
+                      <span className="mt-1.5 font-mono text-xs text-zinc-400" aria-hidden>
                         —
                       </span>
                       <span>{line}</span>
                     </li>
                   ))}
                 </ul>
-                <p className="mt-8 font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-600">
+                <p className="mt-8 font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-400">
                   Not connected to accounting · browser-only demo
                 </p>
               </div>
@@ -687,13 +694,13 @@ function InvoiceGenerationStep({ titleId }: { titleId: string }) {
         <aside className={dosAside}>
           <div className={`${demoUi.productAside} p-5 sm:p-6 md:p-7`}>
             <p className={demoUi.phaseEyebrow}>From time to invoice</p>
-            <p className="mt-3 text-sm leading-relaxed text-zinc-500">
+            <p className="mt-3 text-sm leading-relaxed text-zinc-400">
               When billable hours are already tagged to the client, the invoice story writes itself — partners review
               totals, not reconstruct who did what.
             </p>
-            <div className="mt-6 rounded-xl border border-white/[0.08] bg-black/25 p-4">
-              <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-600">Flow</p>
-              <ol className="mt-3 list-decimal space-y-2 pl-4 text-xs leading-relaxed text-zinc-500">
+            <div className="mt-6 rounded-xl border border-white/[0.08] bg-black/20 p-4">
+              <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-400">Flow</p>
+              <ol className="mt-3 list-decimal space-y-2 pl-4 text-xs leading-relaxed text-zinc-400">
                 <li>Structured time entries</li>
                 <li>Billable approval</li>
                 <li>Draft invoice line</li>
@@ -732,7 +739,7 @@ function AdminDashboardStep({ titleId }: { titleId: string }) {
 
           <div className={`${demoUi.sectionY} ${dosSurface} p-0`}>
             <div className={dosToolbar}>
-              <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-500">Operations pulse · sample</p>
+              <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-400">Operations pulse · sample</p>
             </div>
             <div className="grid gap-3.5 p-4 sm:grid-cols-2 sm:gap-4 sm:p-5 md:p-6">
               {adminDashboardMetrics.map((m) => (
@@ -741,12 +748,12 @@ function AdminDashboardStep({ titleId }: { titleId: string }) {
                   className={`rounded-2xl border p-4 ring-1 transition-shadow duration-300 sm:p-5 ${
                     m.key === "alerts"
                       ? "border-amber-500/35 bg-amber-500/[0.08] ring-amber-500/10 hover:shadow-[0_16px_40px_rgba(245,158,11,0.08)]"
-                      : "border-white/[0.09] bg-black/35 ring-white/[0.05] hover:shadow-[0_16px_40px_rgba(0,0,0,0.35)]"
+                      : "border-white/[0.09] bg-black/28 ring-white/[0.05] hover:shadow-[0_16px_40px_rgba(0,0,0,0.35)]"
                   }`}
                 >
-                  <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-500">{m.label}</p>
+                  <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-400">{m.label}</p>
                   <p className="mt-3 font-mono text-3xl font-semibold tracking-tight text-zinc-50 sm:text-[2rem]">{m.value}</p>
-                  <p className="mt-2 text-xs leading-relaxed text-zinc-500">{m.detail}</p>
+                  <p className="mt-2 text-xs leading-relaxed text-zinc-400">{m.detail}</p>
                 </div>
               ))}
             </div>
@@ -756,11 +763,11 @@ function AdminDashboardStep({ titleId }: { titleId: string }) {
         <aside className={dosAside}>
           <div className={`${demoUi.productAside} p-5 sm:p-6 md:p-7`}>
             <p className={demoUi.phaseEyebrow}>Live posture</p>
-            <p className="mt-3 text-sm leading-relaxed text-zinc-500">
+            <p className="mt-3 text-sm leading-relaxed text-zinc-400">
               This board is meant to answer “how are we doing right now?” — not vanity metrics, but who is active, which
               clients are in motion, what is still open, and what needs a human decision.
             </p>
-            <p className="mt-6 text-xs leading-relaxed text-zinc-600">
+            <p className="mt-6 text-xs leading-relaxed text-zinc-400">
               Numbers are fabricated for the demo; your firm would wire real rollups and thresholds.
             </p>
           </div>
@@ -775,18 +782,19 @@ const performanceInsightsPanels = [
     key: "topClients",
     title: "Top clients",
     rows: [
-      { label: "Don Titos", meta: "42h · mix 0.81" },
-      { label: "Eli’s", meta: "31h · mix 0.74" },
-      { label: "Above the Dunes", meta: "18h · mix 0.88" },
+      { label: "Redwood Hospitality Group", meta: "42h · mix 0.81" },
+      { label: "Summit Dining Co.", meta: "31h · mix 0.74" },
+      { label: "Harbor Foods Management", meta: "18h · mix 0.88" },
     ],
   },
   {
     key: "workload",
     title: "Employee workload",
     rows: [
-      { label: "Storm", meta: "38h / 44h plan", bar: 0.86 },
-      { label: "Alex", meta: "44h / 40h plan", bar: 1.1 },
-      { label: "Jordan", meta: "29h / 40h plan", bar: 0.72 },
+      { label: "Alex Carter", meta: "38h / 44h plan", bar: 0.86 },
+      { label: "Jordan Blake", meta: "44h / 40h plan", bar: 1.1 },
+      { label: "Taylor Morgan", meta: "29h / 40h plan", bar: 0.72 },
+      { label: "Casey Rivera", meta: "33h / 40h plan", bar: 0.82 },
     ],
   },
   {
@@ -804,7 +812,7 @@ const performanceInsightsPanels = [
     rows: [
       { label: "Invoice review queue", meta: "6d avg age" },
       { label: "MarginEdge access requests", meta: "3 pending" },
-      { label: "Client B — missing approvals", meta: "risk" },
+      { label: "BluePeak Restaurant Group — missing approvals", meta: "risk" },
     ],
   },
 ] as const;
@@ -828,13 +836,13 @@ function PerformanceInsightsStep({ titleId }: { titleId: string }) {
 
           <div className={`${demoUi.sectionY} ${dosSurface} p-0`}>
             <div className={dosToolbar}>
-              <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-500">Signals · sample analytics</p>
+              <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-400">Signals · sample analytics</p>
             </div>
             <div className="grid gap-3.5 p-4 sm:grid-cols-2 sm:gap-4 sm:p-5 md:p-6">
               {performanceInsightsPanels.map((panel) => (
                 <div
                   key={panel.key}
-                  className="rounded-2xl border border-white/[0.09] bg-black/40 p-4 ring-1 ring-white/[0.05] transition-shadow duration-300 hover:border-white/[0.11] hover:shadow-[0_18px_44px_rgba(0,0,0,0.38)] sm:p-5"
+                  className="rounded-2xl border border-white/[0.09] bg-black/32 p-4 ring-1 ring-white/[0.05] transition-shadow duration-300 hover:border-white/[0.11] hover:shadow-[0_18px_44px_rgba(0,0,0,0.38)] sm:p-5"
                 >
                   <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-cauris-flame/80">{panel.title}</p>
                   <ul className="mt-4 space-y-3.5">
@@ -842,7 +850,7 @@ function PerformanceInsightsStep({ titleId }: { titleId: string }) {
                       <li key={row.label}>
                         <div className="flex items-start justify-between gap-3 text-sm">
                           <span className="font-medium leading-snug text-zinc-200">{row.label}</span>
-                          <span className="shrink-0 text-right font-mono text-[11px] font-medium normal-case tracking-normal text-zinc-500">
+                          <span className="shrink-0 text-right font-mono text-[11px] font-medium normal-case tracking-normal text-zinc-400">
                             {row.meta}
                           </span>
                         </div>
@@ -868,11 +876,11 @@ function PerformanceInsightsStep({ titleId }: { titleId: string }) {
         <aside className={dosAside}>
           <div className={`${demoUi.productAside} p-5 sm:p-6 md:p-7`}>
             <p className={demoUi.phaseEyebrow}>One narrative</p>
-            <p className="mt-3 text-sm leading-relaxed text-zinc-500">
+            <p className="mt-3 text-sm leading-relaxed text-zinc-400">
               Analytics here are meant to stitch together — who is buying time, who is burning it, whether it is
               billable, and what is stuck — instead of four disconnected exports.
             </p>
-            <p className="mt-6 text-xs leading-relaxed text-zinc-600">
+            <p className="mt-6 text-xs leading-relaxed text-zinc-400">
               Figures are illustrative; a live build would reflect your firm’s definitions and date ranges.
             </p>
           </div>
@@ -908,7 +916,7 @@ function EarlyAccessStep() {
           >
             {dashboardOSDemoEarlyAccess.title}
           </h2>
-          <p className="text-base font-medium leading-[1.65] text-zinc-400 sm:text-lg">
+          <p className="text-base font-medium leading-[1.65] text-zinc-300 sm:text-lg">
             {dashboardOSDemoEarlyAccess.body}
           </p>
         </div>
@@ -989,9 +997,9 @@ export function DashboardOSDemoExperience() {
           <div className="flex flex-wrap items-start justify-between gap-3">
             <div className="min-w-0">
               <p className="text-[13px] font-semibold tracking-[-0.02em] text-zinc-100 sm:text-sm">
-                DashboardOS <span className="font-medium text-zinc-500">Demo</span>
+                DashboardOS <span className="font-medium text-zinc-300">Demo</span>
               </p>
-              <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-600 sm:text-[11px]">
+              <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-400 sm:text-[11px]">
                 Sample consulting UI · not live data
               </p>
             </div>

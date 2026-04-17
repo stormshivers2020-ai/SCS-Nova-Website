@@ -13,7 +13,7 @@ export default function LightDemoLayout({ children }: { children: ReactNode }) {
     <div className="relative z-10 min-h-screen w-full bg-white font-sans text-neutral-800 antialiased">
       <header className="border-b border-neutral-200/90 bg-white">
         <div className="mx-auto flex max-w-[75rem] flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8">
-          <p className="text-xs font-medium text-neutral-500 sm:text-sm">
+          <p className="text-xs font-medium text-neutral-600 sm:text-sm">
             Upgraded coworking site concept · <span className="text-neutral-700">SCS Nova</span>
             <span className="hidden sm:inline"> · Think Tank–inspired structure</span>
           </p>

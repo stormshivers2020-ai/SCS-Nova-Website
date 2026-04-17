@@ -168,7 +168,7 @@ function PricingOfferingCard({
         </p>
       ) : null}
       {offering.notes?.length ? (
-        <div className="mt-6 space-y-3 text-xs leading-relaxed text-zinc-400 sm:text-[13px] sm:leading-relaxed">
+        <div className="mt-6 space-y-3 text-xs leading-relaxed text-zinc-300 sm:text-[13px] sm:leading-relaxed">
           {offering.notes.map((n) => (
             <p key={n}>{n}</p>
           ))}
@@ -217,7 +217,7 @@ export default function ServicesPage() {
             SCS Nova builds websites, branded systems, and operational tools designed to help businesses
             present clearly, work smarter, and grow with more control.
           </p>
-          <p className="mt-5 max-w-3xl text-pretty text-sm leading-relaxed text-zinc-400 sm:text-base">
+          <p className="mt-5 max-w-3xl text-pretty text-sm leading-relaxed text-zinc-300 sm:text-base">
             This page is the full offer architecture: capabilities, pricing, productized systems, and clear
             next steps.
           </p>
@@ -255,10 +255,10 @@ export default function ServicesPage() {
           >
             What We Do
           </h2>
-          <p className="mt-6 max-w-3xl text-pretty text-base leading-relaxed text-zinc-400 sm:text-lg">
+          <p className="mt-6 max-w-3xl text-pretty text-base leading-relaxed text-zinc-300 sm:text-lg">
             We build systems that help businesses attract customers, manage inventory, and grow.
           </p>
-          <p className="mt-4 max-w-3xl text-pretty text-sm leading-relaxed text-zinc-500 sm:text-base">
+          <p className="mt-4 max-w-3xl text-pretty text-sm leading-relaxed text-zinc-300 sm:text-base">
             Engagements are scoped directly with the studio. No generic package theater, no copy-paste
             proposals.
           </p>
@@ -271,7 +271,7 @@ export default function ServicesPage() {
               className="rounded-brand border border-white/[0.12] bg-gradient-to-b from-white/[0.09] to-white/[0.022] p-7 shadow-cauris-elevate-sm ring-1 ring-cauris-gold/[0.1] sm:p-8"
             >
               <h3 className="text-lg font-semibold tracking-[-0.02em] text-zinc-50">{pillar.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-zinc-400 sm:text-[15px]">{pillar.body}</p>
+              <p className="mt-3 text-sm leading-relaxed text-zinc-300 sm:text-[15px]">{pillar.body}</p>
             </ScrollReveal>
           ))}
         </div>
@@ -283,7 +283,7 @@ export default function ServicesPage() {
         className="relative overflow-hidden border-t border-white/[0.08] bg-gradient-to-b from-black/36 via-zinc-950/10 to-black/36 !py-24 md:!py-32 lg:!py-36"
       >
         <ScrollReveal>
-          <p className="cauris-kicker text-zinc-500">Pricing</p>
+          <p className="cauris-kicker">Pricing</p>
           <h2
             id="website-pricing-heading"
             className="mt-5 max-w-4xl text-pretty text-3xl font-semibold tracking-[-0.03em] text-zinc-100 sm:text-4xl md:text-[2.65rem] md:leading-[1.08]"
@@ -303,7 +303,7 @@ export default function ServicesPage() {
           </div>
         </div>
         <ScrollReveal delayMs={320} className="mx-auto mt-14 max-w-3xl px-1 text-center sm:mt-16">
-          <p className="text-pretty text-sm font-medium leading-relaxed text-zinc-400 sm:text-base sm:leading-relaxed">
+          <p className="text-pretty text-sm font-medium leading-relaxed text-zinc-300 sm:text-base sm:leading-relaxed">
             We structure every project based on your business goals — whether you need a premium website, a
             fully managed system, or custom-built software.
           </p>
@@ -319,7 +319,7 @@ export default function ServicesPage() {
           <h2 id="product-systems-heading" className="text-3xl font-semibold tracking-[-0.03em] text-zinc-100 sm:text-4xl">
             Product Systems
           </h2>
-          <p className="mt-6 max-w-3xl text-pretty text-base leading-relaxed text-zinc-400 sm:text-lg">
+          <p className="mt-6 max-w-3xl text-pretty text-base leading-relaxed text-zinc-300 sm:text-lg">
             Productized systems with dedicated pages and demo paths when available.
           </p>
         </ScrollReveal>
@@ -332,7 +332,7 @@ export default function ServicesPage() {
             >
               <h3 className="text-xl font-semibold tracking-[-0.03em] text-zinc-50">{system.name}</h3>
               <p className="mt-4 text-sm leading-relaxed text-zinc-300 sm:text-[15px]">{system.summary}</p>
-              <p className="mt-5 font-mono text-[10px] uppercase tracking-[0.22em] text-zinc-500 sm:text-[11px]">
+              <p className="mt-5 font-mono text-[10px] uppercase tracking-[0.22em] text-zinc-300 sm:text-[11px]">
                 {system.note}
               </p>
               <Link

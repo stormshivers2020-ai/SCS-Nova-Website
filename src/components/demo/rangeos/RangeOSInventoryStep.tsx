@@ -57,7 +57,7 @@ function InventoryCard({ item }: { item: RangeOSDemoInventoryItem }) {
           </span>
         </div>
         <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4">
-          <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-zinc-500">
+          <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-zinc-400">
             {rangeOSInventoryMediaLabels.kicker}
           </p>
           <p className="mt-1 text-xs font-medium text-zinc-400 opacity-90 sm:text-sm">
@@ -67,8 +67,8 @@ function InventoryCard({ item }: { item: RangeOSDemoInventoryItem }) {
       </div>
       <div className="flex flex-1 flex-col border-t border-white/[0.06] p-4 sm:p-5">
         <h3 className="text-base font-semibold tracking-tight text-zinc-50 sm:text-lg">{item.name}</h3>
-        <p className="mt-2 text-sm text-zinc-500">{item.type}</p>
-        <p className="mt-1 font-mono text-xs tracking-wide text-zinc-600">{item.caliber}</p>
+        <p className="mt-2 text-sm text-zinc-400">{item.type}</p>
+        <p className="mt-1 font-mono text-xs tracking-wide text-zinc-400">{item.caliber}</p>
         <div className="mt-4 flex items-center gap-2 border-t border-white/[0.05] pt-4">
           <span
             className={`h-1.5 w-1.5 shrink-0 rounded-full ${

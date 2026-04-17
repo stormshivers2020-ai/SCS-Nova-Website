@@ -68,7 +68,7 @@ export default function DemosPage() {
           aria-hidden
         />
         <ScrollReveal className="relative">
-          <p className="cauris-kicker text-zinc-500">Product Demos</p>
+          <p className="cauris-kicker">Product Demos</p>
           <h1
             id="demos-hero-heading"
             className="mt-5 max-w-4xl text-pretty text-3xl font-semibold tracking-[-0.03em] text-zinc-100 sm:text-4xl md:text-[3rem] md:leading-[1.05]"
@@ -91,7 +91,7 @@ export default function DemosPage() {
           <h2 id="demos-about-heading" className="text-2xl font-semibold tracking-[-0.02em] text-zinc-100 sm:text-3xl">
             What this page is
           </h2>
-          <p className="mt-5 max-w-3xl text-pretty text-sm leading-relaxed text-zinc-400 sm:text-base sm:leading-relaxed">
+          <p className="mt-5 max-w-3xl text-pretty text-sm leading-relaxed text-zinc-300 sm:text-base sm:leading-relaxed">
             This is the demo hub: one organized place to understand what each system does before you
             click into a walkthrough. Live demos open directly. Systems still in progress are shown
             clearly so expectations stay clean.
@@ -120,7 +120,7 @@ export default function DemosPage() {
                 <h3 className="text-xl font-semibold tracking-[-0.02em] text-zinc-50">{item.name}</h3>
                 <span
                   className={`font-mono text-[10px] uppercase tracking-[0.18em] sm:shrink-0 sm:text-[11px] ${
-                    item.inactive ? "text-zinc-500" : "text-cauris-dawn/90"
+                    item.inactive ? "text-zinc-300" : "text-cauris-dawn/90"
                   }`}
                 >
                   {item.status}
@@ -136,7 +136,7 @@ export default function DemosPage() {
               ) : (
                 <span
                   aria-disabled="true"
-                  className="mt-7 inline-flex min-h-11 items-center justify-center rounded-brand-sm border border-white/[0.12] bg-white/[0.03] px-5 text-sm font-medium text-zinc-500"
+                  className="mt-7 inline-flex min-h-11 items-center justify-center rounded-brand-sm border border-white/[0.12] bg-white/[0.03] px-5 text-sm font-medium text-zinc-200"
                 >
                   {item.cta}
                 </span>

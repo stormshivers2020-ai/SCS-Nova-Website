@@ -41,7 +41,7 @@ function WelcomeStep({ onStart }: { onStart: () => void }) {
         <p className="mx-auto mt-5 max-w-xl text-pretty text-lg font-medium leading-snug text-zinc-300 sm:mt-6 sm:text-xl sm:leading-snug">
           {rangeOSDemoWelcome.subheadline}
         </p>
-        <p className="mx-auto mt-6 max-w-2xl text-pretty text-sm leading-relaxed text-zinc-500 sm:mt-7 sm:text-base sm:leading-relaxed">
+        <p className="mx-auto mt-6 max-w-2xl text-pretty text-sm leading-relaxed text-zinc-400 sm:mt-7 sm:text-base sm:leading-relaxed">
           {rangeOSDemoWelcome.body}
         </p>
       </div>
@@ -70,7 +70,7 @@ function WelcomeStep({ onStart }: { onStart: () => void }) {
               </span>
               <div className="mx-auto flex min-w-0 flex-1 justify-center sm:mx-0 sm:justify-start sm:pl-2">
                 <span className="truncate rounded-md border border-white/[0.09] bg-zinc-950/88 px-3 py-1 font-mono text-[10px] text-zinc-400 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] sm:text-[11px]">
-                  rangeos<span className="text-zinc-600">.ops</span>
+                  rangeos<span className="text-zinc-400">.ops</span>
                   <span className="text-cauris-flame/75"> / command</span>
                 </span>
               </div>
@@ -84,7 +84,7 @@ function WelcomeStep({ onStart }: { onStart: () => void }) {
                     className={`rounded-lg px-2 py-2 text-left font-mono text-[9px] uppercase tracking-[0.14em] ${
                       i === 1
                         ? "border border-cauris-gold/25 bg-cauris-flame/[0.08] text-cauris-dawn"
-                        : "border border-transparent text-zinc-600"
+                        : "border border-transparent text-zinc-400"
                     }`}
                   >
                     {t}
@@ -131,7 +131,7 @@ function WelcomeStep({ onStart }: { onStart: () => void }) {
         >
           {rangeOSDemoWelcome.ctaStart}
         </button>
-        <p className="max-w-sm text-center font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-600 sm:text-[11px]">
+        <p className="max-w-sm text-center font-mono text-[10px] uppercase tracking-[0.18em] text-zinc-400 sm:text-[11px]">
           Sample UI here · your branding & data when SCS Nova ships your build
         </p>
       </div>
@@ -183,9 +183,9 @@ export function RangeOSDemoExperience() {
             <div className="min-w-0">
               <p className="text-[13px] font-semibold tracking-[-0.02em] text-zinc-100 sm:text-sm">
                 RangeOS<span className="text-gradient-gold">™</span>{" "}
-                <span className="font-medium text-zinc-500">Demo</span>
+                <span className="font-medium text-zinc-400">Demo</span>
               </p>
-              <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-600 sm:text-[11px]">
+              <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-400 sm:text-[11px]">
                 Sample range UI · not live data
               </p>
             </div>

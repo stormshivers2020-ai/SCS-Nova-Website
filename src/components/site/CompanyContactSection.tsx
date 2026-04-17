@@ -10,7 +10,7 @@ import {
 const MAILTO_GENERAL = buildBusinessMailto();
 const MAILTO_PROJECT = buildBusinessMailto({ subject: MAILTO_SUBJECTS.studioProject });
 const threadLinkClass =
-  "text-sm font-medium text-zinc-500 underline decoration-white/[0.12] underline-offset-4 transition-colors hover:text-cauris-dawn hover:decoration-cauris-gold/35";
+  "text-sm font-medium text-zinc-300 underline decoration-white/[0.12] underline-offset-4 transition-colors hover:text-cauris-dawn hover:decoration-cauris-gold/35";
 
 export function CompanyContactSection() {
   return (
@@ -29,10 +29,10 @@ export function CompanyContactSection() {
             >
               SCS Nova
             </h2>
-            <p className="mt-6 max-w-md text-pretty text-sm leading-relaxed text-zinc-400 sm:text-base">
+            <p className="mt-6 max-w-md text-pretty text-sm leading-relaxed text-zinc-300 sm:text-base">
               16A Belair South Parkway, Bel Air, MD 21015
             </p>
-            <p className="mt-3 max-w-md text-pretty text-xs leading-relaxed text-zinc-600 sm:text-sm">
+            <p className="mt-3 max-w-md text-pretty text-xs leading-relaxed text-zinc-300 sm:text-sm">
               Physical studio address — same team as the builds and demos on this site.
             </p>
 
@@ -42,7 +42,7 @@ export function CompanyContactSection() {
             />
 
             <p className="cauris-kicker mt-10 sm:mt-12">Contact</p>
-            <p className="mt-3 max-w-md text-pretty text-sm leading-relaxed text-zinc-500">
+            <p className="mt-3 max-w-md text-pretty text-sm leading-relaxed text-zinc-300">
               One inbox, read by the studio. Use a subject line that matches your ask — it helps us
               respond faster.
             </p>
@@ -52,17 +52,17 @@ export function CompanyContactSection() {
             >
               {SCS_NOVA_BUSINESS_EMAIL}
             </a>
-            <p className="mt-6 flex flex-wrap gap-x-3 gap-y-2 font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-600 sm:text-[11px]">
+            <p className="mt-6 flex flex-wrap gap-x-3 gap-y-2 font-mono text-[10px] uppercase tracking-[0.16em] text-zinc-300 sm:text-[11px]">
               <Link href="/demo" className={threadLinkClass}>
                 Cauris demo
               </Link>
-              <span className="text-zinc-700" aria-hidden>
+              <span className="text-zinc-300" aria-hidden>
                 ·
               </span>
               <Link href="/rangeos-demo" className={threadLinkClass}>
                 RangeOS demo
               </Link>
-              <span className="text-zinc-700" aria-hidden>
+              <span className="text-zinc-300" aria-hidden>
                 ·
               </span>
               <Link href="/rangeos" className={threadLinkClass}>
@@ -83,7 +83,7 @@ export function CompanyContactSection() {
             >
               Website, brand, or a disciplined refresh?
             </h3>
-            <p className="mt-5 text-pretty text-sm leading-relaxed text-zinc-400 sm:text-[15px] sm:leading-relaxed">
+            <p className="mt-5 text-pretty text-sm leading-relaxed text-zinc-300 sm:text-[15px] sm:leading-relaxed">
               New sites, identity work, or a focused pass on what you already ship — scoped before we
               touch code.
             </p>
@@ -93,11 +93,11 @@ export function CompanyContactSection() {
             >
               Start Your Project
             </a>
-            <p className="mt-4 text-pretty text-xs leading-relaxed text-zinc-500 sm:text-sm">
+            <p className="mt-4 text-pretty text-xs leading-relaxed text-zinc-300 sm:text-sm">
               Opens your mail app with a clear subject — add context in the body; we reply in person.
             </p>
             <div className="mt-8 border-t border-white/[0.08] pt-7">
-              <p className="font-mono text-[10px] font-medium uppercase tracking-[0.2em] text-zinc-600 sm:text-[11px]">
+              <p className="font-mono text-[10px] font-medium uppercase tracking-[0.2em] text-zinc-300 sm:text-[11px]">
                 Other threads
               </p>
               <ul className="mt-4 flex flex-col gap-3">

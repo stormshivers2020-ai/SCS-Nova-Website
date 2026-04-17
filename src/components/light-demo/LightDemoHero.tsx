@@ -13,7 +13,7 @@ export function LightDemoHero() {
         </div>
         <div className="mt-8 grid gap-10 sm:gap-12 lg:mt-10 lg:grid-cols-2 lg:items-center lg:gap-16">
           <div className="max-w-xl text-center sm:text-left lg:max-w-none">
-            <p className="text-sm font-medium text-neutral-600 sm:text-base">
+            <p className="text-sm font-medium text-neutral-700 sm:text-base">
               How we would elevate a coworking hub site—cleaner spacing, stronger type, and a flow
               visitors already understand.
             </p>
@@ -27,7 +27,7 @@ export function LightDemoHero() {
               Flexible workspace for professionals, entrepreneurs, and growing businesses—built for
               productivity, meetings, networking, and momentum.
             </p>
-            <p className="mt-4 text-pretty text-base leading-relaxed text-neutral-500">
+            <p className="mt-4 text-pretty text-base leading-relaxed text-neutral-700">
               A cleaner, more modern upgraded version of a coworking and local business website: calm
               layout, clear membership paths, and room for community—rebuilt as an SCS Nova concept, not
               a venue clone.

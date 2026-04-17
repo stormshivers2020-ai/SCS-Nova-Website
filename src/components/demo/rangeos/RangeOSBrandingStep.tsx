@@ -36,7 +36,7 @@ function IdentityPlaceholder() {
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_20%_30%,rgba(244,176,66,0.1),transparent_55%)]"
         aria-hidden
       />
-      <p className={`relative ${demoUi.kickerTrack} text-zinc-500`}>{rangeOSBrandingIdentityKicker}</p>
+      <p className={`relative ${demoUi.kickerTrack} text-zinc-400`}>{rangeOSBrandingIdentityKicker}</p>
       <div className="relative mt-8 flex flex-col items-center gap-8 sm:flex-row sm:items-center sm:justify-center sm:gap-12">
         <div className="relative">
           <div
@@ -50,11 +50,11 @@ function IdentityPlaceholder() {
           </div>
         </div>
         <div className="text-center sm:text-left">
-          <p className="text-xs font-medium uppercase tracking-[0.2em] text-zinc-500">Wordmark</p>
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-zinc-400">Wordmark</p>
           <p className="mt-2 text-xl font-semibold tracking-tight text-zinc-100 sm:text-2xl">
             Range<span className="text-gradient-gold">Name</span>
           </p>
-          <p className="mt-2 max-w-xs text-sm text-zinc-500">
+          <p className="mt-2 max-w-xs text-sm text-zinc-400">
             Your marks replace this sample — spacing and lockup rules ship with the templates.
           </p>
         </div>
@@ -66,7 +66,7 @@ function IdentityPlaceholder() {
 function ColorThemeRow() {
   return (
     <section aria-labelledby="rangeos-brand-colors-label">
-      <p id="rangeos-brand-colors-label" className={`${demoUi.kickerTrack} text-zinc-500`}>
+      <p id="rangeos-brand-colors-label" className={`${demoUi.kickerTrack} text-zinc-400`}>
         Color & theme
       </p>
       <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -78,7 +78,7 @@ function ColorThemeRow() {
             <div className={`h-20 w-full ${s.swatchClass}`} />
             <div className="border-t border-white/[0.06] p-4">
               <p className="text-sm font-semibold text-zinc-200">{s.label}</p>
-              <p className="mt-1 text-xs leading-relaxed text-zinc-500">{s.note}</p>
+              <p className="mt-1 text-xs leading-relaxed text-zinc-400">{s.note}</p>
             </div>
           </div>
         ))}
@@ -90,7 +90,7 @@ function ColorThemeRow() {
 function HeroFraming() {
   return (
     <section aria-labelledby="rangeos-brand-hero-label">
-      <p id="rangeos-brand-hero-label" className={`${demoUi.kickerTrack} text-zinc-500`}>
+      <p id="rangeos-brand-hero-label" className={`${demoUi.kickerTrack} text-zinc-400`}>
         Hero framing
       </p>
       <div className="relative mt-4 overflow-hidden rounded-brand border border-white/[0.11] bg-black/40 p-1 ring-1 ring-cauris-gold/[0.12] shadow-[0_24px_56px_rgba(0,0,0,0.28)]">
@@ -123,7 +123,7 @@ function HeroFraming() {
 function HierarchyStrip() {
   return (
     <section aria-labelledby="rangeos-brand-type-label">
-      <p id="rangeos-brand-type-label" className={`${demoUi.kickerTrack} text-zinc-500`}>
+      <p id="rangeos-brand-type-label" className={`${demoUi.kickerTrack} text-zinc-400`}>
         Visual hierarchy
       </p>
       <div className="mt-4 space-y-6 rounded-brand border border-white/[0.11] bg-gradient-to-b from-white/[0.07] to-white/[0.02] p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_20px_48px_rgba(0,0,0,0.22)] ring-1 ring-white/[0.05] backdrop-blur-md sm:p-8">
@@ -132,7 +132,7 @@ function HierarchyStrip() {
             key={row.role}
             className="border-b border-white/[0.06] pb-6 last:border-b-0 last:pb-0"
           >
-            <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-600">{row.role}</p>
+            <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-400">{row.role}</p>
             <p className={`mt-2 ${row.className}`}>{row.sample}</p>
           </div>
         ))}
@@ -157,7 +157,7 @@ function ConsistencyPanel() {
       >
         Brand consistency
       </h3>
-      <p className="mt-2 text-sm font-medium text-zinc-500">
+      <p className="mt-2 text-sm font-medium text-zinc-400">
         One system, repeated with discipline — so every page feels like the same range.
       </p>
       <ul className="mt-6 space-y-3">

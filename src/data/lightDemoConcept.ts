@@ -10,7 +10,7 @@ export const LIGHT_DEMO_BUILDER_PHONE_DISPLAY = "667-437-5067";
 export const LIGHT_DEMO_BUILDER_PHONE_TEL = "+16674375067";
 
 /** Builder inbox for this demo page — mailto targets this address only on /light-demo. */
-export const LIGHT_DEMO_BUILDER_EMAIL = "SCSNova.Business@gmail.com";
+export const LIGHT_DEMO_BUILDER_EMAIL = "info@scsnova.com";
 
 const LIGHT_DEMO_MAILTO_BASE = `mailto:${LIGHT_DEMO_BUILDER_EMAIL}`;
 

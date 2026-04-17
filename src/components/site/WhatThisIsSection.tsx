@@ -32,7 +32,7 @@ export function WhatThisIsSection() {
                 everyday input into structured memory, connected insight, and clearer decisions — not
                 another notes app.
               </p>
-              <p className="text-zinc-500">
+              <p className="text-zinc-300">
                 It doesn&apos;t just store information.
                 <br />
                 <span className="text-zinc-200">It organizes meaning.</span>

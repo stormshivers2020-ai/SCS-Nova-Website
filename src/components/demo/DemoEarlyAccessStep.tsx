@@ -54,7 +54,7 @@ export function DemoEarlyAccessStep() {
         <p className="mx-auto mt-5 max-w-2xl text-pretty text-sm font-medium leading-relaxed text-zinc-400 sm:text-base lg:mx-0">
           {demoEarlyAccessIntro.supporting}
         </p>
-        <p className="mx-auto mt-3 max-w-xl text-pretty text-sm leading-relaxed text-zinc-500 sm:text-base lg:mx-0">
+        <p className="mx-auto mt-3 max-w-xl text-pretty text-sm leading-relaxed text-zinc-400 sm:text-base lg:mx-0">
           {demoEarlyAccessIntro.secondary}
         </p>
         <div className="mt-5 flex flex-col items-center gap-2 lg:items-start">
@@ -67,7 +67,7 @@ export function DemoEarlyAccessStep() {
               {demoEarlyAccessContinuity.label}
             </span>
           </div>
-          <p className="max-w-xl text-[11px] leading-relaxed text-zinc-600 lg:text-left">
+          <p className="max-w-xl text-[11px] leading-relaxed text-zinc-400 lg:text-left">
             {demoEarlyAccessContinuity.note}
           </p>
         </div>
@@ -76,7 +76,7 @@ export function DemoEarlyAccessStep() {
       <div className={`${demoUi.sectionYLoose} ${demoUi.gridSplit}`}>
         <div className="flex flex-col gap-8 sm:gap-10">
           <div>
-            <p className={`text-center font-mono text-[10px] font-medium uppercase tracking-[0.22em] text-zinc-500 lg:text-left sm:text-[11px]`}>
+            <p className={`text-center font-mono text-[10px] font-medium uppercase tracking-[0.22em] text-zinc-400 lg:text-left sm:text-[11px]`}>
               Next steps
             </p>
             <ul
@@ -105,10 +105,10 @@ export function DemoEarlyAccessStep() {
                       >
                         {cta.label}
                       </span>
-                      <span className="mt-3 text-pretty text-xs leading-relaxed text-zinc-500 sm:text-sm">
+                      <span className="mt-3 text-pretty text-xs leading-relaxed text-zinc-400 sm:text-sm">
                         {cta.description}
                       </span>
-                      <span className="mt-auto pt-4 text-[11px] font-medium text-zinc-600 transition-colors duration-[var(--cauris-duration-hover)] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:text-zinc-400">
+                      <span className="mt-auto pt-4 text-[11px] font-medium text-zinc-400 transition-colors duration-[var(--cauris-duration-hover)] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:text-zinc-400">
                         Email →
                       </span>
                     </a>
@@ -116,7 +116,7 @@ export function DemoEarlyAccessStep() {
                 );
               })}
             </ul>
-            <p className="mt-6 text-center text-sm leading-relaxed text-zinc-500 lg:text-left">
+            <p className="mt-6 text-center text-sm leading-relaxed text-zinc-400 lg:text-left">
               Studio sites, RangeOS™, or something else —{" "}
               <Link
                 href="/#scs-nova"
@@ -133,8 +133,8 @@ export function DemoEarlyAccessStep() {
               className="pointer-events-none absolute -left-10 bottom-0 h-40 w-40 rounded-full bg-indigo-600/[0.06] blur-3xl"
               aria-hidden
             />
-            <h3 className={`${demoUi.kickerTrack} text-zinc-500`}>{demoEarlyAccessForm.title}</h3>
-            <p className="mt-3 max-w-xl text-pretty text-xs leading-relaxed text-zinc-600 sm:text-sm">
+            <h3 className={`${demoUi.kickerTrack} text-zinc-400`}>{demoEarlyAccessForm.title}</h3>
+            <p className="mt-3 max-w-xl text-pretty text-xs leading-relaxed text-zinc-400 sm:text-sm">
               {demoEarlyAccessForm.helper}
             </p>
             <form
@@ -157,7 +157,7 @@ export function DemoEarlyAccessStep() {
                   placeholder={demoEarlyAccessForm.namePlaceholder}
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="mt-1.5 w-full rounded-xl border border-white/[0.12] bg-black/58 px-4 py-3 text-sm text-zinc-100 placeholder:text-zinc-600 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] focus:border-cauris-gold/38 focus:outline-none focus:ring-1 focus:ring-cauris-flame/40"
+                  className="mt-1.5 w-full rounded-xl border border-white/[0.12] bg-black/58 px-4 py-3 text-sm text-zinc-100 placeholder:text-zinc-400 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] focus:border-cauris-gold/38 focus:outline-none focus:ring-1 focus:ring-cauris-flame/40"
                 />
               </div>
               <div>
@@ -173,7 +173,7 @@ export function DemoEarlyAccessStep() {
                   placeholder={demoEarlyAccessForm.emailPlaceholder}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="mt-1.5 w-full rounded-xl border border-white/[0.12] bg-black/58 px-4 py-3 text-sm text-zinc-100 placeholder:text-zinc-600 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] focus:border-cauris-gold/38 focus:outline-none focus:ring-1 focus:ring-cauris-flame/40"
+                  className="mt-1.5 w-full rounded-xl border border-white/[0.12] bg-black/58 px-4 py-3 text-sm text-zinc-100 placeholder:text-zinc-400 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] focus:border-cauris-gold/38 focus:outline-none focus:ring-1 focus:ring-cauris-flame/40"
                 />
               </div>
               <div>
@@ -187,7 +187,7 @@ export function DemoEarlyAccessStep() {
                   placeholder={demoEarlyAccessForm.interestPlaceholder}
                   value={interest}
                   onChange={(e) => setInterest(e.target.value)}
-                  className="mt-1.5 w-full resize-y rounded-xl border border-white/[0.12] bg-black/58 px-4 py-3 text-sm text-zinc-100 placeholder:text-zinc-600 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] focus:border-cauris-gold/38 focus:outline-none focus:ring-1 focus:ring-cauris-flame/40"
+                  className="mt-1.5 w-full resize-y rounded-xl border border-white/[0.12] bg-black/58 px-4 py-3 text-sm text-zinc-100 placeholder:text-zinc-400 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] focus:border-cauris-gold/38 focus:outline-none focus:ring-1 focus:ring-cauris-flame/40"
                 />
               </div>
               <button
@@ -206,7 +206,7 @@ export function DemoEarlyAccessStep() {
               className="pointer-events-none absolute right-0 top-1/2 h-32 w-32 translate-x-1/4 -translate-y-1/2 rounded-full bg-cauris-flame/[0.05] blur-3xl"
               aria-hidden
             />
-            <p className={`relative ${demoUi.kickerTrack} text-zinc-500`}>{demoEarlyAccessSupport.title}</p>
+            <p className={`relative ${demoUi.kickerTrack} text-zinc-400`}>{demoEarlyAccessSupport.title}</p>
             <p className="relative mt-4 text-sm leading-relaxed text-zinc-400">
               {demoEarlyAccessSupport.body}
             </p>

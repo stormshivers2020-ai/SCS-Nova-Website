@@ -61,7 +61,7 @@ export function LightDemoBenefitsTestimonial() {
             >
               Location &amp; access
             </h2>
-            <p className="relative mt-5 text-pretty text-left text-base leading-relaxed text-neutral-600 sm:text-center sm:text-lg">
+            <p className="relative mt-5 text-pretty text-left text-base leading-relaxed text-neutral-700 sm:text-center sm:text-lg">
               Sample copy for a “visit us” block—clear commute story, parking notes, and what to expect
               at the door. Placeholder only; no real operator address or phone appears on this concept
               page.
@@ -69,13 +69,13 @@ export function LightDemoBenefitsTestimonial() {
             <dl className="relative mt-10 space-y-6 border-t border-neutral-200/80 pt-10 text-left text-sm sm:text-base">
               <div className="sm:grid sm:grid-cols-[8rem_1fr] sm:gap-4">
                 <dt className="font-semibold text-neutral-900">Neighborhood</dt>
-                <dd className="mt-1 text-neutral-600 sm:mt-0">
+                <dd className="mt-1 text-neutral-700 sm:mt-0">
                   Metro business district · walkable lunch &amp; coffee
                 </dd>
               </div>
               <div className="sm:grid sm:grid-cols-[8rem_1fr] sm:gap-4">
                 <dt className="font-semibold text-neutral-900">Hours (example)</dt>
-                <dd className="mt-1 text-neutral-600 sm:mt-0">
+                <dd className="mt-1 text-neutral-700 sm:mt-0">
                   Member access 7am–8pm weekdays · extended for dedicated suites
                 </dd>
               </div>
@@ -100,7 +100,7 @@ export function LightDemoBenefitsTestimonial() {
                 before they ever open the door.”
               </p>
             </blockquote>
-            <figcaption className="mt-6 text-sm font-medium text-neutral-600 sm:text-base">
+            <figcaption className="mt-6 text-sm font-medium text-neutral-700 sm:text-base">
               — Illustrative quote · SCS Nova redesign concept
             </figcaption>
           </figure>

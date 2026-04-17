@@ -80,7 +80,7 @@ export function DemoInsightStep() {
                 <h4 className="relative text-xs font-semibold uppercase tracking-wider text-zinc-200">
                   {card.title}
                 </h4>
-                <p className="relative mt-2.5 text-sm leading-relaxed text-zinc-500">
+                <p className="relative mt-2.5 text-sm leading-relaxed text-zinc-400">
                   {card.detail}
                 </p>
               </li>
@@ -94,7 +94,7 @@ export function DemoInsightStep() {
               className="pointer-events-none absolute right-0 top-0 h-28 w-28 translate-x-1/4 -translate-y-1/4 rounded-full bg-indigo-500/[0.08] blur-3xl"
               aria-hidden
             />
-            <p className={`relative ${demoUi.kickerTrack} text-zinc-500`}>{demoInsightSupport.title}</p>
+            <p className={`relative ${demoUi.kickerTrack} text-zinc-400`}>{demoInsightSupport.title}</p>
             <p className="relative mt-4 text-sm leading-relaxed text-zinc-400">
               {demoInsightSupport.body}
             </p>

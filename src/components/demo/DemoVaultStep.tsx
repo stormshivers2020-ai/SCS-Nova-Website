@@ -176,7 +176,7 @@ export function DemoVaultStep() {
                 <h4 className="relative mt-4 text-sm font-semibold tracking-tight text-zinc-200">
                   {artifact.title}
                 </h4>
-                <p className="relative mt-2 text-sm leading-relaxed text-zinc-500">
+                <p className="relative mt-2 text-sm leading-relaxed text-zinc-400">
                   {artifact.detail}
                 </p>
               </li>
@@ -192,7 +192,7 @@ export function DemoVaultStep() {
               className="pointer-events-none absolute right-0 top-0 h-24 w-24 translate-x-1/3 -translate-y-1/3 rounded-full bg-indigo-600/[0.06] blur-3xl"
               aria-hidden
             />
-            <p className={`relative ${demoUi.kickerTrack} text-zinc-500`}>{demoVaultSupport.title}</p>
+            <p className={`relative ${demoUi.kickerTrack} text-zinc-400`}>{demoVaultSupport.title}</p>
             <p className="relative mt-4 text-sm leading-relaxed text-zinc-400">
               {demoVaultSupport.body}
             </p>

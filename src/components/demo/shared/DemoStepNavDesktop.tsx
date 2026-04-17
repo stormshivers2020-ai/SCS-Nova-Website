@@ -1,5 +1,5 @@
 const stepNavDesktopClass =
-  "hidden border-t border-white/[0.06] pt-4 font-mono text-[10px] uppercase leading-relaxed tracking-[0.16em] text-zinc-600 xl:block";
+  "hidden border-t border-white/[0.06] pt-4 font-mono text-[10px] uppercase leading-relaxed tracking-[0.16em] text-zinc-400 xl:block";
 
 type DemoStepNavDesktopProps = {
   labels: readonly string[];
@@ -14,7 +14,7 @@ export function DemoStepNavDesktop({ labels, step }: DemoStepNavDesktopProps) {
         <span
           key={l}
           className={
-            i === step ? "font-medium text-cauris-dawn" : i < step ? "text-zinc-500" : undefined
+            i === step ? "font-medium text-cauris-dawn" : i < step ? "text-zinc-400" : undefined
           }
         >
           {i + 1}. {l}

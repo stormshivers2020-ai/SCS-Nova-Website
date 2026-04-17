@@ -141,7 +141,7 @@ export function SelectedWorkSection() {
                 <div className="relative aspect-[16/10] w-full border-b border-white/[0.08] bg-gradient-to-br from-zinc-950/48 via-black/32 to-zinc-950/42">
                   <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_40%,rgba(244,176,66,0.12),transparent_62%)]" />
                   <div className="relative flex h-full items-center justify-center px-6">
-                    <p className="text-center font-mono text-[10px] uppercase tracking-[0.28em] text-zinc-400 sm:text-[11px]">
+                    <p className="text-center font-mono text-[10px] uppercase tracking-[0.28em] text-zinc-300 sm:text-[11px]">
                       Iterating in public
                     </p>
                   </div>
@@ -155,7 +155,7 @@ export function SelectedWorkSection() {
                 <h3 className="mt-4 text-lg font-semibold tracking-[-0.02em] text-zinc-50 sm:text-xl">
                   {item.title}
                 </h3>
-                <p className="mt-3.5 text-sm leading-relaxed text-zinc-500 sm:text-[15px] sm:leading-relaxed">
+                <p className="mt-3.5 text-sm leading-relaxed text-zinc-300 sm:text-[15px] sm:leading-relaxed">
                   {item.description}
                 </p>
               </div>

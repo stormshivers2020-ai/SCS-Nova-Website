@@ -42,7 +42,7 @@ export function ProductsOverviewSection() {
       />
       <div className="relative">
         <ScrollReveal>
-          <p className="cauris-kicker text-zinc-500">Products &amp; systems</p>
+          <p className="cauris-kicker text-zinc-400">Products &amp; systems</p>
           <h2
             id="products-overview-heading"
             className="mt-5 max-w-4xl text-pretty text-3xl font-semibold tracking-[-0.025em] text-zinc-100 sm:text-4xl md:text-[2.7rem] md:leading-[1.07]"
@@ -65,7 +65,7 @@ export function ProductsOverviewSection() {
               <h3 className="text-lg font-semibold tracking-[-0.02em] text-zinc-50 sm:text-xl">
                 {system.name}
               </h3>
-              <p className="mt-4 flex-1 text-sm leading-relaxed text-zinc-400 sm:text-[15px] sm:leading-relaxed">
+              <p className="mt-4 flex-1 text-sm leading-relaxed text-zinc-300 sm:text-[15px] sm:leading-relaxed">
                 {system.line}
               </p>
               <Link

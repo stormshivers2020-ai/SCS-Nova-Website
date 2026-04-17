@@ -62,7 +62,7 @@ export function DemoHelixStep() {
             aria-hidden
           />
           <div className="relative z-[1]">
-          <p className={`${demoUi.kickerTrack} text-zinc-500`}>Pattern layer</p>
+          <p className={`${demoUi.kickerTrack} text-zinc-400`}>Pattern layer</p>
           <figure className="relative mt-7">
             <svg
               viewBox="0 0 120 100"

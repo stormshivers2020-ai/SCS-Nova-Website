@@ -49,7 +49,7 @@ export function BuildStatusSection() {
           >
             How we started
           </h2>
-          <p className="mt-6 max-w-2xl text-pretty text-sm font-medium leading-relaxed text-zinc-500 sm:mt-7 sm:text-base">
+          <p className="mt-6 max-w-2xl text-pretty text-sm font-medium leading-relaxed text-zinc-300 sm:mt-7 sm:text-base">
             SCS Nova began with a core intelligence direction, then expanded into products, demos, and
             business-facing systems.
           </p>
@@ -84,7 +84,7 @@ export function BuildStatusSection() {
                   </span>
                 </div>
                 <div className="h-px w-full bg-gradient-to-r from-cauris-flame/35 via-cauris-gold/20 to-transparent" />
-                <p className="text-sm leading-relaxed text-zinc-400 sm:text-[15px] sm:leading-relaxed">
+                <p className="text-sm leading-relaxed text-zinc-300 sm:text-[15px] sm:leading-relaxed">
                   {item.description}
                 </p>
               </div>
@@ -93,14 +93,14 @@ export function BuildStatusSection() {
         </div>
 
         <ScrollReveal delayMs={280} className="mt-16 border-t border-white/[0.07] pt-12 sm:mt-20 sm:pt-14">
-          <p className="text-center text-sm font-medium leading-relaxed text-zinc-500">
+          <p className="text-center text-sm font-medium leading-relaxed text-zinc-300">
             <Link
               href="/demo"
               className="text-zinc-400 underline decoration-white/[0.12] underline-offset-4 transition-colors hover:text-cauris-dawn hover:decoration-cauris-gold/35"
             >
               Cauris demo
             </Link>
-            <span className="mx-2 text-zinc-700" aria-hidden>
+            <span className="mx-2 text-zinc-400" aria-hidden>
               ·
             </span>
             <Link
@@ -109,7 +109,7 @@ export function BuildStatusSection() {
             >
               RangeOS demo
             </Link>
-            <span className="mx-2 text-zinc-700" aria-hidden>
+            <span className="mx-2 text-zinc-400" aria-hidden>
               ·
             </span>
             <Link

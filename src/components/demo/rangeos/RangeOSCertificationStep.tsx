@@ -44,13 +44,13 @@ function FunnelStageCard({ stage, isLast }: { stage: RangeOSCertFunnelStage; isL
           <h3 className="text-base font-semibold tracking-tight text-zinc-50 sm:text-lg">
             {stage.title}
           </h3>
-          <p className="mt-3 text-sm font-medium leading-relaxed text-zinc-500 sm:text-[15px] sm:leading-relaxed">
+          <p className="mt-3 text-sm font-medium leading-relaxed text-zinc-400 sm:text-[15px] sm:leading-relaxed">
             {stage.description}
           </p>
           <ul className="mt-4 flex flex-wrap gap-2" aria-label="Context for this stage">
             {stage.contextTags.map((tag) => (
               <li key={tag}>
-                <span className="inline-flex rounded-full border border-white/[0.08] bg-black/25 px-2.5 py-1 font-mono text-[9px] font-medium uppercase tracking-[0.12em] text-zinc-500 sm:text-[10px]">
+                <span className="inline-flex rounded-full border border-white/[0.08] bg-black/25 px-2.5 py-1 font-mono text-[9px] font-medium uppercase tracking-[0.12em] text-zinc-400 sm:text-[10px]">
                   {tag}
                 </span>
               </li>
@@ -83,7 +83,7 @@ export function RangeOSCertificationStep() {
             aria-labelledby="rangeos-funnel-label"
           >
             <div className="border-b border-white/[0.07] pb-5">
-              <p id="rangeos-funnel-label" className={`${demoUi.kickerTrack} text-zinc-500`}>
+              <p id="rangeos-funnel-label" className={`${demoUi.kickerTrack} text-zinc-400`}>
                 {rangeOSCertificationFunnelKicker}
               </p>
             </div>
@@ -96,7 +96,7 @@ export function RangeOSCertificationStep() {
                 />
               ))}
             </ol>
-            <p className="mt-2 border-t border-white/[0.06] pt-6 font-mono text-[10px] leading-relaxed text-zinc-600 sm:text-[11px]">
+            <p className="mt-2 border-t border-white/[0.06] pt-6 font-mono text-[10px] leading-relaxed text-zinc-400 sm:text-[11px]">
               {rangeOSCertificationDemoNote}
             </p>
           </section>

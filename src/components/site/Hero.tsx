@@ -110,10 +110,10 @@ export function Hero() {
 
           <div className="mt-16 flex w-full flex-col items-center text-center sm:mt-[4.5rem] md:mt-24">
             <p
-              className="hero-reveal cauris-kicker text-zinc-500 [animation-delay:0.14s]"
+              className="hero-reveal cauris-kicker [animation-delay:0.14s]"
             >
-              Intelligence <span className="text-zinc-600">•</span> Memory{" "}
-              <span className="text-zinc-600">•</span> Clarity
+              Intelligence <span className="text-zinc-400">•</span> Memory{" "}
+              <span className="text-zinc-400">•</span> Clarity
             </p>
 
             <div
@@ -132,13 +132,13 @@ export function Hero() {
               Intelligence for your life.
             </p>
 
-            <p className="hero-reveal mx-auto mt-5 max-w-lg text-pretty text-xs font-medium leading-relaxed text-zinc-500 sm:mt-6 sm:max-w-xl sm:text-sm [animation-delay:0.38s]">
-              <span className="text-zinc-400">SCS Nova</span> is the studio behind this site.{" "}
-              <span className="text-zinc-400">Cauris</span> is the personal intelligence engine we&apos;re
+            <p className="hero-reveal mx-auto mt-5 max-w-lg text-pretty text-xs font-medium leading-relaxed text-zinc-300 sm:mt-6 sm:max-w-xl sm:text-sm [animation-delay:0.38s]">
+              <span className="text-zinc-200">SCS Nova</span> is the studio behind this site.{" "}
+              <span className="text-zinc-200">Cauris</span> is the personal intelligence engine we&apos;re
               building — memory, patterns, and calmer next steps.
             </p>
 
-            <p className="hero-reveal mx-auto mt-8 max-w-lg text-pretty text-sm leading-relaxed text-zinc-400 sm:mt-9 sm:max-w-xl sm:text-[15px] sm:leading-relaxed [animation-delay:0.42s]">
+            <p className="hero-reveal mx-auto mt-8 max-w-lg text-pretty text-sm leading-relaxed text-zinc-300 sm:mt-9 sm:max-w-xl sm:text-[15px] sm:leading-relaxed [animation-delay:0.42s]">
               In active development — a personal intelligence layer that turns everyday capture into
               memory, insight, and calmer next steps.
             </p>
@@ -146,7 +146,7 @@ export function Hero() {
             <p className="hero-reveal mx-auto mt-6 max-w-lg text-center [animation-delay:0.48s]">
               <Link
                 href="/cauris"
-                className="text-sm font-medium text-zinc-500 underline decoration-white/[0.12] underline-offset-[5px] transition-colors duration-[var(--cauris-duration-hover)] ease-[cubic-bezier(0.22,1,0.36,1)] hover:text-cauris-dawn hover:decoration-cauris-gold/35"
+                className="text-sm font-medium text-zinc-300 underline decoration-white/[0.12] underline-offset-[5px] transition-colors duration-[var(--cauris-duration-hover)] ease-[cubic-bezier(0.22,1,0.36,1)] hover:text-cauris-dawn hover:decoration-cauris-gold/35"
               >
                 Explore Cauris
               </Link>
@@ -164,18 +164,18 @@ export function Hero() {
               </Link>
             </div>
 
-            <p className="hero-reveal mx-auto mt-10 max-w-lg text-pretty text-center text-[13px] leading-relaxed text-zinc-500 sm:mt-11 sm:text-sm [animation-delay:0.58s]">
+            <p className="hero-reveal mx-auto mt-10 max-w-lg text-pretty text-center text-[13px] leading-relaxed text-zinc-300 sm:mt-11 sm:text-sm [animation-delay:0.58s]">
               Gun range operator? Explore{" "}
               <Link
                 href="/rangeos"
-                className="font-medium text-zinc-400 underline decoration-white/[0.14] underline-offset-[5px] transition-colors duration-[var(--cauris-duration-hover)] ease-[cubic-bezier(0.22,1,0.36,1)] hover:text-cauris-dawn hover:decoration-cauris-gold/40"
+                className="font-medium text-zinc-200 underline decoration-white/[0.14] underline-offset-[5px] transition-colors duration-[var(--cauris-duration-hover)] ease-[cubic-bezier(0.22,1,0.36,1)] hover:text-cauris-dawn hover:decoration-cauris-gold/40"
               >
                 RangeOS™
               </Link>{" "}
               or{" "}
               <Link
                 href="/rangeos-demo"
-                className="font-medium text-zinc-400 underline decoration-white/[0.14] underline-offset-[5px] transition-colors duration-[var(--cauris-duration-hover)] ease-[cubic-bezier(0.22,1,0.36,1)] hover:text-cauris-dawn hover:decoration-cauris-gold/40"
+                className="font-medium text-zinc-200 underline decoration-white/[0.14] underline-offset-[5px] transition-colors duration-[var(--cauris-duration-hover)] ease-[cubic-bezier(0.22,1,0.36,1)] hover:text-cauris-dawn hover:decoration-cauris-gold/40"
               >
                 its product demo
               </Link>
@@ -183,11 +183,11 @@ export function Hero() {
             </p>
 
             <div className="hero-reveal mx-auto mt-12 w-full max-w-xl border-t border-white/[0.08] pt-10 text-center [animation-delay:0.62s]">
-              <p className="cauris-kicker text-zinc-500">DashboardOS</p>
+              <p className="cauris-kicker">DashboardOS</p>
               <p className="mt-4 text-balance text-base font-semibold leading-snug tracking-[-0.02em] text-zinc-200 sm:text-lg">
                 Run your consulting operations with structure and clarity.
               </p>
-              <p className="mx-auto mt-3 max-w-lg text-pretty text-sm leading-relaxed text-zinc-500 sm:text-[15px] sm:leading-relaxed">
+              <p className="mx-auto mt-3 max-w-lg text-pretty text-sm leading-relaxed text-zinc-300 sm:text-[15px] sm:leading-relaxed">
                 DashboardOS tracks employee work, billable hours, and client activity across your entire operation —
                 all in one system.
               </p>
@@ -200,7 +200,7 @@ export function Hero() {
                 </Link>
                 <Link
                   href="/dashboardos"
-                  className="text-sm font-medium text-zinc-400 underline decoration-white/[0.14] underline-offset-[5px] transition-colors duration-[var(--cauris-duration-hover)] ease-[cubic-bezier(0.22,1,0.36,1)] hover:text-cauris-dawn hover:decoration-cauris-gold/40"
+                  className="text-sm font-medium text-zinc-300 underline decoration-white/[0.14] underline-offset-[5px] transition-colors duration-[var(--cauris-duration-hover)] ease-[cubic-bezier(0.22,1,0.36,1)] hover:text-cauris-dawn hover:decoration-cauris-gold/40"
                 >
                   Explore DashboardOS
                 </Link>
@@ -210,7 +210,7 @@ export function Hero() {
         </div>
       </div>
 
-      <p className="pointer-events-none absolute bottom-[max(1.25rem,calc(0.5rem+env(safe-area-inset-bottom,0px)))] left-0 right-0 z-10 text-center font-mono text-[10px] uppercase tracking-[0.3em] text-zinc-600 sm:bottom-8 sm:text-[11px] sm:tracking-[0.26em]">
+      <p className="pointer-events-none absolute bottom-[max(1.25rem,calc(0.5rem+env(safe-area-inset-bottom,0px)))] left-0 right-0 z-10 text-center font-mono text-[10px] uppercase tracking-[0.3em] text-zinc-400 sm:bottom-8 sm:text-[11px] sm:tracking-[0.26em]">
         © {new Date().getFullYear()} SCS Nova / Cauris
       </p>
     </section>

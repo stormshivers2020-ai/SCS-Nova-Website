@@ -35,7 +35,7 @@ function WelcomeStep({ onStart }: { onStart: () => void }) {
         <p className="mx-auto mt-5 max-w-xl text-pretty text-lg font-medium leading-snug text-zinc-300 sm:mt-6 sm:text-xl sm:leading-snug">
           {demoWelcome.subheadline}
         </p>
-        <p className="mx-auto mt-6 max-w-2xl text-pretty text-sm leading-relaxed text-zinc-500 sm:mt-7 sm:text-base sm:leading-relaxed">
+        <p className="mx-auto mt-6 max-w-2xl text-pretty text-sm leading-relaxed text-zinc-400 sm:mt-7 sm:text-base sm:leading-relaxed">
           {demoWelcome.body}
         </p>
       </div>
@@ -140,9 +140,9 @@ export function CaurisDemoExperience() {
           <div className="flex flex-wrap items-start justify-between gap-3">
             <div className="min-w-0">
               <p className="text-[13px] font-semibold tracking-[-0.02em] text-zinc-100 sm:text-sm">
-                Cauris <span className="font-medium text-zinc-500">Demo</span>
+                Cauris <span className="font-medium text-zinc-400">Demo</span>
               </p>
-              <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-600 sm:text-[11px]">
+              <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-400 sm:text-[11px]">
                 Sample UI · product in development
               </p>
             </div>

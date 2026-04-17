@@ -2,7 +2,7 @@
  * Public business contact — shared by marketing sections and demo CTAs.
  * No backend; mailto opens the visitor's email client.
  */
-export const SCS_NOVA_BUSINESS_EMAIL = "SCSANova.Business@gmail.com";
+export const SCS_NOVA_BUSINESS_EMAIL = "info@scsnova.com";
 
 /** Pre-filled subjects so the right thread reaches the inbox — calm, not salesy. */
 export const MAILTO_SUBJECTS = {

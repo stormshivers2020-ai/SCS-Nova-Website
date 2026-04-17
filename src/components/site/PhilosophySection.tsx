@@ -14,7 +14,7 @@ export function PhilosophySection() {
             eyebrow="Philosophy"
             headingId="philosophy-heading"
             title="Our Philosophy"
-            eyebrowClassName="cauris-kicker text-zinc-500"
+            eyebrowClassName="cauris-kicker"
             titleClassName="mt-6 text-balance text-3xl font-semibold tracking-[-0.02em] text-zinc-100 sm:text-4xl md:text-[2.85rem] md:leading-[1.06]"
           />
         </ScrollReveal>
@@ -26,13 +26,13 @@ export function PhilosophySection() {
             <span className="text-zinc-200">It is data waiting to be understood.</span>
           </p>
 
-          <div className="space-y-5 text-base leading-[1.88] text-zinc-500 sm:text-lg sm:leading-[1.92]">
+          <div className="space-y-5 text-base leading-[1.88] text-zinc-300 sm:text-lg sm:leading-[1.92]">
             <p>Every experience holds meaning.</p>
             <p>Every pattern can be revealed.</p>
             <p>Every decision can be improved.</p>
           </div>
 
-          <p className="pt-2 text-base font-medium text-zinc-400 sm:text-lg">
+          <p className="pt-2 text-base font-medium text-zinc-300 sm:text-lg">
             Cauris exists to bring clarity to complexity.
           </p>
 

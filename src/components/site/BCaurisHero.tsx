@@ -41,7 +41,7 @@ export function BCaurisHero() {
                 tasks shaped into operational memory and calmer guidance. In active development; this
                 section is the direction, not a shipped product.
               </p>
-              <p className="animate-fade-up mt-6 max-w-xl text-pretty text-base leading-relaxed text-zinc-500 opacity-0 [animation-delay:0.3s] sm:mt-7 sm:text-[17px] sm:leading-relaxed lg:max-w-2xl">
+              <p className="animate-fade-up mt-6 max-w-xl text-pretty text-base leading-relaxed text-zinc-300 opacity-0 [animation-delay:0.3s] sm:mt-7 sm:text-[17px] sm:leading-relaxed lg:max-w-2xl">
                 The aim is a light start, then stronger workflow memory and less repeated explanation as
                 use compounds.
               </p>

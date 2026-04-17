@@ -37,7 +37,7 @@ export function SystemCards() {
             <span className="h-px w-10 bg-gradient-to-r from-cauris-flame/50 to-transparent opacity-60 transition-opacity duration-500 group-hover:opacity-100" />
           </div>
           <h3 className="mt-6 text-lg font-semibold tracking-[-0.02em] text-zinc-100">{card.title}</h3>
-          <p className="mt-3.5 text-sm leading-relaxed text-zinc-500">{card.body}</p>
+          <p className="mt-3.5 text-sm leading-relaxed text-zinc-300">{card.body}</p>
         </ScrollReveal>
       ))}
     </div>

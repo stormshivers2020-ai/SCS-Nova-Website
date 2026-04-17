@@ -33,7 +33,7 @@ export function DemosPreviewSection() {
       />
       <div className="relative">
         <ScrollReveal>
-          <p className="cauris-kicker text-zinc-500">Demos</p>
+          <p className="cauris-kicker text-zinc-400">Demos</p>
           <h2
             id="demos-preview-heading"
             className="mt-5 max-w-4xl text-pretty text-3xl font-semibold tracking-[-0.025em] text-zinc-100 sm:text-4xl md:text-[2.6rem] md:leading-[1.08]"
@@ -61,7 +61,7 @@ export function DemosPreviewSection() {
               <h3 className="text-lg font-semibold tracking-[-0.02em] text-zinc-50 sm:text-xl">
                 {demo.title}
               </h3>
-              <p className="mt-4 flex-1 text-sm leading-relaxed text-zinc-400 sm:text-[15px] sm:leading-relaxed">
+              <p className="mt-4 flex-1 text-sm leading-relaxed text-zinc-300 sm:text-[15px] sm:leading-relaxed">
                 {demo.line}
               </p>
               <Link

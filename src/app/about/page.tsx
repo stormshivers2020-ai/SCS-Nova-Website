@@ -44,7 +44,7 @@ export default function AboutPage() {
           aria-hidden
         />
         <ScrollReveal className="relative">
-          <p className="cauris-kicker text-zinc-500">About SCS Nova</p>
+          <p className="cauris-kicker">About SCS Nova</p>
           <h1
             id="about-page-heading"
             className="mt-5 max-w-5xl text-pretty text-3xl font-semibold tracking-[-0.03em] text-zinc-100 sm:text-4xl md:text-[3rem] md:leading-[1.05]"
@@ -132,7 +132,7 @@ export default function AboutPage() {
           </p>
           <ul className="mt-8 space-y-3">
             {horizonPoints.map((point) => (
-              <li key={point} className="text-sm leading-relaxed text-zinc-400 sm:text-[15px] sm:leading-relaxed">
+              <li key={point} className="text-sm leading-relaxed text-zinc-300 sm:text-[15px] sm:leading-relaxed">
                 {point}
               </li>
             ))}

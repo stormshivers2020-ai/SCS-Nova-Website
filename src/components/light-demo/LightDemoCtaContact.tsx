@@ -60,14 +60,14 @@ export function LightDemoCtaContact() {
                   <h2 id="ld-contact-heading" className={`${ldSectionTitle} mt-3 text-[1.5rem] sm:text-[1.875rem]`}>
                     Contact the builder
                   </h2>
-                  <p className="mt-4 text-pretty text-base leading-relaxed text-neutral-600 sm:text-lg">
+                  <p className="mt-4 text-pretty text-base leading-relaxed text-neutral-700 sm:text-lg">
                     Project inquiries for this demo and similar work go to SCS Nova. The sample venue
                     story above is illustrative—real operator contact details are never used here.
                   </p>
 
                   <div className="mt-8 space-y-5 text-left text-base text-neutral-700">
                     <div className="rounded-2xl border border-neutral-200/80 bg-neutral-50/60 px-5 py-4 sm:px-6">
-                      <p className="text-xs font-semibold uppercase tracking-wider text-neutral-500">Email</p>
+                      <p className="text-xs font-semibold uppercase tracking-wider text-neutral-600">Email</p>
                       <a
                         href={mailtoGeneral}
                         className="mt-1 inline-block text-base font-medium text-blue-700 underline decoration-blue-200 underline-offset-4 transition-colors hover:text-blue-900 hover:decoration-blue-400"
@@ -76,7 +76,7 @@ export function LightDemoCtaContact() {
                       </a>
                     </div>
                     <div className="rounded-2xl border border-neutral-200/80 bg-neutral-50/60 px-5 py-4 sm:px-6">
-                      <p className="text-xs font-semibold uppercase tracking-wider text-neutral-500">Phone</p>
+                      <p className="text-xs font-semibold uppercase tracking-wider text-neutral-600">Phone</p>
                       {phoneHref ? (
                         <a
                           href={`tel:${phoneHref}`}
@@ -90,13 +90,13 @@ export function LightDemoCtaContact() {
                     </div>
                   </div>
 
-                  <p className="mx-auto mt-8 max-w-lg text-pretty text-left text-xs leading-relaxed text-neutral-500 sm:text-sm lg:mx-0">
+                  <p className="mx-auto mt-8 max-w-lg text-pretty text-left text-xs leading-relaxed text-neutral-600 sm:text-sm lg:mx-0">
                     {LIGHT_DEMO_CONCEPT_NOTE}
                   </p>
                 </div>
 
                 <div className="min-w-0">
-                  <p className="mb-2 text-center font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-neutral-500 sm:text-left sm:text-[11px]">
+                  <p className="mb-2 text-center font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-neutral-600 sm:text-left sm:text-[11px]">
                     Quick message
                   </p>
                   <LightDemoContactForm />
@@ -105,7 +105,7 @@ export function LightDemoCtaContact() {
             </div>
           </div>
 
-          <p className="mx-auto mt-12 max-w-md text-center text-[11px] leading-relaxed text-neutral-500 sm:mt-14 sm:text-xs">
+          <p className="mx-auto mt-12 max-w-md text-center text-[11px] leading-relaxed text-neutral-600 sm:mt-14 sm:text-xs">
             This is one of multiple design styles we offer.
           </p>
         </div>

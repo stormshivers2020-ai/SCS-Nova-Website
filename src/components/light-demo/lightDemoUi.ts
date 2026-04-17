@@ -1,12 +1,12 @@
 /** Shared typography for /light-demo — consistent hierarchy without globals changes. */
-export const ldSectionKicker = "font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-neutral-500 sm:text-[11px]";
+export const ldSectionKicker = "font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-neutral-700 sm:text-[11px]";
 
 export const ldSectionTitle =
   "text-[1.75rem] font-semibold leading-[1.12] tracking-[-0.032em] text-neutral-900 sm:text-[2.125rem] sm:leading-[1.1] md:text-[2.375rem] md:leading-[1.08] lg:text-[2.5rem]";
 
 export const ldSectionLead = "mt-4 text-pretty text-base font-medium leading-relaxed text-neutral-700 sm:mt-5 sm:text-lg sm:leading-relaxed";
 
-export const ldSectionDeck = "mt-3 text-pretty text-sm leading-relaxed text-neutral-500 sm:mt-4 sm:text-base";
+export const ldSectionDeck = "mt-3 text-pretty text-sm leading-relaxed text-neutral-700 sm:mt-4 sm:text-base";
 
 /** Premium primary / secondary — soft lift on primary for CTAs. */
 export const ldBtnPrimary =

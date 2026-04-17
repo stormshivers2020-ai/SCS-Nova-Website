@@ -94,7 +94,7 @@ export function LightDemoOurSystems() {
                 <h3 className="text-xl font-semibold tracking-[-0.02em] text-neutral-900 sm:text-2xl">
                   {plan.title}
                 </h3>
-                <p className="mt-4 text-pretty text-base leading-relaxed text-neutral-600">
+                <p className="mt-4 text-pretty text-base leading-relaxed text-neutral-700">
                   {plan.description}
                 </p>
                 <ul className="mt-7 space-y-2.5 border-t border-neutral-100 pt-7 text-left text-sm leading-relaxed text-neutral-700 sm:space-y-3 sm:text-[15px]">

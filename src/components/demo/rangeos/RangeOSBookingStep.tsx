@@ -56,7 +56,7 @@ function BookingOptionCard({
       <h3 className="mt-3 text-base font-semibold tracking-tight text-zinc-50 sm:text-lg">
         {option.title}
       </h3>
-      <p className="mt-2 text-sm leading-relaxed text-zinc-500">{option.description}</p>
+      <p className="mt-2 text-sm leading-relaxed text-zinc-400">{option.description}</p>
     </button>
   );
 }
@@ -103,7 +103,7 @@ export function RangeOSBookingStep() {
       <div className={`${demoUi.sectionY} ${demoUi.gridSplit}`}>
         <div className="space-y-10">
           <section aria-labelledby="rangeos-booking-paths-label">
-            <p id="rangeos-booking-paths-label" className={`${demoUi.kickerTrack} text-zinc-500`}>
+            <p id="rangeos-booking-paths-label" className={`${demoUi.kickerTrack} text-zinc-400`}>
               Booking paths
             </p>
             <div className="mt-4 grid gap-4 sm:grid-cols-2">
@@ -124,7 +124,7 @@ export function RangeOSBookingStep() {
           >
             <div className="flex flex-wrap items-end justify-between gap-4 border-b border-white/[0.06] pb-5">
               <div>
-                <p id="rangeos-schedule-label" className={`${demoUi.kickerTrack} text-zinc-500`}>
+                <p id="rangeos-schedule-label" className={`${demoUi.kickerTrack} text-zinc-400`}>
                   Schedule
                 </p>
                 <p className="mt-2 text-sm font-medium text-zinc-400">
@@ -133,14 +133,14 @@ export function RangeOSBookingStep() {
                     : "Select a booking path to continue"}
                 </p>
               </div>
-              <span className="max-w-full shrink-0 text-right font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-600 sm:text-left">
+              <span className="max-w-full shrink-0 text-right font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-400 sm:text-left">
                 {rangeOSBookingScheduleNote}
               </span>
             </div>
 
             <div className="mt-6 space-y-8">
               <div>
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-zinc-500">
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-zinc-400">
                   Date
                 </p>
                 <div className="mt-3 flex flex-wrap gap-2">
@@ -166,7 +166,7 @@ export function RangeOSBookingStep() {
               </div>
 
               <div>
-                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-zinc-500">
+                <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-zinc-400">
                   Time
                 </p>
                 <div className="mt-3 flex flex-wrap gap-2">
@@ -193,7 +193,7 @@ export function RangeOSBookingStep() {
 
               {showLanes ? (
                 <div>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-zinc-500">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-zinc-400">
                     Lane preference
                   </p>
                   <div className="mt-3 flex flex-wrap gap-2">
@@ -247,7 +247,7 @@ export function RangeOSBookingStep() {
                   payment, assign lanes on your rules.
                 </p>
               ) : (
-                <p className="max-w-xs text-sm leading-relaxed text-zinc-500 sm:max-w-sm sm:text-right">
+                <p className="max-w-xs text-sm leading-relaxed text-zinc-400 sm:max-w-sm sm:text-right">
                   Preview never charges a card or creates a hold — it only shows the customer-facing
                   flow.
                 </p>

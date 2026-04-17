@@ -54,7 +54,7 @@ export const rangeOSBrandingTypeSamples = [
   {
     role: "Meta",
     sample: "Safety · Supervision · Respect for the line",
-    className: "font-mono text-[10px] uppercase tracking-[0.22em] text-zinc-500 sm:text-[11px]",
+    className: "font-mono text-[10px] uppercase tracking-[0.22em] text-zinc-400 sm:text-[11px]",
   },
 ] as const;
 

@@ -40,7 +40,7 @@ export default function RangeOSPage() {
       >
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_84%_52%_at_50%_0%,rgba(232,148,58,0.1),transparent_58%)]" />
         <ScrollReveal className="relative">
-          <p className="cauris-kicker text-zinc-500">RangeOS™</p>
+          <p className="cauris-kicker">RangeOS™</p>
           <h1
             id="rangeos-page-heading"
             className="mt-5 max-w-5xl text-pretty text-3xl font-semibold tracking-[-0.03em] text-zinc-100 sm:text-4xl md:text-[3rem] md:leading-[1.05]"
@@ -114,7 +114,7 @@ export default function RangeOSPage() {
           </p>
           <div className="mt-8 space-y-2">
             {pricingPreview.map((line) => (
-              <p key={line} className="font-mono text-[11px] uppercase tracking-[0.16em] text-zinc-500 sm:text-xs">
+              <p key={line} className="font-mono text-[11px] uppercase tracking-[0.16em] text-zinc-300 sm:text-xs">
                 {line}
               </p>
             ))}

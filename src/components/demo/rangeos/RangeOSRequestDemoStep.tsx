@@ -86,18 +86,18 @@ export function RangeOSRequestDemoStep() {
 
           <a
             href={buildBusinessMailto()}
-            className="mt-8 block text-center font-mono text-xs tracking-wide text-zinc-500 underline decoration-cauris-gold/25 underline-offset-4 transition-colors hover:text-cauris-dawn hover:decoration-cauris-flame/50 sm:text-sm"
+            className="mt-8 block text-center font-mono text-xs tracking-wide text-zinc-400 underline decoration-cauris-gold/25 underline-offset-4 transition-colors hover:text-cauris-dawn hover:decoration-cauris-flame/50 sm:text-sm"
           >
             {SCS_NOVA_BUSINESS_EMAIL}
           </a>
 
-          <p className="mt-8 text-center text-sm font-medium leading-relaxed text-zinc-500 sm:text-[15px]">
+          <p className="mt-8 text-center text-sm font-medium leading-relaxed text-zinc-400 sm:text-[15px]">
             {rangeOSRequestDemoSupportLine}
           </p>
-          <p className="mt-6 text-center text-sm text-zinc-600">
+          <p className="mt-6 text-center text-sm text-zinc-400">
             <Link
               href="/#scs-nova"
-              className="font-medium text-zinc-500 underline decoration-white/[0.12] underline-offset-4 transition-colors hover:text-cauris-dawn hover:decoration-cauris-gold/35"
+              className="font-medium text-zinc-400 underline decoration-white/[0.12] underline-offset-4 transition-colors hover:text-cauris-dawn hover:decoration-cauris-gold/35"
             >
               Studio services &amp; other inquiries — SCS Nova contact
             </Link>

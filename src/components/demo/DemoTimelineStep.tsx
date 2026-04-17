@@ -45,7 +45,7 @@ export function DemoTimelineStep() {
             aria-hidden
           />
           <div className="relative z-[1]">
-          <p className={`${demoUi.kickerTrack} text-zinc-500`}>Day progression</p>
+          <p className={`${demoUi.kickerTrack} text-zinc-400`}>Day progression</p>
           <div className="relative mt-9 pl-2 sm:pl-3">
             <div
               className="absolute left-[11px] top-2 bottom-2 w-px bg-gradient-to-b from-cauris-flame/50 via-cauris-gold/25 to-indigo-500/20 sm:left-[13px]"
@@ -72,7 +72,7 @@ export function DemoTimelineStep() {
                     <h3 className="mt-1 text-base font-semibold leading-snug text-zinc-100 sm:text-lg">
                       {entry.headline}
                     </h3>
-                    <p className="mt-2 max-w-lg text-sm leading-relaxed text-zinc-500">
+                    <p className="mt-2 max-w-lg text-sm leading-relaxed text-zinc-400">
                       {entry.supporting}
                     </p>
                   </div>

@@ -26,7 +26,7 @@ export function LightDemoPromoSection() {
 
         <div className="relative grid items-center gap-16 pt-6 sm:gap-20 sm:pt-8 lg:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)] lg:gap-14 lg:pt-6 xl:gap-20">
           <ScrollReveal>
-            <p className="cauris-kicker text-zinc-500">Design option · SCS Nova</p>
+            <p className="cauris-kicker">Design option · SCS Nova</p>
 
             <div
               className="mt-6 h-px w-11 max-w-full bg-gradient-to-r from-cauris-flame/45 via-cauris-gold/30 to-transparent sm:mt-7 sm:w-12"
@@ -43,7 +43,7 @@ export function LightDemoPromoSection() {
             <p className="mt-7 max-w-3xl text-pretty text-lg font-medium leading-relaxed text-zinc-200 sm:mt-8 sm:text-xl sm:leading-relaxed">
               Not every brand needs a dark cinematic look.
             </p>
-            <p className="mt-5 max-w-3xl text-pretty text-base font-medium leading-relaxed text-zinc-500 sm:mt-6 sm:text-lg sm:leading-relaxed">
+            <p className="mt-5 max-w-3xl text-pretty text-base font-medium leading-relaxed text-zinc-300 sm:mt-6 sm:text-lg sm:leading-relaxed">
               Explore a clean, modern design option built for professional businesses, coworking
               spaces, consultants, and local service brands.
             </p>
@@ -53,7 +53,7 @@ export function LightDemoPromoSection() {
                 className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cauris-gold/45 to-transparent"
                 aria-hidden
               />
-              <p className="font-mono text-[10px] font-medium uppercase tracking-[0.22em] text-zinc-500 sm:text-[11px]">
+              <p className="font-mono text-[10px] font-medium uppercase tracking-[0.22em] text-zinc-300 sm:text-[11px]">
                 Next step
               </p>
               <div className="mt-5 flex w-full flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-stretch">
@@ -72,7 +72,7 @@ export function LightDemoPromoSection() {
               </div>
             </div>
 
-            <p className="mt-8 max-w-md text-pretty font-mono text-[10px] uppercase leading-relaxed tracking-[0.18em] text-zinc-600 sm:mt-10 sm:text-[11px] sm:tracking-[0.16em]">
+            <p className="mt-8 max-w-md text-pretty font-mono text-[10px] uppercase leading-relaxed tracking-[0.18em] text-zinc-300 sm:mt-10 sm:text-[11px] sm:tracking-[0.16em]">
               This is one of multiple design styles we offer.
             </p>
           </ScrollReveal>
@@ -99,8 +99,8 @@ export function LightDemoPromoSection() {
                     <span className="h-2.5 w-2.5 rounded-full bg-emerald-400/48 shadow-inner" />
                   </span>
                   <div className="ml-1 flex min-h-[2rem] flex-1 items-center rounded-lg border border-white/[0.1] bg-white/[0.07] px-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] sm:min-h-[2.125rem]">
-                    <span className="truncate font-mono text-[10px] text-zinc-400 sm:text-[11px]">
-                      /<span className="text-zinc-500">light-demo</span>
+                    <span className="truncate font-mono text-[10px] text-zinc-300 sm:text-[11px]">
+                      /<span className="text-zinc-300">light-demo</span>
                     </span>
                   </div>
                 </div>

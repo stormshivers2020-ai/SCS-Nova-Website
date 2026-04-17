@@ -90,7 +90,7 @@ export function ManagementDashboardOSSection() {
 
       <div className="relative">
         <ScrollReveal>
-          <p className="cauris-kicker text-zinc-500">DashboardOS</p>
+          <p className="cauris-kicker">DashboardOS</p>
           <h2
             id="dashboard-os-heading"
             className="mt-6 max-w-4xl text-pretty text-3xl font-semibold tracking-[-0.025em] text-zinc-100 sm:mt-7 sm:text-4xl md:text-[2.95rem] md:leading-[1.05]"
@@ -101,7 +101,7 @@ export function ManagementDashboardOSSection() {
             DashboardOS tracks employee work, billable hours, and client activity across your entire operation — all
             in one system. It is a consulting operations layer, not a social or content platform.
           </p>
-          <p className="mt-6 max-w-3xl text-pretty text-base leading-relaxed text-zinc-500 sm:text-lg sm:leading-relaxed">
+          <p className="mt-6 max-w-3xl text-pretty text-base leading-relaxed text-zinc-300 sm:text-lg sm:leading-relaxed">
             It connects time, work, clients, employees, and billing — including work performed inside tools like
             MarginEdge, Restaurant365, and QuickBooks.
           </p>
@@ -125,7 +125,7 @@ export function ManagementDashboardOSSection() {
               <h3 className="text-base font-semibold tracking-[-0.02em] text-zinc-50 sm:text-lg">
                 {item.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-zinc-500 sm:text-[15px] sm:leading-relaxed">
+              <p className="mt-3 text-sm leading-relaxed text-zinc-300 sm:text-[15px] sm:leading-relaxed">
                 {item.body}
               </p>
             </ScrollReveal>
@@ -137,7 +137,7 @@ export function ManagementDashboardOSSection() {
             <h3 className="text-2xl font-semibold tracking-[-0.03em] text-zinc-100 sm:text-3xl">
               Built for consulting delivery
             </h3>
-            <p className="mt-6 max-w-3xl text-pretty text-base leading-relaxed text-zinc-400 sm:text-lg sm:leading-relaxed">
+            <p className="mt-6 max-w-3xl text-pretty text-base leading-relaxed text-zinc-300 sm:text-lg sm:leading-relaxed">
               For firms that need operational discipline across staff, clients, and billing — without content
               workflows, posting tools, or engagement tracking.
             </p>
@@ -159,7 +159,7 @@ export function ManagementDashboardOSSection() {
             <h3 className="text-2xl font-semibold tracking-[-0.03em] text-zinc-100 sm:text-3xl">
               Built to work with your existing tools
             </h3>
-            <p className="mt-6 max-w-3xl text-pretty text-base leading-relaxed text-zinc-400 sm:text-lg sm:leading-relaxed">
+            <p className="mt-6 max-w-3xl text-pretty text-base leading-relaxed text-zinc-300 sm:text-lg sm:leading-relaxed">
               DashboardOS does not replace MarginEdge, Restaurant365, or QuickBooks. It tracks the work performed
               inside them and connects it to time, billing, clients, and employees.
             </p>
@@ -168,7 +168,7 @@ export function ManagementDashboardOSSection() {
 
         <div className="mt-20 border-t border-white/[0.09] pt-16 sm:mt-24 sm:pt-20">
           <ScrollReveal delayMs={120}>
-            <p className="cauris-kicker text-zinc-500">How it works</p>
+            <p className="cauris-kicker">How it works</p>
           </ScrollReveal>
           <div className="mt-10 grid gap-6 sm:mt-12 md:grid-cols-2 md:gap-7">
             {howItWorksColumns.map((col, i) => (
@@ -181,7 +181,7 @@ export function ManagementDashboardOSSection() {
                   {col.title}
                 </p>
                 <h4 className="mt-4 text-lg font-semibold tracking-[-0.02em] text-zinc-50">How {col.title.toLowerCase()} use it</h4>
-                <ul className="mt-4 flex flex-col gap-2.5 text-sm leading-relaxed text-zinc-500 sm:text-[15px] sm:leading-relaxed">
+                <ul className="mt-4 flex flex-col gap-2.5 text-sm leading-relaxed text-zinc-300 sm:text-[15px] sm:leading-relaxed">
                   {col.bullets.map((b) => (
                     <li key={b} className="flex gap-2">
                       <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-cauris-flame/55" aria-hidden />
@@ -209,14 +209,14 @@ export function ManagementDashboardOSSection() {
               >
                 <h4 className="text-lg font-semibold tracking-[-0.02em] text-zinc-50">{plan.title}</h4>
                 <p className="mt-3 text-2xl font-semibold tracking-tight text-zinc-100">{plan.price}</p>
-                <p className="mt-4 text-sm leading-relaxed text-zinc-500 sm:text-[15px] sm:leading-relaxed">
+                <p className="mt-4 text-sm leading-relaxed text-zinc-300 sm:text-[15px] sm:leading-relaxed">
                   {plan.body}
                 </p>
               </ScrollReveal>
             ))}
           </div>
           <ScrollReveal delayMs={360} className="mt-8">
-            <p className="text-pretty text-sm font-medium leading-relaxed text-zinc-500 sm:text-base">
+            <p className="text-pretty text-sm font-medium leading-relaxed text-zinc-300 sm:text-base">
               Full service and product pricing available on the Services page.
             </p>
           </ScrollReveal>
